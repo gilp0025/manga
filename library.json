@@ -5855,21 +5855,30 @@
     "chapters": "9"
   },
   {
-    "id": "db7fa61241",
-    "title": "Sato-kun ga shinde kara",
-    "author": "",
-    "cover": "",
-    "synopsis": "",
-    "volumes": "",
-    "demographic": "",
-    "genres": [],
+    "title": "Satou-kun ga Shinde kara",
+    "author": "Aona Yamagata",
+    "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx144954-5yLrUvfhw2qC.jpg",
+    "synopsis": "That boy is… a walking corpse! Sato-kun, who met an early demise in a traffic accident, came back to school as a zombie. That popular guy who'd light up the room, is now silent and expressionless and barely manages to trace the habits of his old life. Hozumi, a girl in his class, is worried for him. Experience this mysterious and youthful romance between a reticent zombie and a shy girl!",
+    "volumes": "1",
+    "chapters": "7",
+    "demographic": "josei",
+    "pubStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
+    "genres": [
+      "drama",
+      "romance",
+      "supernatural"
+    ],
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "db7fa61241",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "07669ef0bf",
