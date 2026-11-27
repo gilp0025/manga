@@ -943,6 +943,75 @@ body {
   z-index: 50;
   box-shadow: var(--shadow-md);
 }
+
+/* Auto-populate progress */
+.autopop-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.autopop-overlay.open { display: flex; }
+
+.autopop-box {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.autopop-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.autopop-status {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  min-height: 1.2em;
+}
+
+.autopop-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: var(--border-light);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.autopop-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.autopop-counts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1.25rem;
+}
+
+.autopop-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
 </style>
 </head>
 <body>
@@ -953,6 +1022,7 @@ body {
     <span class="header-count" id="mangaCount"></span>
   </div>
   <div class="header-actions">
+    <button class="icon-btn" onclick="startAutoPopulate()" title="Fetch covers and info from AniList for all manga" style="background:var(--accent-light);color:var(--accent);border-color:var(--accent);font-weight:600;">auto-fill</button>
     <button class="icon-btn" onclick="exportLibrary()" title="Export library as JSON">export</button>
     <button class="icon-btn" onclick="document.getElementById('importFile').click()" title="Import library from JSON">import</button>
     <input type="file" id="importFile" accept=".json" style="display:none" onchange="importLibrary(event)">
@@ -1178,6 +1248,23 @@ body {
     </div>
     <div class="modal-actions">
       <button class="btn btn-primary" onclick="saveSetup()">Connect</button>
+    </div>
+  </div>
+</div>
+
+<!-- Auto-populate progress -->
+<div class="autopop-overlay" id="autopopOverlay">
+  <div class="autopop-box">
+    <h3 id="autopopTitle">Fetching manga data…</h3>
+    <div class="autopop-status" id="autopopStatus">Preparing…</div>
+    <div class="autopop-bar-bg"><div class="autopop-bar" id="autopopBar"></div></div>
+    <div class="autopop-counts">
+      <span id="autopopProgress">0 / 0</span>
+      <span id="autopopFound">0 found</span>
+    </div>
+    <div class="autopop-actions">
+      <button class="btn btn-secondary" id="autopopStopBtn" onclick="stopAutoPopulate()">Stop</button>
+      <button class="btn btn-primary" id="autopopDoneBtn" onclick="closeAutoPopulate()" style="display:none;">Done</button>
     </div>
   </div>
 </div>
@@ -1926,6 +2013,164 @@ document.addEventListener('keydown', function(e) {
     else if (document.getElementById('detailModal').classList.contains('open')) closeDetailModal();
   }
 });
+
+// ── Auto-populate from AniList ──
+let autopopRunning = false;
+
+function cleanSearchTitle(title) {
+  // Remove everything after underscore (alternative titles)
+  let t = title.split('_')[0].trim();
+  // Remove parenthetical notes
+  t = t.replace(/\s*\(.*?\)\s*$/g, '').trim();
+  return t;
+}
+
+async function anilistSearch(searchTitle) {
+  const gql = `query ($search: String) {
+    Page(page: 1, perPage: 3) {
+      media(search: $search, type: MANGA, sort: [SEARCH_MATCH, POPULARITY_DESC]) {
+        title { romaji english }
+        coverImage { large }
+        description(asHtml: false)
+        staff(sort: RELEVANCE, perPage: 5) { edges { role node { name { full } } } }
+        genres
+        volumes
+        status
+      }
+    }
+  }`;
+  const res = await fetch('https://graphql.anilist.co', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ query: gql, variables: { search: searchTitle } })
+  });
+  if (res.status === 429) {
+    // Rate limited — wait 60s then retry
+    await new Promise(r => setTimeout(r, 60000));
+    return anilistSearch(searchTitle);
+  }
+  if (!res.ok) return null;
+  const json = await res.json();
+  const results = json.data?.Page?.media;
+  return results && results.length > 0 ? results[0] : null;
+}
+
+function mapAnilistStatus(s) {
+  const m = { FINISHED: 'finished', RELEASING: 'ongoing', HIATUS: 'hiatus', CANCELLED: 'cancelled', NOT_YET_RELEASED: 'ongoing' };
+  return m[s] || 'unknown';
+}
+
+function cleanSynopsis(desc) {
+  if (!desc) return '';
+  let t = desc.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
+  if (t.length > 400) t = t.slice(0, 397) + '…';
+  return t;
+}
+
+function getStaffAuthors(edges) {
+  const authors = [];
+  for (const e of (edges || [])) {
+    const role = (e.role || '').toLowerCase();
+    if (role.includes('story') || role.includes('art') || role.includes('original') || role.includes('creator')) {
+      const name = e.node?.name?.full;
+      if (name && !authors.includes(name)) authors.push(name);
+    }
+  }
+  return authors;
+}
+
+async function startAutoPopulate() {
+  // Find entries missing cover
+  const needsData = manga.filter(m => !m.cover);
+  if (needsData.length === 0) {
+    alert('All manga already have covers!');
+    return;
+  }
+
+  autopopRunning = true;
+  document.getElementById('autopopOverlay').classList.add('open');
+  document.getElementById('autopopTitle').textContent = 'Fetching manga data…';
+  document.getElementById('autopopStopBtn').style.display = '';
+  document.getElementById('autopopDoneBtn').style.display = 'none';
+  document.getElementById('autopopBar').style.width = '0%';
+
+  let done = 0;
+  let found = 0;
+  const total = needsData.length;
+  let saveCounter = 0;
+
+  for (const entry of needsData) {
+    if (!autopopRunning) break;
+
+    const searchTitle = cleanSearchTitle(entry.title);
+    document.getElementById('autopopStatus').textContent = searchTitle;
+    document.getElementById('autopopProgress').textContent = `${done} / ${total}`;
+    document.getElementById('autopopFound').textContent = `${found} found`;
+
+    try {
+      const result = await anilistSearch(searchTitle);
+      if (result) {
+        const cover = result.coverImage?.large || '';
+        if (cover) {
+          entry.cover = cover;
+          found++;
+        }
+        const synopsis = cleanSynopsis(result.description);
+        if (synopsis && !entry.synopsis) entry.synopsis = synopsis;
+
+        const authors = getStaffAuthors(result.staff?.edges);
+        if (authors.length && !entry.author) entry.author = authors.join(', ');
+
+        const genres = (result.genres || []).map(g => g.toLowerCase());
+        if (genres.length && (!entry.genres || !entry.genres.length)) entry.genres = genres;
+
+        if (result.volumes && !entry.volumes) entry.volumes = String(result.volumes);
+
+        const apiStatus = mapAnilistStatus(result.status);
+        if (entry.publicationStatus === 'unknown' && apiStatus !== 'unknown') {
+          entry.publicationStatus = apiStatus;
+        }
+      }
+    } catch (err) {
+      // Skip on error, continue with next
+    }
+
+    done++;
+    document.getElementById('autopopBar').style.width = `${Math.round((done / total) * 100)}%`;
+
+    // Save to GitHub every 20 entries
+    saveCounter++;
+    if (saveCounter >= 20) {
+      saveCounter = 0;
+      document.getElementById('autopopStatus').textContent = 'Saving progress…';
+      try { await saveToGitHub(); } catch(e) {}
+    }
+
+    // Rate limit: AniList allows 90 req/min, so ~700ms between requests
+    await new Promise(r => setTimeout(r, 700));
+  }
+
+  // Final save
+  document.getElementById('autopopStatus').textContent = 'Saving…';
+  try { await saveToGitHub(); } catch(e) {}
+
+  document.getElementById('autopopTitle').textContent = autopopRunning ? 'Done!' : 'Stopped';
+  document.getElementById('autopopStatus').textContent = `${found} manga updated with covers and info.`;
+  document.getElementById('autopopProgress').textContent = `${done} / ${total}`;
+  document.getElementById('autopopFound').textContent = `${found} found`;
+  document.getElementById('autopopBar').style.width = `${Math.round((done / total) * 100)}%`;
+  document.getElementById('autopopStopBtn').style.display = 'none';
+  document.getElementById('autopopDoneBtn').style.display = '';
+  autopopRunning = false;
+  renderManga();
+}
+
+function stopAutoPopulate() { autopopRunning = false; }
+
+function closeAutoPopulate() {
+  document.getElementById('autopopOverlay').classList.remove('open');
+  renderManga();
+}
 
 // ── Init ──
 async function init() {
