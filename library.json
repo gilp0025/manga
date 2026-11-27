@@ -4537,26 +4537,30 @@
     "titleRomaji": ""
   },
   {
-    "id": "0f012abb2e",
     "title": "My Hero Academia - Smash!!",
     "author": "Hirofumi Neda, Kouhei Horikoshi",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86652-H37PDPi69z5F.jpg",
     "synopsis": "Boku no Hero Academia Smash!! Is a spin-off gag manga written and illustrated by Hirofumi Neda and is published in Weekly Shonen Jump and the Jump+ App. The manga debuted on November 9th, 2015.\n\n\nChapter count includes 94 main chapters and 10 bonus chapters.\n\n5 of the bonus chapters are “Bonus Stuff!!” sets of pages, where each volume contains a set.\n\n\nAdditional Bonus Chapters:\n\nVolume 2: Goof…",
     "volumes": "5",
-    "demographic": "shounen",
+    "chapters": "104",
+    "demographic": "shonen",
+    "pubStatus": "finished",
+    "readingStatus": "not-read",
+    "rating": 0,
     "genres": [
       "action",
       "comedy",
       "fantasy"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "0f012abb2e",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "104"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "4d10c5f70a",
