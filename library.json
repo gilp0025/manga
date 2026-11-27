@@ -7075,13 +7075,16 @@
     "chapters": "15"
   },
   {
-    "id": "0acb7a5803",
     "title": "The Summer Hikaru Died",
     "author": "Mio Nukaga, Mokmok Len",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx190970-k3dpZS7OSQD7.jpg",
     "synopsis": "The bond between Yoshiki and Hikaru is a welcome escape from their isolated village. But one day when the two boys meet up, Yoshiki can immediately tell something is off. Though the person standing before him looks and acts exactly like Hikaru, Yoshiki knows that his friend is…gone. Someone—no, something has taken Hikaru’s place. And with so many eerie incidents happening in town lately, Yoshik…",
     "volumes": "3",
-    "demographic": "",
+    "chapters": "",
+    "demographic": "seinen",
+    "pubStatus": "ongoing",
+    "readingStatus": "reading",
+    "rating": 4,
     "genres": [
       "horror",
       "mystery",
@@ -7089,13 +7092,17 @@
       "supernatural",
       "thriller"
     ],
-    "readingStatus": "reading",
-    "rating": 4,
     "tags": [],
+    "themes": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "0acb7a5803",
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": "",
+    "reread": false
   },
   {
     "id": "a1c91d52ea",
