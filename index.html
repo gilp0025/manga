@@ -2666,6 +2666,13 @@ async function startAutoPopulate() {
           changed = true;
         }
 
+        // Romaji title — ALWAYS update from AniList
+        const apiRomaji = result.title?.romaji || '';
+        if (apiRomaji && entry.titleRomaji !== apiRomaji) {
+          entry.titleRomaji = apiRomaji;
+          changed = true;
+        }
+
         if (changed) updated++;
       }
     } catch (err) {
