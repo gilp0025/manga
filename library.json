@@ -4563,25 +4563,29 @@
     "titleRomaji": ""
   },
   {
-    "id": "4d10c5f70a",
     "title": "My Hero Academia - Team-Up Missions",
     "author": "Yoco Akiyama, Kouhei Horikoshi",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx110981-rl7yTVL5IcMA.jpg",
     "synopsis": "Midoriya is excited for his first team-up mission until he learns that his team includes the explosive Bakugo. The pro hero they’ve been matched with is also a real wild card. Can this makeshift team cooperate, or will Midoriya’s first mission be his last?\n\n\n\n(Source: VIZ Media)\n\n\n\nNote: Includes three extra chapters, the one-shot \"Everyone Is Someone's Hero\", and both chapters of \"Deku and Bak…",
     "volumes": "8",
-    "demographic": "shounen",
+    "chapters": "61",
+    "demographic": "shonen",
+    "pubStatus": "finished",
+    "readingStatus": "not-read",
+    "rating": 0,
     "genres": [
       "action",
       "adventure"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "4d10c5f70a",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "61"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "86797f0f14",
