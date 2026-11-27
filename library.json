@@ -480,7 +480,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "ongoing",
+    "titleRomaji": "Akebi-chan no Sailor Fuku"
   },
   {
     "id": "43e203a6fe",
@@ -503,7 +504,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "40"
+    "chapters": "40",
+    "titleRomaji": "Alice 19th"
   },
   {
     "title": "Alice in Borderland",
@@ -527,7 +529,8 @@
     "tags": [],
     "notes": "",
     "id": "f2321e27b8",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "titleRomaji": "Imawa no Kuni no Alice"
   },
   {
     "id": "66c2f61f98",
@@ -552,7 +555,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "17"
+    "chapters": "17",
+    "titleRomaji": "All You Need Is Kill"
   },
   {
     "id": "faf315e764",
@@ -575,7 +579,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "19"
+    "chapters": "19",
+    "titleRomaji": "Jishou Akuyaku Reijou na Konyakusha no Kansatsu Kiroku."
   },
   {
     "id": "1b1d2b1384",
@@ -595,7 +600,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "60"
+    "chapters": "60",
+    "titleRomaji": "Nanoni, Chigira-kun ga Amasugiru."
   },
   {
     "title": "Anohana: The Flower We Saw That Day",
@@ -618,7 +624,8 @@
     "lgbtq": [],
     "disability": [],
     "id": "2413a72629",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "titleRomaji": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai."
   },
   {
     "id": "442c0184eb",
@@ -641,7 +648,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "20"
+    "chapters": "20",
+    "titleRomaji": "Another"
   },
   {
     "id": "bc95960385",
@@ -661,7 +669,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "410"
+    "chapters": "410",
+    "titleRomaji": "Aoashi"
   },
   {
     "id": "a7f23335ec",
@@ -684,7 +693,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "53"
+    "chapters": "53",
+    "titleRomaji": "Ao Haru Ride"
   },
   {
     "id": "bbbe91545c",
@@ -705,7 +715,8 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "79"
+    "chapters": "79",
+    "titleRomaji": "Busu ni Hanataba wo."
   },
   {
     "id": "642e8dd2bc",
