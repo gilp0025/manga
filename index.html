@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manga Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --surface-hover: #fafaf8;
+  --border: #e8e5df;
+  --border-light: #f0ede8;
+  --text: #2d2b28;
+  --text-secondary: #7a756d;
+  --text-tertiary: #a8a299;
+  --accent: #e85d4a;
+  --accent-hover: #d44e3c;
+  --accent-light: rgba(232, 93, 74, 0.08);
+  --accent-mid: rgba(232, 93, 74, 0.15);
+  --tag-bg: #f0ede8;
+  --tag-text: #5a554d;
+  --green: #4a9e6d;
+  --green-light: rgba(74, 158, 109, 0.1);
+  --amber: #c49a2a;
+  --amber-light: rgba(196, 154, 42, 0.1);
+  --purple: #7c5cbf;
+  --purple-light: rgba(124, 92, 191, 0.1);
+  --blue: #4a7fb5;
+  --blue-light: rgba(74, 127, 181, 0.1);
+  --gray: #8a8580;
+  --gray-light: rgba(138, 133, 128, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+  --radius: 8px;
+  --radius-sm: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  padding: 1.5rem 2rem 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.header h1 span { color: var(--accent); }
+
+.header-count {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-left: 0.75rem;
+  font-weight: 400;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.icon-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+}
+
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Main Layout */
+.main-layout {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  padding: 0 0 2rem 2rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-section { margin-bottom: 1.25rem; }
+
+.sidebar-heading {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-edit {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sidebar-edit:hover { color: var(--accent); }
+
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0 1px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: all 0.1s;
+  line-height: 1.4;
+}
+
+.sidebar-item:hover {
+  color: var(--text);
+  background: var(--accent-light);
+}
+
+.sidebar-item.active {
+  color: var(--accent);
+  background: var(--accent-light);
+  font-weight: 500;
+}
+
+.sidebar-item-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 0.4rem;
+}
+
+.sidebar-item-count {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+/* Main content */
+.main-content { flex: 1; min-width: 0; }
+
+/* Toolbar */
+.toolbar {
+  padding: 0 2rem 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.55rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search-box:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.search-box::placeholder { color: var(--text-tertiary); }
+
+.filter-select {
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a8a299'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+}
+
+.filter-select:focus, .filter-select:hover { border-color: var(--accent); }
+.filter-select option { background: var(--surface); }
+
+.add-btn {
+  padding: 0.55rem 1.1rem;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.add-btn:hover { background: var(--accent-hover); }
+
+/* Manga Grid */
+.manga-grid {
+  padding: 0 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.25rem;
+}
+
+.manga-card {
+  cursor: pointer;
+  transition: transform 0.15s;
+  position: relative;
+}
+
+.manga-card:hover { transform: translateY(-4px); }
+
+.manga-cover-wrap {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s;
+  position: relative;
+}
+
+.manga-card:hover .manga-cover-wrap {
+  box-shadow: var(--shadow-md);
+}
+
+.manga-cover-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.manga-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  background: var(--border-light);
+}
+
+/* Publication status indicator */
+.pub-dot {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.pub-dot.ongoing { background: var(--amber); }
+.pub-dot.finished { background: var(--green); }
+.pub-dot.hiatus { background: var(--purple); }
+.pub-dot.cancelled { background: var(--gray); }
+.pub-dot.unknown { background: var(--text-tertiary); }
+
+/* Rating stars on card */
+.card-rating {
+  display: flex;
+  gap: 1px;
+  margin-top: 0.25rem;
+}
+
+.card-rating .star {
+  font-size: 0.65rem;
+  color: var(--border);
+}
+
+.card-rating .star.filled { color: var(--amber); }
+
+.manga-info {
+  padding: 0.5rem 0.15rem;
+}
+
+.manga-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.manga-author {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Reading status badge on card */
+.reading-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.reading-badge.reading { background: rgba(232,93,74,0.85); color: #fff; }
+.reading-badge.read { background: rgba(74,158,109,0.85); color: #fff; }
+.reading-badge.dropped { background: rgba(138,133,128,0.85); color: #fff; }
+.reading-badge.not-read { display: none; }
+
+/* Empty State */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-tertiary);
+}
+
+.empty-state h2 {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: var(--surface);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.1s;
+}
+
+.modal-close:hover { background: var(--tag-bg); color: var(--text); }
+
+.modal-body { padding: 1.5rem; }
+
+/* Form */
+.form-group { margin-bottom: 1rem; }
+
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.form-textarea { resize: vertical; min-height: 80px; }
+.form-select option { background: var(--surface); }
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row .form-group { flex: 1; }
+
+/* Lookup */
+.lookup-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.lookup-row .form-input { flex: 1; }
+
+.lookup-btn {
+  padding: 0.5rem 0.9rem;
+  background: var(--text);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.lookup-btn:hover { opacity: 0.85; }
+.lookup-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.lookup-results {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lookup-result {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.15s;
+  align-items: center;
+}
+
+.lookup-result:hover { border-color: var(--accent); }
+
+.lookup-result img {
+  width: 36px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.lookup-result-info { flex: 1; min-width: 0; }
+
+.lookup-result-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.lookup-result-meta {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+}
+
+.lookup-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.6rem 0;
+  color: var(--text-tertiary);
+  font-size: 0.7rem;
+}
+
+.lookup-divider::before, .lookup-divider::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Tags input */
+.tags-input-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.35rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  min-height: 2.3rem;
+  align-items: center;
+  cursor: text;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.tags-input-wrap:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.45rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.tag-chip button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.tag-chip button:hover { opacity: 1; }
+
+.tags-input {
+  border: none;
+  background: none;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  outline: none;
+  flex: 1;
+  min-width: 80px;
+  padding: 0.15rem;
+}
+
+.tags-input::placeholder { color: var(--text-tertiary); }
+
+.tag-suggestions {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  max-height: 130px;
+  overflow-y: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.tag-suggestions.open { display: block; }
+
+.tag-suggestion-item {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.tag-suggestion-item:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* Rating input */
+.rating-input {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rating-input .star-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--border);
+  padding: 0;
+  transition: color 0.1s, transform 0.1s;
+  line-height: 1;
+}
+
+.rating-input .star-btn:hover { transform: scale(1.15); }
+.rating-input .star-btn.filled { color: var(--amber); }
+
+/* Detail modal */
+.detail-top {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-cover {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.detail-cover img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.detail-cover-placeholder {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  background: var(--border-light);
+  border-radius: var(--radius);
+}
+
+.detail-meta { flex: 1; }
+
+.detail-meta h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.detail-meta .author {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge.demographic { background: var(--tag-bg); color: var(--tag-text); }
+.badge.pub-ongoing { background: var(--amber-light); color: var(--amber); }
+.badge.pub-finished { background: var(--green-light); color: var(--green); }
+.badge.pub-hiatus { background: var(--purple-light); color: var(--purple); }
+.badge.pub-cancelled { background: var(--gray-light); color: var(--gray); }
+.badge.reading-status { background: var(--accent-light); color: var(--accent); }
+.badge.reading-status.read { background: var(--green-light); color: var(--green); }
+.badge.reading-status.dropped { background: var(--gray-light); color: var(--gray); }
+.badge.reading-status.not-read { background: var(--tag-bg); color: var(--text-tertiary); }
+
+.detail-rating {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.detail-rating .star {
+  font-size: 0.9rem;
+  color: var(--border);
+}
+
+.detail-rating .star.filled { color: var(--amber); }
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.detail-tag {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 3px;
+}
+
+.detail-section {
+  margin-bottom: 1rem;
+}
+
+.detail-section-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+
+.detail-synopsis {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.detail-volumes {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.modal-actions {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { background: var(--bg); border: 1px solid var(--border); color: var(--text-secondary); }
+.btn-secondary:hover { border-color: var(--text-secondary); color: var(--text); }
+.btn-danger { background: none; border: 1px solid var(--accent); color: var(--accent); }
+.btn-danger:hover { background: var(--accent); color: #fff; }
+
+/* Confirm dialog */
+.confirm-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.confirm-overlay.open { display: flex; }
+
+.confirm-box {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.confirm-box p { margin-bottom: 1.25rem; font-size: 0.9rem; }
+.confirm-box .modal-actions { border: none; padding: 0; justify-content: center; }
+
+/* Tag Manager */
+.tag-manager-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tag-manager-row:last-child { border-bottom: none; }
+
+.tag-manager-name { flex: 1; font-size: 0.85rem; color: var(--text); }
+
+.tag-manager-count { font-size: 0.7rem; color: var(--text-tertiary); flex-shrink: 0; }
+
+.tag-manager-input {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.tag-manager-btn {
+  background: none;
+  border: none;
+  font-size: 0.72rem;
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.1s;
+  font-weight: 500;
+}
+
+.tag-manager-btn.rename { color: var(--blue); }
+.tag-manager-btn.rename:hover { background: var(--blue-light); }
+.tag-manager-btn.delete { color: var(--accent); }
+.tag-manager-btn.delete:hover { background: var(--accent-light); }
+.tag-manager-btn.save { color: var(--green); }
+.tag-manager-btn.save:hover { background: var(--green-light); }
+.tag-manager-btn.cancel { color: var(--text-tertiary); }
+.tag-manager-btn.cancel:hover { background: var(--tag-bg); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header, .toolbar, .manga-grid { padding-left: 1rem; padding-right: 1rem; }
+  .manga-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1rem; }
+  .form-row { flex-direction: column; gap: 0; }
+  .detail-top { flex-direction: column; align-items: center; text-align: center; }
+  .detail-tags { justify-content: center; }
+  .detail-badges { justify-content: center; }
+  .main-layout { flex-direction: column; }
+  .sidebar {
+    width: 100%;
+    max-width: none;
+    padding: 0 1rem 1rem;
+    max-height: none;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.5rem;
+  }
+  .sidebar-section { margin-bottom: 0.5rem; }
+}
+
+/* Save indicator */
+#saveIndicator {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: none;
+  z-index: 50;
+  box-shadow: var(--shadow-md);
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="display:flex;align-items:baseline;">
+    <h1>manga <span>library</span></h1>
+    <span class="header-count" id="mangaCount"></span>
+  </div>
+  <div class="header-actions">
+    <button class="icon-btn" onclick="exportLibrary()" title="Export library as JSON">export</button>
+    <button class="icon-btn" onclick="document.getElementById('importFile').click()" title="Import library from JSON">import</button>
+    <input type="file" id="importFile" accept=".json" style="display:none" onchange="importLibrary(event)">
+    <button class="icon-btn" onclick="openSetupModal()" title="GitHub settings">settings</button>
+  </div>
+</div>
+
+<div class="main-layout">
+  <div class="sidebar" id="sidebar"></div>
+  <div class="main-content">
+    <div class="toolbar">
+      <input type="text" class="search-box" id="searchBox" placeholder="search by title, author, genre, or tag…" oninput="renderManga()">
+      <select class="filter-select" id="readingFilter" onchange="setReadingFilter(this.value)">
+        <option value="all">all</option>
+        <option value="reading">reading</option>
+        <option value="not-read">not read</option>
+        <option value="read">read</option>
+        <option value="dropped">dropped</option>
+      </select>
+      <select class="filter-select" id="sortOrder" onchange="renderManga()">
+        <option value="alpha">a–z</option>
+        <option value="rating">by rating</option>
+        <option value="status">by reading status</option>
+      </select>
+      <button class="add-btn" onclick="openAddModal()">+ add manga</button>
+    </div>
+    <div class="manga-grid" id="mangaGrid"></div>
+  </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="addModalTitle">Add Manga</h2>
+      <button class="modal-close" onclick="closeAddModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Search AniList</label>
+        <div class="lookup-row">
+          <input type="text" class="form-input" id="lookupQuery" placeholder="search by title…" onkeydown="if(event.key==='Enter'){event.preventDefault();lookupManga()}">
+          <button class="lookup-btn" id="lookupBtn" onclick="lookupManga()">search</button>
+        </div>
+        <div class="lookup-results" id="lookupResults"></div>
+      </div>
+
+      <div class="lookup-divider">or enter manually</div>
+
+      <div class="form-group">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-input" id="mangaTitle">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Author</label>
+          <input type="text" class="form-input" id="mangaAuthor">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Volumes</label>
+          <input type="text" class="form-input" id="mangaVolumes" placeholder="e.g. 24 or ongoing">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Cover Image URL</label>
+        <input type="text" class="form-input" id="mangaCover" placeholder="auto-filled from search">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Synopsis</label>
+        <textarea class="form-textarea" id="mangaSynopsis" placeholder="short summary…" style="min-height:60px;"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Demographic</label>
+          <select class="form-select" id="mangaDemographic">
+            <option value="">—</option>
+            <option value="shonen">Shonen</option>
+            <option value="shojo">Shojo</option>
+            <option value="seinen">Seinen</option>
+            <option value="josei">Josei</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Publication Status</label>
+          <select class="form-select" id="mangaPubStatus">
+            <option value="unknown">Unknown</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="finished">Finished</option>
+            <option value="hiatus">Hiatus</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Reading Status</label>
+          <select class="form-select" id="mangaReadingStatus">
+            <option value="not-read">Not Read</option>
+            <option value="reading">Reading</option>
+            <option value="read">Read</option>
+            <option value="dropped">Dropped</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Rating</label>
+          <div class="rating-input" id="ratingInput">
+            <button type="button" class="star-btn" onclick="setRating(1)">★</button>
+            <button type="button" class="star-btn" onclick="setRating(2)">★</button>
+            <button type="button" class="star-btn" onclick="setRating(3)">★</button>
+            <button type="button" class="star-btn" onclick="setRating(4)">★</button>
+            <button type="button" class="star-btn" onclick="setRating(5)">★</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex:1;">
+          <label class="form-label">Genres (press enter to add)</label>
+          <div class="tags-input-wrap" id="genresWrap" onclick="document.getElementById('genresInput').focus()">
+            <input type="text" class="tags-input" id="genresInput" placeholder="e.g. isekai, romance…" onkeydown="handleTagKey(event,'genres')" oninput="showTagSuggestions('genres')" autocomplete="off">
+          </div>
+          <div class="tag-suggestions" id="genresSuggestions"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex:1;">
+          <label class="form-label">Tags (press enter to add)</label>
+          <div class="tags-input-wrap" id="tagsWrap" onclick="document.getElementById('tagsInput').focus()">
+            <input type="text" class="tags-input" id="tagsInput" placeholder="e.g. lgbtq+, mental health…" onkeydown="handleTagKey(event,'tags')" oninput="showTagSuggestions('tags')" autocomplete="off">
+          </div>
+          <div class="tag-suggestions" id="tagsSuggestions"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Notes</label>
+        <textarea class="form-textarea" id="mangaNotes" placeholder="personal notes…" style="min-height:60px;"></textarea>
+      </div>
+    </div>
+    <div id="formError" style="padding:0 1.5rem;font-size:0.75rem;color:var(--accent);display:none;"></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAddModal()">Cancel</button>
+      <button class="btn btn-primary" id="saveMangaBtn" onclick="saveManga()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-overlay" id="detailModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Details</h2>
+      <button class="modal-close" onclick="closeDetailModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="detailBody"></div>
+    <div class="modal-actions">
+      <button class="btn btn-danger" id="deleteBtn" onclick="confirmDelete()">Delete</button>
+      <button class="btn btn-secondary" onclick="editCurrentManga()">Edit</button>
+      <button class="btn btn-secondary" onclick="closeDetailModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm Delete -->
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <p>Remove this manga from your library?</p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeConfirm()">Cancel</button>
+      <button class="btn btn-danger" onclick="deleteManga()">Remove</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tag Manager Modal -->
+<div class="modal-overlay" id="tagManagerModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="tagManagerTitle">Edit Tags</h2>
+      <button class="modal-close" onclick="closeTagManager()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div id="tagManagerList"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeTagManager()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Setup Modal -->
+<div class="modal-overlay" id="setupModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>GitHub Setup</h2>
+      <button class="modal-close" onclick="closeSetupModal()" id="setupCloseBtn" style="display:none">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:1rem;">
+        Your library is stored in a GitHub repository. You need a
+        <a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener" style="color:var(--accent);">personal access token</a>
+        with <strong>repo</strong> scope.
+      </p>
+      <div class="form-group">
+        <label class="form-label">GitHub Username</label>
+        <input type="text" class="form-input" id="ghUser" placeholder="e.g. yourname">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Repository Name</label>
+        <input type="text" class="form-input" id="ghRepo" placeholder="e.g. manga-library">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Personal Access Token</label>
+        <input type="password" class="form-input" id="ghToken" placeholder="ghp_...">
+      </div>
+      <div id="setupError" style="color:var(--accent);font-size:0.75rem;margin-top:0.5rem;display:none;"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveSetup()">Connect</button>
+    </div>
+  </div>
+</div>
+
+<div id="saveIndicator"></div>
+
+<script>
+// ── State ──
+let ghConfig = null;
+let fileSha = null;
+let manga = [];
+let currentReadingFilter = 'all';
+let currentDemographic = null;
+let currentGenre = null;
+let currentTag = null;
+let currentPubStatus = null;
+let editingId = null;
+let viewingId = null;
+let currentGenres = [];
+let currentTags = [];
+let currentRating = 0;
+let saveTimeout = null;
+let tagManagerType = 'tags'; // 'tags' or 'genres'
+
+// ── GitHub Storage ──
+function loadConfig() {
+  try {
+    const raw = localStorage.getItem('manga-library-gh');
+    if (raw) { ghConfig = JSON.parse(raw); return true; }
+  } catch(e) {}
+  return false;
+}
+
+function saveConfig() { localStorage.setItem('manga-library-gh', JSON.stringify(ghConfig)); }
+
+function openSetupModal() {
+  if (ghConfig) {
+    document.getElementById('ghUser').value = ghConfig.user || '';
+    document.getElementById('ghRepo').value = ghConfig.repo || '';
+    document.getElementById('ghToken').value = ghConfig.token || '';
+    document.getElementById('setupCloseBtn').style.display = '';
+  } else {
+    document.getElementById('ghUser').value = '';
+    document.getElementById('ghRepo').value = '';
+    document.getElementById('ghToken').value = '';
+    document.getElementById('setupCloseBtn').style.display = 'none';
+  }
+  document.getElementById('setupError').style.display = 'none';
+  document.getElementById('setupModal').classList.add('open');
+}
+
+function closeSetupModal() { document.getElementById('setupModal').classList.remove('open'); }
+
+async function saveSetup() {
+  const user = document.getElementById('ghUser').value.trim();
+  const repo = document.getElementById('ghRepo').value.trim();
+  const token = document.getElementById('ghToken').value.trim();
+  const errEl = document.getElementById('setupError');
+  if (!user || !repo || !token) { errEl.textContent = 'All fields required.'; errEl.style.display = 'block'; return; }
+  errEl.style.display = 'none';
+  ghConfig = { user, repo, token };
+  try {
+    await loadFromGitHub();
+    saveConfig(); closeSetupModal(); renderManga();
+  } catch(e) {
+    if (e.message === 'NOT_FOUND') {
+      try { await saveToGitHub(); saveConfig(); closeSetupModal(); renderManga(); }
+      catch(e2) { errEl.textContent = 'Could not create library file. Check token and repo.'; errEl.style.display = 'block'; ghConfig = null; }
+    } else { errEl.textContent = e.message || 'Connection failed.'; errEl.style.display = 'block'; ghConfig = null; }
+  }
+}
+
+async function loadFromGitHub() {
+  const url = `https://api.github.com/repos/${ghConfig.user}/${ghConfig.repo}/contents/library.json`;
+  const res = await fetch(url, { headers: { 'Authorization': `Bearer ${ghConfig.token}`, 'Accept': 'application/vnd.github.v3+json' } });
+  if (res.status === 404) throw new Error('NOT_FOUND');
+  if (res.status === 401 || res.status === 403) throw new Error('Authentication failed.');
+  if (!res.ok) throw new Error(`GitHub returned ${res.status}`);
+  const data = await res.json();
+  fileSha = data.sha;
+  const content = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
+  manga = JSON.parse(content);
+}
+
+async function saveToGitHub() {
+  if (!ghConfig) return;
+  const url = `https://api.github.com/repos/${ghConfig.user}/${ghConfig.repo}/contents/library.json`;
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(manga, null, 2))));
+  const body = { message: `Update library (${new Date().toISOString().split('T')[0]})`, content };
+  if (fileSha) body.sha = fileSha;
+  const res = await fetch(url, { method: 'PUT', headers: { 'Authorization': `Bearer ${ghConfig.token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  if (!res.ok) { const err = await res.json().catch(() => ({})); throw new Error(err.message || `Save failed (${res.status})`); }
+  const data = await res.json();
+  fileSha = data.content.sha;
+}
+
+function save() {
+  showIndicator('saving…');
+  if (saveTimeout) clearTimeout(saveTimeout);
+  saveTimeout = setTimeout(async () => {
+    try { await saveToGitHub(); showIndicator('saved'); setTimeout(hideIndicator, 1500); }
+    catch(e) {
+      showIndicator('save failed — retrying…');
+      setTimeout(async () => {
+        try { await loadFromGitHub(); await saveToGitHub(); showIndicator('saved'); setTimeout(hideIndicator, 1500); }
+        catch(e2) { showIndicator('save failed — use export as backup'); }
+      }, 5000);
+    }
+  }, 2000);
+}
+
+function showIndicator(t) { const e = document.getElementById('saveIndicator'); e.textContent = t; e.style.display = 'block'; }
+function hideIndicator() { document.getElementById('saveIndicator').style.display = 'none'; }
+function genId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+function escHtml(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+// ── AniList Lookup ──
+async function lookupManga() {
+  const query = document.getElementById('lookupQuery').value.trim();
+  if (!query) return;
+  const btn = document.getElementById('lookupBtn');
+  btn.disabled = true; btn.textContent = 'searching…';
+  const resultsDiv = document.getElementById('lookupResults');
+  resultsDiv.innerHTML = '';
+
+  const gql = `query ($search: String) {
+    Page(page: 1, perPage: 6) {
+      media(search: $search, type: MANGA, sort: [SEARCH_MATCH, POPULARITY_DESC]) {
+        id
+        title { romaji english }
+        coverImage { large medium }
+        description(asHtml: false)
+        staff(sort: RELEVANCE, perPage: 3) { edges { role node { name { full } } } }
+        genres
+        volumes
+        status
+        format
+        countryOfOrigin
+      }
+    }
+  }`;
+
+  try {
+    const res = await fetch('https://graphql.anilist.co', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ query: gql, variables: { search: query } })
+    });
+    const json = await res.json();
+    const results = json.data?.Page?.media || [];
+
+    if (results.length === 0) {
+      resultsDiv.innerHTML = '<div style="color:var(--text-tertiary);font-size:0.75rem;padding:0.4rem;">No results found.</div>';
+      return;
+    }
+
+    window._lookupResults = results.map(m => {
+      const authors = (m.staff?.edges || [])
+        .filter(e => e.role && (e.role.toLowerCase().includes('story') || e.role.toLowerCase().includes('art') || e.role.toLowerCase().includes('original')))
+        .map(e => e.node.name.full);
+      const uniqueAuthors = [...new Set(authors)];
+
+      // Map AniList status to our status
+      let pubStatus = 'unknown';
+      if (m.status === 'FINISHED') pubStatus = 'finished';
+      else if (m.status === 'RELEASING') pubStatus = 'ongoing';
+      else if (m.status === 'HIATUS') pubStatus = 'hiatus';
+      else if (m.status === 'CANCELLED') pubStatus = 'cancelled';
+      else if (m.status === 'NOT_YET_RELEASED') pubStatus = 'ongoing';
+
+      // Guess demographic from format/country (AniList doesn't always have this)
+      let demographic = '';
+      // We won't auto-fill demographic since AniList doesn't reliably provide it
+
+      // Clean synopsis (remove HTML tags)
+      let synopsis = (m.description || '').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
+      if (synopsis.length > 400) synopsis = synopsis.slice(0, 397) + '…';
+
+      return {
+        title: m.title.english || m.title.romaji || '',
+        titleRomaji: m.title.romaji || '',
+        authors: uniqueAuthors.length ? uniqueAuthors : ['Unknown'],
+        cover: m.coverImage?.large || m.coverImage?.medium || '',
+        synopsis,
+        genres: (m.genres || []).map(g => g.toLowerCase()),
+        volumes: m.volumes || null,
+        pubStatus,
+        demographic,
+        format: m.format
+      };
+    });
+
+    resultsDiv.innerHTML = window._lookupResults.map((r, i) => {
+      const subtitle = r.authors.join(', ') + (r.volumes ? ` · ${r.volumes} vol` : '') + (r.pubStatus !== 'unknown' ? ` · ${r.pubStatus}` : '');
+      return `<div class="lookup-result" onclick="selectLookup(${i})">
+        ${r.cover ? `<img src="${escHtml(r.cover)}" alt="">` : ''}
+        <div class="lookup-result-info">
+          <div class="lookup-result-title">${escHtml(r.title)}</div>
+          <div class="lookup-result-meta">${escHtml(subtitle)}</div>
+        </div>
+      </div>`;
+    }).join('');
+  } catch(err) {
+    resultsDiv.innerHTML = '<div style="color:var(--accent);font-size:0.75rem;padding:0.4rem;">Search failed. Check your connection.</div>';
+  } finally {
+    btn.textContent = 'wait…';
+    setTimeout(() => { btn.disabled = false; btn.textContent = 'search'; }, 1500);
+  }
+}
+
+function selectLookup(i) {
+  const item = window._lookupResults?.[i];
+  if (!item) return;
+  document.getElementById('mangaTitle').value = item.title;
+  document.getElementById('mangaAuthor').value = item.authors.join(', ');
+  document.getElementById('mangaCover').value = item.cover;
+  document.getElementById('mangaSynopsis').value = item.synopsis;
+  document.getElementById('mangaVolumes').value = item.volumes || '';
+  document.getElementById('mangaPubStatus').value = item.pubStatus;
+  if (item.demographic) document.getElementById('mangaDemographic').value = item.demographic;
+
+  // Fill genres
+  item.genres.forEach(g => { if (!currentGenres.includes(g)) currentGenres.push(g); });
+  renderTagChips('genres');
+
+  document.getElementById('lookupResults').innerHTML = '';
+  document.getElementById('lookupQuery').value = '';
+}
+
+// ── Render ──
+function starsHtml(rating, size) {
+  let h = '';
+  for (let i = 1; i <= 5; i++) h += `<span class="star${i <= rating ? ' filled' : ''}" style="font-size:${size};">★</span>`;
+  return h;
+}
+
+function renderManga() {
+  const query = document.getElementById('searchBox').value.toLowerCase().trim();
+  const grid = document.getElementById('mangaGrid');
+
+  let filtered = manga.filter(m => {
+    if (currentReadingFilter !== 'all' && m.readingStatus !== currentReadingFilter) return false;
+    if (currentDemographic && m.demographic !== currentDemographic) return false;
+    if (currentGenre && !(m.genres || []).includes(currentGenre)) return false;
+    if (currentTag && !(m.tags || []).includes(currentTag)) return false;
+    if (currentPubStatus && m.pubStatus !== currentPubStatus) return false;
+    if (query) {
+      const searchable = [m.title, m.author, ...(m.genres || []), ...(m.tags || []), m.demographic || ''].join(' ').toLowerCase();
+      return searchable.includes(query);
+    }
+    return true;
+  });
+
+  const sortMode = document.getElementById('sortOrder').value;
+  if (sortMode === 'rating') {
+    filtered.sort((a, b) => {
+      const r = (b.rating || 0) - (a.rating || 0);
+      if (r !== 0) return r;
+      return (a.title || '').localeCompare(b.title || '');
+    });
+  } else if (sortMode === 'status') {
+    const order = { reading: 0, 'not-read': 1, read: 2, dropped: 3 };
+    filtered.sort((a, b) => {
+      const s = (order[a.readingStatus] || 9) - (order[b.readingStatus] || 9);
+      if (s !== 0) return s;
+      return (a.title || '').localeCompare(b.title || '');
+    });
+  } else {
+    filtered.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+  }
+
+  document.getElementById('mangaCount').textContent = manga.length === 0 ? '' : `${manga.length} titles`;
+  renderSidebar();
+
+  if (filtered.length === 0) {
+    grid.innerHTML = manga.length === 0
+      ? '<div class="empty-state"><h2>Your library is empty</h2><p>Add your first manga to get started.</p></div>'
+      : '<div class="empty-state"><p>No manga match your filters.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(m => {
+    const coverHtml = m.cover
+      ? `<img src="${escHtml(m.cover)}" alt="" loading="lazy">`
+      : `<div class="manga-cover-placeholder">${(m.title || '?')[0]}</div>`;
+
+    const pubClass = m.pubStatus || 'unknown';
+    const readBadge = m.readingStatus && m.readingStatus !== 'not-read'
+      ? `<div class="reading-badge ${m.readingStatus}">${m.readingStatus === 'not-read' ? '' : m.readingStatus}</div>` : '';
+
+    const ratingHtml = m.rating ? `<div class="card-rating">${starsHtml(m.rating, '0.6rem')}</div>` : '';
+
+    return `<div class="manga-card" onclick="openDetail('${m.id}')">
+      <div class="manga-cover-wrap">
+        ${coverHtml}
+        <div class="pub-dot ${pubClass}" title="${pubClass}"></div>
+        ${readBadge}
+      </div>
+      <div class="manga-info">
+        <div class="manga-title">${escHtml(m.title || 'Untitled')}</div>
+        <div class="manga-author">${escHtml(m.author || '')}</div>
+        ${ratingHtml}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Sidebar ──
+function renderSidebar() {
+  const sb = document.getElementById('sidebar');
+  let html = '';
+
+  // Reading status counts
+  const readCounts = { all: manga.length, reading: 0, 'not-read': 0, read: 0, dropped: 0 };
+  manga.forEach(m => { if (readCounts.hasOwnProperty(m.readingStatus)) readCounts[m.readingStatus]++; });
+  const readLabels = { all: 'All', reading: 'Reading', 'not-read': 'Not Read', read: 'Read', dropped: 'Dropped' };
+
+  html += '<div class="sidebar-section"><div class="sidebar-heading">Shelves</div>';
+  for (const [key, label] of Object.entries(readLabels)) {
+    const active = currentReadingFilter === key && !currentDemographic && !currentGenre && !currentTag && !currentPubStatus ? ' active' : '';
+    html += `<div class="sidebar-item${active}" onclick="clearFilters();setReadingFilter('${key}')"><span class="sidebar-item-name">${label}</span><span class="sidebar-item-count">${readCounts[key]}</span></div>`;
+  }
+  html += '</div>';
+
+  // Publication status counts
+  const pubCounts = {};
+  manga.forEach(m => { const s = m.pubStatus || 'unknown'; pubCounts[s] = (pubCounts[s] || 0) + 1; });
+  const pubLabels = { ongoing: 'Ongoing', finished: 'Finished', hiatus: 'Hiatus', cancelled: 'Cancelled', unknown: 'Unknown' };
+  const pubKeys = Object.keys(pubLabels).filter(k => pubCounts[k]);
+
+  if (pubKeys.length > 0) {
+    html += '<div class="sidebar-section"><div class="sidebar-heading">Publication</div>';
+    pubKeys.forEach(key => {
+      const active = currentPubStatus === key ? ' active' : '';
+      html += `<div class="sidebar-item${active}" onclick="togglePubStatus('${key}')"><span class="sidebar-item-name">${pubLabels[key]}</span><span class="sidebar-item-count">${pubCounts[key]}</span></div>`;
+    });
+    html += '</div>';
+  }
+
+  // Demographic counts
+  const demCounts = {};
+  manga.forEach(m => { if (m.demographic) demCounts[m.demographic] = (demCounts[m.demographic] || 0) + 1; });
+  const demOrder = ['shonen', 'shojo', 'seinen', 'josei'];
+  const demLabels = { shonen: 'Shonen', shojo: 'Shojo', seinen: 'Seinen', josei: 'Josei' };
+  const demKeys = demOrder.filter(k => demCounts[k]);
+
+  if (demKeys.length > 0) {
+    html += '<div class="sidebar-section"><div class="sidebar-heading">Demographic</div>';
+    demKeys.forEach(key => {
+      const active = currentDemographic === key ? ' active' : '';
+      html += `<div class="sidebar-item${active}" onclick="toggleDemographic('${key}')"><span class="sidebar-item-name">${demLabels[key]}</span><span class="sidebar-item-count">${demCounts[key]}</span></div>`;
+    });
+    html += '</div>';
+  }
+
+  // Genre counts
+  const genreCounts = {};
+  manga.forEach(m => { (m.genres || []).forEach(g => { genreCounts[g] = (genreCounts[g] || 0) + 1; }); });
+  const sortedGenres = Object.keys(genreCounts).sort((a, b) => a.localeCompare(b));
+
+  if (sortedGenres.length > 0) {
+    html += '<div class="sidebar-section"><div class="sidebar-heading"><span>Genres</span><span class="sidebar-edit" onclick="openTagManager(\'genres\')">edit</span></div>';
+    sortedGenres.forEach(g => {
+      const active = currentGenre === g ? ' active' : '';
+      html += `<div class="sidebar-item${active}" onclick="toggleGenre('${g.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(g)}</span><span class="sidebar-item-count">${genreCounts[g]}</span></div>`;
+    });
+    html += '</div>';
+  }
+
+  // Tag counts (representation tags)
+  const tagCounts = {};
+  manga.forEach(m => { (m.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }); });
+  const sortedTags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
+
+  if (sortedTags.length > 0) {
+    html += '<div class="sidebar-section"><div class="sidebar-heading"><span>Tags</span><span class="sidebar-edit" onclick="openTagManager(\'tags\')">edit</span></div>';
+    sortedTags.forEach(t => {
+      const active = currentTag === t ? ' active' : '';
+      html += `<div class="sidebar-item${active}" onclick="toggleTag('${t.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(t)}</span><span class="sidebar-item-count">${tagCounts[t]}</span></div>`;
+    });
+    html += '</div>';
+  }
+
+  sb.innerHTML = html;
+}
+
+// ── Filters ──
+function clearFilters() { currentDemographic = null; currentGenre = null; currentTag = null; currentPubStatus = null; }
+
+function setReadingFilter(v) {
+  currentReadingFilter = v;
+  document.getElementById('readingFilter').value = v;
+  renderManga();
+}
+
+function toggleDemographic(d) { currentDemographic = currentDemographic === d ? null : d; renderManga(); }
+function toggleGenre(g) { currentGenre = currentGenre === g ? null : g; renderManga(); }
+function toggleTag(t) { currentTag = currentTag === t ? null : t; renderManga(); }
+function togglePubStatus(s) { currentPubStatus = currentPubStatus === s ? null : s; renderManga(); }
+
+// ── Rating ──
+function setRating(n) {
+  currentRating = currentRating === n ? 0 : n;
+  updateRatingDisplay();
+}
+
+function updateRatingDisplay() {
+  const stars = document.querySelectorAll('#ratingInput .star-btn');
+  stars.forEach((s, i) => { s.classList.toggle('filled', i < currentRating); });
+}
+
+// ── Add/Edit Modal ──
+function openAddModal() {
+  editingId = null;
+  currentGenres = []; currentTags = []; currentRating = 0;
+  clearFormError();
+  document.getElementById('addModalTitle').textContent = 'Add Manga';
+  document.getElementById('mangaTitle').value = '';
+  document.getElementById('mangaAuthor').value = '';
+  document.getElementById('mangaCover').value = '';
+  document.getElementById('mangaSynopsis').value = '';
+  document.getElementById('mangaVolumes').value = '';
+  document.getElementById('mangaDemographic').value = '';
+  document.getElementById('mangaPubStatus').value = 'unknown';
+  document.getElementById('mangaReadingStatus').value = 'not-read';
+  document.getElementById('mangaNotes').value = '';
+  document.getElementById('lookupQuery').value = '';
+  document.getElementById('lookupResults').innerHTML = '';
+  updateRatingDisplay();
+  renderTagChips('genres'); renderTagChips('tags');
+  document.getElementById('addModal').classList.add('open');
+}
+
+function openEditModal(id) {
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  editingId = id;
+  currentGenres = [...(m.genres || [])];
+  currentTags = [...(m.tags || [])];
+  currentRating = m.rating || 0;
+  clearFormError();
+  document.getElementById('addModalTitle').textContent = 'Edit Manga';
+  document.getElementById('mangaTitle').value = m.title || '';
+  document.getElementById('mangaAuthor').value = m.author || '';
+  document.getElementById('mangaCover').value = m.cover || '';
+  document.getElementById('mangaSynopsis').value = m.synopsis || '';
+  document.getElementById('mangaVolumes').value = m.volumes || '';
+  document.getElementById('mangaDemographic').value = m.demographic || '';
+  document.getElementById('mangaPubStatus').value = m.pubStatus || 'unknown';
+  document.getElementById('mangaReadingStatus').value = m.readingStatus || 'not-read';
+  document.getElementById('mangaNotes').value = m.notes || '';
+  document.getElementById('lookupQuery').value = '';
+  document.getElementById('lookupResults').innerHTML = '';
+  updateRatingDisplay();
+  renderTagChips('genres'); renderTagChips('tags');
+  document.getElementById('addModal').classList.add('open');
+}
+
+function closeAddModal() { document.getElementById('addModal').classList.remove('open'); editingId = null; }
+
+function showFormError(msg) { const e = document.getElementById('formError'); e.textContent = msg; e.style.display = 'block'; }
+function clearFormError() { const e = document.getElementById('formError'); e.textContent = ''; e.style.display = 'none'; }
+
+function saveManga() {
+  const title = document.getElementById('mangaTitle').value.trim();
+  if (!title) { document.getElementById('mangaTitle').focus(); return; }
+
+  const data = {
+    title,
+    author: document.getElementById('mangaAuthor').value.trim(),
+    cover: document.getElementById('mangaCover').value.trim(),
+    synopsis: document.getElementById('mangaSynopsis').value.trim(),
+    volumes: document.getElementById('mangaVolumes').value.trim(),
+    demographic: document.getElementById('mangaDemographic').value,
+    pubStatus: document.getElementById('mangaPubStatus').value,
+    readingStatus: document.getElementById('mangaReadingStatus').value,
+    rating: currentRating,
+    genres: [...currentGenres],
+    tags: [...currentTags],
+    notes: document.getElementById('mangaNotes').value.trim(),
+  };
+
+  // Duplicate check
+  if (!editingId) {
+    const newTitle = data.title.toLowerCase();
+    const dup = manga.find(m => m.title.toLowerCase() === newTitle);
+    if (dup) { showFormError(`"${dup.title}" is already in your library.`); return; }
+  }
+
+  if (editingId) {
+    const idx = manga.findIndex(m => m.id === editingId);
+    if (idx > -1) {
+      data.id = editingId;
+      data.dateAdded = manga[idx].dateAdded;
+      manga[idx] = data;
+    }
+  } else {
+    data.id = genId();
+    data.dateAdded = new Date().toISOString().split('T')[0];
+    manga.push(data);
+  }
+
+  save(); closeAddModal(); renderManga();
+  if (viewingId === editingId) openDetail(editingId);
+}
+
+// ── Tags / Genres input ──
+function getList(type) { return type === 'genres' ? currentGenres : currentTags; }
+function setList(type, v) { if (type === 'genres') currentGenres = v; else currentTags = v; }
+
+function renderTagChips(type) {
+  const wrap = document.getElementById(type + 'Wrap');
+  const input = document.getElementById(type + 'Input');
+  wrap.querySelectorAll('.tag-chip').forEach(c => c.remove());
+  getList(type).forEach((tag, i) => {
+    const chip = document.createElement('span');
+    chip.className = 'tag-chip';
+    chip.innerHTML = `${escHtml(tag)} <button onclick="removeChip('${type}',${i})">&times;</button>`;
+    wrap.insertBefore(chip, input);
+  });
+}
+
+function handleTagKey(e, type) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    const val = e.target.value.trim().toLowerCase();
+    const list = getList(type);
+    if (val && !list.includes(val)) { list.push(val); renderTagChips(type); }
+    e.target.value = '';
+    hideSuggestions(type);
+  } else if (e.key === 'Backspace' && !e.target.value) {
+    const list = getList(type);
+    if (list.length) { list.pop(); renderTagChips(type); }
+  } else if (e.key === 'Escape') { hideSuggestions(type); }
+}
+
+function getAllExisting(type) {
+  const s = new Set();
+  const field = type === 'genres' ? 'genres' : 'tags';
+  manga.forEach(m => (m[field] || []).forEach(t => s.add(t)));
+  return [...s].sort();
+}
+
+function showTagSuggestions(type) {
+  const input = document.getElementById(type + 'Input');
+  const val = input.value.trim().toLowerCase();
+  const container = document.getElementById(type + 'Suggestions');
+  if (!val) { hideSuggestions(type); return; }
+  const all = getAllExisting(type);
+  const list = getList(type);
+  const matches = all.filter(t => t.includes(val) && !list.includes(t));
+  if (!matches.length) { hideSuggestions(type); return; }
+  container.innerHTML = matches.map(t =>
+    `<div class="tag-suggestion-item" onmousedown="selectSuggestion('${type}','${t.replace(/'/g, "\\'")}')">${escHtml(t)}</div>`
+  ).join('');
+  container.classList.add('open');
+}
+
+function selectSuggestion(type, val) {
+  const list = getList(type);
+  if (!list.includes(val)) { list.push(val); renderTagChips(type); }
+  document.getElementById(type + 'Input').value = '';
+  hideSuggestions(type);
+  document.getElementById(type + 'Input').focus();
+}
+
+function hideSuggestions(type) { document.getElementById(type + 'Suggestions').classList.remove('open'); }
+function removeChip(type, i) { getList(type).splice(i, 1); renderTagChips(type); }
+
+// ── Tag/Genre Manager ──
+function openTagManager(type) {
+  tagManagerType = type;
+  document.getElementById('tagManagerTitle').textContent = type === 'genres' ? 'Edit Genres' : 'Edit Tags';
+  renderTagManagerList();
+  document.getElementById('tagManagerModal').classList.add('open');
+}
+
+function closeTagManager() { document.getElementById('tagManagerModal').classList.remove('open'); }
+
+function renderTagManagerList() {
+  const field = tagManagerType === 'genres' ? 'genres' : 'tags';
+  const counts = {};
+  manga.forEach(m => { (m[field] || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }); });
+  const sorted = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+  const container = document.getElementById('tagManagerList');
+
+  if (!sorted.length) { container.innerHTML = '<div style="color:var(--text-tertiary);font-size:0.8rem;">None yet.</div>'; return; }
+
+  container.innerHTML = sorted.map(tag => {
+    const safe = tag.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    return `<div class="tag-manager-row">
+      <span class="tag-manager-name">${escHtml(tag)}</span>
+      <span class="tag-manager-count">${counts[tag]}</span>
+      <button class="tag-manager-btn rename" onclick="startRename('${safe}')">rename</button>
+      <button class="tag-manager-btn delete" onclick="deleteTagItem('${safe}')">delete</button>
+    </div>`;
+  }).join('');
+}
+
+function startRename(oldTag) {
+  const container = document.getElementById('tagManagerList');
+  container.querySelectorAll('.tag-manager-row').forEach(row => {
+    const name = row.querySelector('.tag-manager-name');
+    if (name && name.textContent === oldTag) {
+      const safe = oldTag.replace(/'/g, "\\'");
+      row.innerHTML = `<input type="text" class="tag-manager-input" id="renameInput" value="${escHtml(oldTag)}" onkeydown="if(event.key==='Enter')confirmRename('${safe}');if(event.key==='Escape')renderTagManagerList();">
+        <button class="tag-manager-btn save" onclick="confirmRename('${safe}')">save</button>
+        <button class="tag-manager-btn cancel" onclick="renderTagManagerList()">cancel</button>`;
+      document.getElementById('renameInput').focus();
+      document.getElementById('renameInput').select();
+    }
+  });
+}
+
+function confirmRename(oldTag) {
+  const input = document.getElementById('renameInput');
+  const newTag = input.value.trim().toLowerCase();
+  if (!newTag || newTag === oldTag) { renderTagManagerList(); return; }
+  const field = tagManagerType === 'genres' ? 'genres' : 'tags';
+  const existing = new Set();
+  manga.forEach(m => (m[field] || []).forEach(t => existing.add(t)));
+
+  manga.forEach(m => {
+    if (m[field] && m[field].includes(oldTag)) {
+      m[field] = m[field].filter(t => t !== oldTag);
+      if (!m[field].includes(newTag)) m[field].push(newTag);
+    }
+  });
+
+  save(); renderTagManagerList(); renderManga();
+}
+
+function deleteTagItem(tag) {
+  if (!confirm(`Remove "${tag}" from all manga?`)) return;
+  const field = tagManagerType === 'genres' ? 'genres' : 'tags';
+  manga.forEach(m => { if (m[field]) m[field] = m[field].filter(t => t !== tag); });
+  save();
+  if (tagManagerType === 'genres' && currentGenre === tag) currentGenre = null;
+  if (tagManagerType === 'tags' && currentTag === tag) currentTag = null;
+  renderTagManagerList(); renderManga();
+}
+
+// ── Detail Modal ──
+function openDetail(id) {
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  viewingId = id;
+  const body = document.getElementById('detailBody');
+
+  const coverHtml = m.cover
+    ? `<img src="${escHtml(m.cover)}" alt="${escHtml(m.title)}">`
+    : `<div class="detail-cover-placeholder">${(m.title || '?')[0]}</div>`;
+
+  const pubLabel = { ongoing: 'Ongoing', finished: 'Finished', hiatus: 'Hiatus', cancelled: 'Cancelled', unknown: 'Unknown' };
+  const pubClass = { ongoing: 'pub-ongoing', finished: 'pub-finished', hiatus: 'pub-hiatus', cancelled: 'pub-cancelled', unknown: '' };
+  const readLabel = { reading: 'Reading', read: 'Read', 'not-read': 'Not Read', dropped: 'Dropped' };
+
+  let badges = '';
+  if (m.demographic) badges += `<span class="badge demographic">${escHtml(m.demographic)}</span>`;
+  if (m.pubStatus && m.pubStatus !== 'unknown') badges += `<span class="badge ${pubClass[m.pubStatus] || ''}">${pubLabel[m.pubStatus] || m.pubStatus}</span>`;
+  badges += `<span class="badge reading-status ${m.readingStatus || 'not-read'}">${readLabel[m.readingStatus] || 'Not Read'}</span>`;
+
+  const ratingHtml = m.rating ? `<div class="detail-rating">${starsHtml(m.rating, '1rem')}</div>` : '';
+
+  const genreHtml = (m.genres || []).map(g => `<span class="detail-tag">${escHtml(g)}</span>`).join('');
+  const tagHtml = (m.tags || []).map(t => `<span class="detail-tag" style="background:var(--accent-light);color:var(--accent);">${escHtml(t)}</span>`).join('');
+
+  body.innerHTML = `
+    <div class="detail-top">
+      <div class="detail-cover">${coverHtml}</div>
+      <div class="detail-meta">
+        <h3>${escHtml(m.title || 'Untitled')}</h3>
+        <div class="author">${escHtml(m.author || 'Unknown')}</div>
+        <div class="detail-badges">${badges}</div>
+        ${ratingHtml}
+        ${m.volumes ? `<div class="detail-volumes">${escHtml(m.volumes)} volumes</div>` : ''}
+        <div class="detail-tags">${genreHtml}${tagHtml}</div>
+      </div>
+    </div>
+    ${m.synopsis ? `<div class="detail-section"><div class="detail-section-label">Synopsis</div><div class="detail-synopsis">${escHtml(m.synopsis)}</div></div>` : ''}
+    ${m.notes ? `<div class="detail-section"><div class="detail-section-label">Notes</div><div class="detail-synopsis" style="white-space:pre-wrap;">${escHtml(m.notes)}</div></div>` : ''}
+    ${m.dateAdded ? `<div class="detail-section"><div class="detail-section-label">Added</div><div style="font-size:0.8rem;color:var(--text-tertiary);">${m.dateAdded}</div></div>` : ''}
+  `;
+  document.getElementById('detailModal').classList.add('open');
+}
+
+function closeDetailModal() { document.getElementById('detailModal').classList.remove('open'); viewingId = null; }
+function editCurrentManga() { if (!viewingId) return; const id = viewingId; closeDetailModal(); openEditModal(id); }
+
+// ── Delete ──
+function confirmDelete() { document.getElementById('confirmOverlay').classList.add('open'); }
+function closeConfirm() { document.getElementById('confirmOverlay').classList.remove('open'); }
+function deleteManga() {
+  if (!viewingId) return;
+  manga = manga.filter(m => m.id !== viewingId);
+  save(); closeConfirm(); closeDetailModal(); renderManga();
+}
+
+// ── Export / Import ──
+function exportLibrary() {
+  const blob = new Blob([JSON.stringify(manga, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url;
+  a.download = `manga-library-${new Date().toISOString().split('T')[0]}.json`;
+  a.click(); URL.revokeObjectURL(url);
+}
+
+function importLibrary(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (!Array.isArray(imported)) throw new Error('Invalid');
+      const ids = new Set(manga.map(m => m.id));
+      let added = 0;
+      imported.forEach(m => { if (!ids.has(m.id)) { manga.push(m); added++; } });
+      save(); renderManga();
+      alert(`Imported ${added} new title${added !== 1 ? 's' : ''}. ${imported.length - added} already in library.`);
+    } catch(err) { alert('Could not read that file.'); }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+// ── Modal event handlers ──
+['addModal','detailModal','confirmOverlay','setupModal','tagManagerModal'].forEach(id => {
+  document.getElementById(id).addEventListener('click', function(e) {
+    if (e.target === this) {
+      if (id === 'addModal') closeAddModal();
+      else if (id === 'detailModal') closeDetailModal();
+      else if (id === 'confirmOverlay') closeConfirm();
+      else if (id === 'setupModal' && ghConfig) closeSetupModal();
+      else if (id === 'tagManagerModal') closeTagManager();
+    }
+  });
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (document.getElementById('confirmOverlay').classList.contains('open')) closeConfirm();
+    else if (document.getElementById('tagManagerModal').classList.contains('open')) closeTagManager();
+    else if (document.getElementById('setupModal').classList.contains('open') && ghConfig) closeSetupModal();
+    else if (document.getElementById('addModal').classList.contains('open')) closeAddModal();
+    else if (document.getElementById('detailModal').classList.contains('open')) closeDetailModal();
+  }
+});
+
+// ── Init ──
+async function init() {
+  if (loadConfig()) {
+    try {
+      showIndicator('loading library…');
+      await loadFromGitHub();
+      hideIndicator();
+      renderManga();
+    } catch(e) {
+      hideIndicator();
+      openSetupModal();
+    }
+  } else {
+    openSetupModal();
+  }
+  setReadingFilter('all');
+}
+
+init();
+</script>
+</body>
+</html>
