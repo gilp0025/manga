@@ -1078,8 +1078,8 @@
       "drama",
       "romance"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
+    "readingStatus": "read",
+    "rating": 5,
     "tags": [],
     "notes": "",
     "noteDate": null,
