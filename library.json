@@ -1301,7 +1301,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx114998-JTCzDczl8eBD.jpg",
     "synopsis": "In a parallel universe of Bungo Stray Dogs, Ryuunosuke Akutagawa’s desperate mission to save his younger sister leads to him being recruited by the armed detective agency! \n\n\n\n(Source: Yen Press)",
     "volumes": "4",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "drama",
@@ -1314,7 +1314,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "22"
   },
   {
     "id": "d629aaf4e3",
@@ -1323,7 +1324,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx111233-bQQV6KWMBXz4.jpg",
     "synopsis": "One sleepless night, Ko slips out to walk the streets. Life after dark is a revelation! When flirtatious Nazuna invites Ko to spend the night at her place in an abandoned building, he’s stoked! But then he awakens to kisses on his neck with a little too much bite to them... Is it just the delicious taste of his blood that makes her meet him night after night for late-night adventures, conversat…",
     "volumes": "20",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "comedy",
       "psychological",
@@ -1337,7 +1338,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "203"
   },
   {
     "id": "7b1fc01a41",
@@ -1363,7 +1365,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86778-yms0DmPwIXu9.jpg",
     "synopsis": "From Akane Shimizu, winner of Shounen Sirius' Rookie Award, comes an informative tale about anthropomorthized cells!\n\n\n\nStrep throat! Hay fever! Influenza! The world is a dangerous place for a red blood cell just trying to get her deliveries finished. Fortunately, she’s not alone…she’s got a whole human body’s worth of cells ready to help out! The mysterious white blood cell, the buff and brash…",
     "volumes": "6",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "comedy"
     ],
@@ -1373,7 +1375,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "30"
   },
   {
     "id": "68082676c2",
@@ -1382,7 +1385,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx105778-euxXZEIfDY2u.png",
     "synopsis": "The name says it all! Denji's life of poverty is changed forever when he merges with his pet chainsaw dog, Pochita! Now he's living in the big city and an official Devil Hunter. But he's got a lot to learn about his new job and chainsaw powers!\n\n\n\n(Source: MANGA Plus)\n\n\n\nNotes:\n\n- Nominated for the 2020 Manga Taisho Award.\n\n- Winner of the 2021 Kono Manga ga Sugoi Award.\n\n- Winner of the 66th S…",
     "volumes": "24",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "comedy",
@@ -1396,7 +1399,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "232"
   },
   {
     "id": "da656296ee",
@@ -1422,7 +1426,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx43245-Ied8R99LH3u6.jpg",
     "synopsis": "Chihaya is a girl in the sixth grade, still not old enough to even know the meaning of the word zeal. But one day, she meets Arata, a transfer student from rural Fukui prefecture. Though docile and quiet, he has an unexpected skill: his ability to play competitive karuta, a traditional Japanese card game.\n\n\n\nChihaya is struck by his obsession with the game, along with his ability to pick out th…",
     "volumes": "50",
-    "demographic": "",
+    "demographic": "josei",
     "genres": [
       "drama",
       "romance",
@@ -1434,7 +1438,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "248"
   },
   {
     "id": "3938fcc968",
@@ -1443,7 +1448,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31397-nk2SNXoSRwwF.jpg",
     "synopsis": "Chi is a mischievous newborn kitten who, while on a leisurely stroll with her family, finds herself lost. Separated from the warmth and protection of her mother, she feels distraught. Overcome with loneliness, she breaks into tears in a large urban park meadow, when she is suddenly rescued by a young boy named Yohei and his mother. The kitty is then quickly and quietly whisked away into the war…",
     "volumes": "12",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "comedy",
       "slice of life"
@@ -1454,7 +1459,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "220"
   },
   {
     "id": "2a77c78fb3",
@@ -1463,7 +1469,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30107-UAERGstOOuAh.jpg",
     "synopsis": "After moving from the countryside into the big city, poor college student Hideki Motosuwa finds himself down on his luck. All he wants is a good job, a girlfriend, and his very own “persocom” - the latest and greatest in humanoid computer technology. Hideki’s luck changes one night when he finds Chi - an adorable, but seemingly broken, persocom thrown out in a pile of trash. After taking her ho…",
     "volumes": "8",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "comedy",
       "ecchi",
@@ -1477,7 +1483,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "88"
   },
   {
     "id": "0fd9cb147d",
@@ -1486,7 +1493,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30338-6kT4oaJOLLK7.png",
     "synopsis": "America in the Roaring 20s. On the surface, it's a positive, peaceful time after the violence of the Great War. But lurking in the shadows is a dark element ready to snatch that peace away. Sister Rosette Christopher, an exorcist working as a part of the Magdala Order, has a duty to fight the demons which appear and cause destruction. But along with her companion Chrono, she usually ends up cau…",
     "volumes": "8",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "romance",
@@ -1498,7 +1505,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "59"
   },
   {
     "id": "dd201283fd",
@@ -1507,7 +1515,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx109538-1itoyVTCCvBs.jpg",
     "synopsis": "Haruka is a “plain jane” who left the countryside to start her college life in Tokyo. She’s secretly in love with Kurotaki, a coworker at her part-time job, but she lacks the self-confidence to confess her feelings to him. Then she meets Hikaru, a glamorous but sharp-tongued fashionista who begrudgingly agrees to play “fairy godmother” for Haruka and help her learn to love and value herself in …",
     "volumes": "8",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "romance",
       "slice of life"
@@ -1518,7 +1526,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "32"
   },
   {
     "id": "809949c300",
@@ -1527,7 +1536,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx32598-vVzF2p1UEubd.png",
     "synopsis": "Okazaki Tomoya is a delinquent who finds life dull and believes he'll never amount to anything. Along with his friend Sunohara, he skips school and plans to waste his high school days away.\n\n\nOne day while walking to school, Tomoya passes a young girl muttering quietly to herself. Without warning she exclaims \"Anpan!\" (a popular Japanese food) which catches Tomoya's attention. He soon discovers…",
     "volumes": "8",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "drama",
       "romance"
@@ -1538,7 +1547,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "45"
   },
   {
     "id": "2c0d42b895",
@@ -1547,7 +1557,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31183-XPsJ8LkOF3mD.jpg",
     "synopsis": "Cross Game is a moving drama that is heartfelt and true, yet in the brilliant hands of manga artist Mitsuru Adachi, delightfully flows with a light and amusing touch. The series centers around a boy named Ko, the family of four sisters who live down the street and the game of baseball. This poignant coming-of-age story will change your perception of what shonen manga can be.\n\n\n\n(Source: VIZ Media)",
     "volumes": "17",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "comedy",
       "drama",
@@ -1560,7 +1570,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "170"
   },
   {
     "id": "0912096518",
@@ -1569,7 +1580,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30024-UUUz8xxkt8pc.jpg",
     "synopsis": "A born exorcist, Walker's primary anti-akuma weapon is the cross that's embossed on his red, disfigured left hand, which contains Innocence. But not only does Walker destroy akuma, he sees the akuma hiding inside a person's soul! Together with his fellow exorcists fighting under the command of the Black Order, Walker leads the battle against the Millennium Earl, the evil being out to destroy ma…",
     "volumes": "",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "adventure",
@@ -1590,7 +1601,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx86317-zlMHxrOQwNq5.jpg",
     "synopsis": "Michiko is an unemployed 30-year-old. She has just broken up with a younger boyfriend whom she supported financially until she drained all of her savings. Michiko then has a chance meeting with a former boss she used to dislike.\n\n(Source: Anime News Network)\n\n\n\nNote: Includes four bonus chapters.",
     "volumes": "10",
-    "demographic": "",
+    "demographic": "josei",
     "genres": [
       "comedy",
       "drama",
@@ -1602,7 +1613,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "44"
   },
   {
     "id": "20232be273",
@@ -1611,7 +1623,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx99857-82QVyIpit4Is.jpg",
     "synopsis": "Good-for-nothing Shibata Michiko is back! And with her back are her never-ending troubles. Will she be able to stand on her own feet this time around or will she have to keep on relying on her Shuunin (literally supervisor in the workplace), Kurosawa Ayumu, to get her out of her misery? Hop on board to take a ride for a fun and romantic journey with a woman too good for her own idiocy and a man…",
     "volumes": "6",
-    "demographic": "",
+    "demographic": "josei",
     "genres": [
       "comedy",
       "drama",
@@ -1623,7 +1635,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "24"
   },
   {
     "id": "5eeec20c3f",
@@ -1632,7 +1645,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx132029-prGF4gePdSKv.jpg",
     "synopsis": "Momo Ayase strikes up an unusual friendship with her school’s UFO fanatic, whom she nicknames “Okarun” because he has a name that is not to be said aloud. While Momo believes in spirits, she thinks aliens are nothing but nonsense. Her new friend, meanwhile, thinks the exact opposite. To settle matters, the two set out to prove each other wrong—Momo to a UFO hotspot and Okarun to a haunted tunne…",
     "volumes": "",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "comedy",
@@ -1656,7 +1669,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31016-ifJ4ZS8RWd1o.jpg",
     "synopsis": "Ten years ago, the mysterious Hell&rsquo;s Gate suddenly materialized in the middle of Tokyo, and the stars of the night sky were obscured in darkness. In their place, new stars emerged, each corresponding to an individual endowed with supernatural abilities. Devoid of emotion and conscience, these powerful killers have come to be known as Contractors.\n\n\nBut most people know nothing of the Cont…",
     "volumes": "2",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "action",
       "drama",
@@ -1670,7 +1683,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "9"
   },
   {
     "id": "d3a968a3e5",
@@ -1679,7 +1693,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx57231-EBobSNzMi3iV.jpg",
     "synopsis": "After arriving in Tokyo to live with her uncle, Suzume collapses in a nearby park where she had once seen a shooting star during the day. A handsome stranger brings her to her new home and tells her they’ll meet again. Suzume starts her first day at her new high school sitting next to a boy who blushes furiously at her touch. And her homeroom teacher is none other than the handsome stranger!\n\n\n…",
     "volumes": "12",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "comedy",
       "drama",
@@ -1692,7 +1706,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "86"
   },
   {
     "id": "2e50eee67c",
@@ -1701,7 +1716,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx85316-EGrSrwSMeOxd.jpg",
     "synopsis": "The Japan Self-Defense Forces are still looking for a way to combat the alien threat, but so far conventional weapons have had no effect. Maybe it’s time to try something unconventional.\n\n\n\nMeanwhile, Kadode Koyama and her best friend avidly track the aliens’ movements on social media and less enthusiastically study for college entrance exams. When the end of the world looms overhead, you learn…",
     "volumes": "12",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "comedy",
       "drama",
@@ -1714,7 +1729,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "101"
   },
   {
     "id": "ef47413d61",
