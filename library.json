@@ -148,25 +148,28 @@
     "titleRomaji": "86: Eighty Six"
   },
   {
-    "id": "de90a0423e",
     "title": "A Condition Called Love",
     "author": "Megumi Morino",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx101700-Qut7CCYTPF1F.jpg",
     "synopsis": "Hotaru is a 16-year-old high school first-year who has always been ambivalent about love, preferring instead to have a lively life with her family and friends. So when she sees her schoolmate, Hananoi-kun, sitting in the snow after a messy, public breakup, she thinks nothing of offering to share her umbrella. But when he asks her out in the middle of her classroom the next day, she can’t help b…",
     "volumes": "19",
-    "demographic": "shoujo",
+    "chapters": "78",
+    "demographic": "shojo",
+    "pubStatus": "finished",
+    "readingStatus": "read",
+    "rating": 3,
     "genres": [
       "drama",
       "romance"
     ],
-    "readingStatus": "read",
-    "rating": 3,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "de90a0423e",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "78",
+    "readStart": "",
+    "readFinish": "",
     "titleRomaji": "Hananoi-kun to Koi no Yamai"
   },
   {
