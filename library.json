@@ -5011,26 +5011,31 @@
     "chapters": "109"
   },
   {
-    "id": "308442ced7",
     "title": "One Piece",
     "author": "Eiichirou Oda",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30013-BeslEMqiPhlk.jpg",
     "synopsis": "As a child, Monkey D. Luffy was inspired to become a pirate by listening to the tales of the buccaneer \"Red-Haired\" Shanks. But his life changed when Luffy accidentally ate the Gum-Gum Devil Fruit and gained the power to stretch like rubber...at the cost of never being able to swim again! Years later, still vowing to become the king of the pirates, Luffy sets out on his adventure...one guy alon…",
     "volumes": "",
-    "demographic": "shounen",
+    "chapters": "",
+    "demographic": "shonen",
+    "pubStatus": "ongoing",
+    "readingStatus": "not-read",
+    "rating": 3,
     "genres": [
       "action",
       "adventure",
       "comedy",
       "fantasy"
     ],
-    "readingStatus": "not-read",
-    "rating": 3,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "308442ced7",
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "d5540335ad",
