@@ -6078,14 +6078,15 @@
       "comedy",
       "supernatural"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
+    "readingStatus": "reading",
+    "rating": 3,
     "tags": [],
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "finished",
-    "chapters": "288"
+    "chapters": "288",
+    "reread": true
   },
   {
     "id": "5a45105efe",
