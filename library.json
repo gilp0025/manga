@@ -27,7 +27,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31224-dxugU08jahRT.jpg",
     "synopsis": "Rei Kiriyama is a child prodigy. Rei Kiriyama is also an orphan who lives alone in an empty apartment. Rei Kiriyama is a teen working in an adult's world. Life is complicated for Rei. He's an up-and-coming shogi player on the verge of turning pro, but he has no homelife, or much of a life period, outside his board game, but thankfully with the help of some life-long friends he has an opportunit…",
     "volumes": "",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "drama",
       "slice of life"
@@ -38,7 +38,7 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "hiatus"
+    "pubStatus": "ongoing"
   },
   {
     "title": "365 Days to the Wedding",
@@ -46,8 +46,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx116401-PdVZJ3G432Qj.png",
     "synopsis": "Takuya and Rika are coworkers in a travel agency in Tokyo. They’re both single, but they don’t mind, since they’re introverts with fulfilling lives at home. Unfortunately, now their job is looking to staff an office in Siberia, and non-married employees are the first to be considered. Rika is desperate to avoid the transfer and goes to Takuya with an idea: if they pretend they’re getting marrie…",
     "volumes": "11",
-    "demographic": "",
-    "pubStatus": "unknown",
+    "demographic": "seinen",
+    "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 0,
     "genres": [
@@ -57,7 +57,8 @@
     "tags": [],
     "notes": "",
     "id": "9e69864198",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "chapters": "110"
   },
   {
     "title": "5 Centimeters Per Second",
@@ -65,8 +66,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/23419.jpg",
     "synopsis": "Remember a time before cell phones could be found in every pocket? Or when even accessing the world wide web was something only readily available in a library? Back then letters still filled up postboxes and moments just felt so much more precious when captured on Polaroid film. Now life seems to move at the speed of light. Our memories are captured and shared with the world on social media pla…",
     "volumes": "2",
-    "demographic": "",
-    "pubStatus": "unknown",
+    "demographic": "seinen",
+    "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 0,
     "genres": [
@@ -76,7 +77,8 @@
     "tags": [],
     "notes": "",
     "id": "43c517c711",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "chapters": "11"
   },
   {
     "id": "bd37a21625",
@@ -85,7 +87,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31075-0sTogC04TmSi.jpg",
     "synopsis": "Scientists had predicted this disaster, and in response, the leaders of every country met to develop a plan for human survival before the meteor hit. The Seven Seeds project was developed out of this meeting. Each country froze a number of young healthy people, which allowed them to survive the meteor. After the computer determined that Earth was once again safe for human life, it released them…",
     "volumes": "35",
-    "demographic": "",
+    "demographic": "josei",
     "genres": [
       "adventure",
       "drama",
@@ -101,7 +103,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "178"
   },
   {
     "title": "86 - EIGHTY-SIX",
@@ -109,8 +112,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx101606-3lMiy9HQjBgv.jpg",
     "synopsis": "A War Without Casualties:\n\n\n\nThe Republic of San Magnolia has long been under attack from the neighboring Giadian Empire's army of unmanned drones known as the Legion. After years of painstaking research, the Republic finally developed autonomous drones of their own, turning the one-sided struggle into a war without casualties-or at least, that's what the government claims.\n\n\nIn truth, there is…",
     "volumes": "3",
-    "demographic": "",
-    "pubStatus": "unknown",
+    "demographic": "seinen",
+    "pubStatus": "cancelled",
     "readingStatus": "reading",
     "rating": 0,
     "genres": [
@@ -122,7 +125,8 @@
     "tags": [],
     "notes": "",
     "id": "add7b776ea",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "chapters": "20"
   },
   {
     "id": "de90a0423e",
@@ -131,7 +135,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx101700-Qut7CCYTPF1F.jpg",
     "synopsis": "Hotaru is a 16-year-old high school first-year who has always been ambivalent about love, preferring instead to have a lively life with her family and friends. So when she sees her schoolmate, Hananoi-kun, sitting in the snow after a messy, public breakup, she thinks nothing of offering to share her umbrella. But when he asks her out in the middle of her classroom the next day, she can’t help b…",
     "volumes": "19",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "drama",
       "romance"
@@ -142,7 +146,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "78"
   },
   {
     "id": "175f9e793a",
@@ -151,7 +156,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx112024-tz9XJLAlrXgr.jpg",
     "synopsis": "The story of a boy meeting his real parents for the first time and a girl trying to escape an arranged marriage.",
     "volumes": "",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "comedy",
       "romance"
@@ -162,7 +167,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "1"
   },
   {
     "title": "A Kiss with a Cat",
@@ -170,8 +176,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx122739-QwcI4OU04dpp.jpg",
     "synopsis": "Erina loves cats more than anything, even though she looks like the haughty-princess type who could have any guy she wants. But even with his cat-like name, she can't stand her aloof classmate, Nekoyama-kun. But when she rescues a hurt kitty in her yard and gives it a perfect, snuggly kiss...she suddenly finds a very human Nekoyama-kun in her room? What gives?!\n\n\n\n(Source: Kodansha USA)",
     "volumes": "6",
-    "demographic": "",
-    "pubStatus": "unknown",
+    "demographic": "shoujo",
+    "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 0,
     "genres": [
@@ -182,7 +188,8 @@
     "tags": [],
     "notes": "",
     "id": "ded94de6f9",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "chapters": "24"
   },
   {
     "id": "981d914ef4",
@@ -191,7 +198,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx111189-tvPJRVj5nGic.png",
     "synopsis": "Yuki is a typical college student, whose world revolves around her friends, social media, and the latest sales. But when a chance encounter on a train leads to her meeting friend-of-a-friend and fellow student Itsuomi-san, her world starts to widen. But even though Itsuomi-kun can speak three languages, sign language isn’t one of them. Can the two learn to communicate the budding feelings betwe…",
     "volumes": "",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "romance",
       "slice of life"
@@ -210,8 +217,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx85135-11OOnyaqV71k.png",
     "synopsis": "Based on a one-shot that won the 80th Weekly Shounen Magazine Newbie Best Mangaka Award.\n\n\nShouya is a bully. When Shouko, a girl who can't hear, enters his elementary school class, she becomes their favorite target, and Shouya and his friends goad each other into devising new tortures for her. But the children's cruelty goes too far. Shouko is forced to leave the school, and Shouya ends up sho…",
     "volumes": "7",
-    "demographic": "",
-    "pubStatus": "unknown",
+    "demographic": "shounen",
+    "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 0,
     "genres": [
@@ -222,7 +229,8 @@
     "tags": [],
     "notes": "",
     "id": "c187028b0b",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "chapters": "64"
   },
   {
     "id": "c3aedfd213",
@@ -231,7 +239,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx40884-L9caSaZHxWFG.png",
     "synopsis": "Eijun Sawamura had his heart set on the middle-school national baseball championships. But his team is eliminated thanks to a wild pitch thrown by Eijun himself. He’s planning to go to high school with his teammates and try again next year when he’s scouted by the famous Seido High School baseball team. When he goes for a campus visit, he finds himself on the receiving end of a baptism by fire!…",
     "volumes": "47",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "sports"
     ],
@@ -241,7 +249,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "418"
   },
   {
     "id": "b0b5d604c5",
@@ -250,7 +259,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx59799-qo8ry26p5rtV.png",
     "synopsis": "This is the story of two of the greatest military commanders in history: the Roman Publius Cornelius Scipio and the Carthaginian Hannibal. The story follows the two of them from their early life on. Hannibal is initially shown as a strangely silent infant, who seemed like the gods forgot to put a soul in his little body. However, he soon begins to speak in a way that shows his remarkable abilit…",
     "volumes": "13",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "action",
       "adventure",
@@ -263,7 +272,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "81"
   },
   {
     "id": "7947d9eecb",
@@ -280,7 +290,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "10"
   },
   {
     "title": "After the Rain",
@@ -288,8 +299,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86639-ox749qrCTq7K.jpg",
     "synopsis": "Akira Tachibana. 17 years old, high school junior. Akira, awkward when it comes to expressing her feelings, finds herself secretly falling for the manager of the family restaurant where she works, one Masami Kondo, age 45. The curtain rises on the small love story that begins to unfold between Akira, stuck standing on the crossroads of adolescence, and Kondo, at the turning point of his own lif…",
     "volumes": "10",
-    "demographic": "",
-    "pubStatus": "unknown",
+    "demographic": "seinen",
+    "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 0,
     "genres": [
@@ -300,7 +311,8 @@
     "tags": [],
     "notes": "",
     "id": "6415f350d9",
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "chapters": "83"
   },
   {
     "id": "91dcf0e784",
@@ -309,7 +321,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx108649-JhGE2r3eCiCp.jpg",
     "synopsis": "Ririka Kirise’s a style-savvy high school girl who’s struggling to keep up in her chemistry class. Looking for some extra help, she opens the door to her teacher’s office—breaking his magic barrier in the process! Unbeknownst to Ririka, Renji is actually a sorcerer…and Ririka has the makings of a sorceress herself. Before she knows it, she’s wrapped up in the world of witchcraft as Renji’s appr…",
     "volumes": "3",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "action",
       "ecchi",
@@ -322,7 +334,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "23"
   },
   {
     "id": "41ab7b132b",
@@ -331,7 +344,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx98686-2WuFxpMS10RZ.png",
     "synopsis": "Super quiet Aharen Reina isn’t great with personal space—she’s either inches from your face or too far to hear, leaving people totally baffled. But when Raido, the friendly guy seated next to her, helps retrieve a dropped eraser, Aharen suddenly wants to get closer to him. From that moment on, she’s constantly by his side. And surprisingly…he’s cool with it.\n\n\n\nThis offbeat, sweet-natured rom-c…",
     "volumes": "17",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "comedy",
       "romance",
@@ -343,7 +356,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "167"
   },
   {
     "title": "AIR",
@@ -351,8 +365,8 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b31604-dHOps27OpPIk.jpg",
     "synopsis": "Yukito Kunisaki is a man traveling Japan in search of the \"girl in the sky\". Eventually he makes his way to a sleepy seaside town where he meets a strange girl named Misuzu Kamio who has dreams of flying in the sky. During his stay in the town, Yukito meets other unique people and begins to learn more about Misuzu and the town she lives in. \n\n(Source: AnimeCouncil&sup2;)",
     "volumes": "2",
-    "chapters": "",
-    "demographic": "",
+    "chapters": "17",
+    "demographic": "shounen",
     "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 0,
@@ -374,7 +388,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx55132-bhKk5JoXcvdA.jpg",
     "synopsis": "Teenage country bumpkin Tatsumi dreams of earning enough money for his impoverished village by working in the Capital--but his short-lived plans go awry when he's robbed by a buxom beauty upon arrival! Penniless, Tatsumi is taken in by the lovely Miss Aria, but just when his Capital dreams seem in reach yet again, Miss Aria's mansion is besieged by Night Raid--a team of ruthless assassins who t…",
     "volumes": "15",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "adventure",
@@ -388,7 +402,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "80"
   },
   {
     "id": "7b3abf121b",
@@ -397,7 +412,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx51525-wZ1AjkbXrKns.png",
     "synopsis": "A red-haired princess loses her family and her kingdom—now she must rise and fight for her throne!\n\n\n\nPrincess Yona lives an ideal life as the only princess of her kingdom. Doted on by her father, the king, and protected by her faithful guard Hak, she cherishes the time spent with the man she loves, Su-won. But everything changes on her 16th birthday when tragedy strikes her family!\n\n\n\nYona ree…",
     "volumes": "48",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "action",
       "adventure",
@@ -411,7 +426,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "295"
   },
   {
     "id": "a7b0486f0b",
