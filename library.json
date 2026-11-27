@@ -4512,25 +4512,29 @@
     "chapters": "119"
   },
   {
-    "id": "db4a82b587",
     "title": "My Hero Academia",
     "author": "Anri Takahashi",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx97154-F7eF8hnjAPNI.jpg",
     "synopsis": "Prose short stories featuring the everyday school lives of My Hero Academia’s fan-favorite characters.\n\n\n\nThe U.A. High School hero course teaches young hopefuls everything they need to become heroes. Between killer events like the sports festival and internships, there’s even parents’ day! That’s when all the kids get the chance to show their parents what they’re made of!\n\n\n\n(Source: VIZ Media)",
     "volumes": "6",
-    "demographic": "",
+    "chapters": "41",
+    "demographic": "shonen",
+    "pubStatus": "finished",
+    "readingStatus": "reading",
+    "rating": 3,
     "genres": [
       "action",
       "comedy"
     ],
-    "readingStatus": "reading",
-    "rating": 3,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "db4a82b587",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "41"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "0f012abb2e",
