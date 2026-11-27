@@ -944,34 +944,239 @@ body {
 /* Reading dates in detail modal */
 .detail-dates {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 0.3rem;
+  flex-wrap: wrap;
 }
 
 .detail-dates .date-field {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .detail-dates .date-label {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 
-.detail-dates input[type="date"] {
+.detail-dates select {
   font-size: 0.8rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem 0.4rem;
   border: 1px solid var(--border-light);
   border-radius: 4px;
   background: var(--surface);
   color: var(--text);
   outline: none;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
 }
 
-.detail-dates input[type="date"]:focus {
+.detail-dates select:focus {
   border-color: var(--accent);
+}
+
+.reread-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.reread-row label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.reread-row input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+/* Alphabet bar */
+.alpha-bar {
+  padding: 0 2rem 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.alpha-bar button {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  transition: all 0.1s;
+  line-height: 1;
+}
+
+.alpha-bar button:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.alpha-bar button.active {
+  color: var(--accent);
+  background: var(--accent-light);
+  font-weight: 600;
+}
+
+.alpha-bar button.disabled {
+  color: var(--border);
+  cursor: default;
+}
+
+/* Collapsible sidebar sections */
+.sidebar-heading.collapsible {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sidebar-heading .collapse-arrow {
+  font-size: 0.65rem;
+  transition: transform 0.15s;
+  color: var(--text-tertiary);
+}
+
+.sidebar-heading.collapsed .collapse-arrow {
+  transform: rotate(-90deg);
+}
+
+.sidebar-section-items.collapsed {
+  display: none;
+}
+
+/* Bulk tag mode */
+.bulk-bar {
+  padding: 0.5rem 2rem;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.bulk-bar input {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  min-width: 180px;
+}
+
+.bulk-bar button {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+}
+
+.bulk-bar .bulk-apply {
+  background: var(--accent);
+  color: #fff;
+}
+
+.bulk-bar .bulk-remove {
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.bulk-bar .bulk-cancel {
+  background: var(--surface);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.bulk-bar .bulk-count {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.manga-card.bulk-mode {
+  cursor: pointer;
+}
+
+.manga-card.bulk-selected {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  background: var(--accent-light);
+}
+
+.bulk-check {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: transparent;
+}
+
+.manga-card.bulk-selected .bulk-check {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Autocomplete dropdown for tag/theme inputs */
+.autocomplete-wrap {
+  position: relative;
+}
+
+.autocomplete-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 130px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+}
+
+.autocomplete-list.open { display: block; }
+
+.autocomplete-item {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background: var(--accent-light);
+  color: var(--accent);
 }
 
 .detail-tags {
@@ -1134,6 +1339,8 @@ body {
     gap: 0 1.5rem;
   }
   .sidebar-section { margin-bottom: 0.5rem; }
+  .alpha-bar { padding: 0 1rem 0.5rem; }
+  .bulk-bar { padding: 0.5rem 1rem; flex-wrap: wrap; }
 }
 
 /* Save indicator */
@@ -1256,6 +1463,15 @@ body {
         <option value="status">by reading status</option>
       </select>
       <button class="add-btn" onclick="openAddModal()">+ add manga</button>
+      <button class="icon-btn" id="bulkTagBtn" onclick="toggleBulkMode()" title="Bulk add/remove tags">bulk tag</button>
+    </div>
+    <div class="alpha-bar" id="alphaBar"></div>
+    <div class="bulk-bar" id="bulkBar" style="display:none;">
+      <span><span class="bulk-count" id="bulkCount">0</span> selected</span>
+      <input type="text" id="bulkTagInput" placeholder="Tag name…">
+      <button class="bulk-apply" onclick="applyBulkTag()">Add tag</button>
+      <button class="bulk-remove" onclick="removeBulkTag()">Remove tag</button>
+      <button class="bulk-cancel" onclick="toggleBulkMode()">Cancel</button>
     </div>
     <div class="manga-grid" id="mangaGrid"></div>
   </div>
@@ -1315,8 +1531,8 @@ body {
           <label class="form-label">Demographic</label>
           <select class="form-select" id="mangaDemographic">
             <option value="">—</option>
-            <option value="shonen">Shonen</option>
-            <option value="shojo">Shojo</option>
+            <option value="shounen">Shounen</option>
+            <option value="shoujo">Shoujo</option>
             <option value="seinen">Seinen</option>
             <option value="josei">Josei</option>
           </select>
@@ -1372,6 +1588,16 @@ body {
             <input type="text" class="tags-input" id="tagsInput" placeholder="e.g. lgbtq+, mental health…" onkeydown="handleTagKey(event,'tags')" oninput="showTagSuggestions('tags')" autocomplete="off">
           </div>
           <div class="tag-suggestions" id="tagsSuggestions"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex:1;">
+          <label class="form-label">Themes (press enter to add)</label>
+          <div class="tags-input-wrap" id="themesWrap" onclick="document.getElementById('themesInput').focus()">
+            <input type="text" class="tags-input" id="themesInput" placeholder="e.g. school life, office workers…" onkeydown="handleTagKey(event,'themes')" oninput="showTagSuggestions('themes')" autocomplete="off">
+          </div>
+          <div class="tag-suggestions" id="themesSuggestions"></div>
         </div>
       </div>
 
@@ -1530,9 +1756,15 @@ let editingId = null;
 let viewingId = null;
 let currentGenres = [];
 let currentTags = [];
+let currentThemes = [];
 let currentRating = 0;
 let saveTimeout = null;
-let tagManagerType = 'tags'; // 'tags' or 'genres'
+let tagManagerType = 'tags'; // 'tags', 'genres', or 'themes'
+let currentAlphaFilter = null;
+let currentThemeFilter = null;
+let bulkMode = false;
+let bulkSelected = new Set();
+let sidebarCollapsed = { demographic: false, representation: false };
 
 // ── GitHub Storage ──
 function loadConfig() {
@@ -1599,6 +1831,9 @@ async function loadFromGitHub() {
       delete m.publicationStatus;
     }
     if (!m.pubStatus) m.pubStatus = 'unknown';
+    // Normalize demographic spelling
+    if (m.demographic === 'shonen') m.demographic = 'shounen';
+    if (m.demographic === 'shojo') m.demographic = 'shoujo';
   });
 }
 
@@ -1693,7 +1928,11 @@ async function lookupManga() {
       // Extract demographic from AniList tags (category: "Demographic")
       let demographic = '';
       const demoTag = (m.tags || []).find(t => (t.category || '').toLowerCase() === 'demographic' && !t.isMediaSpoiler);
-      if (demoTag) demographic = demoTag.name.toLowerCase();
+      if (demoTag) {
+        demographic = demoTag.name.toLowerCase();
+        if (demographic === 'shonen') demographic = 'shounen';
+        if (demographic === 'shojo') demographic = 'shoujo';
+      }
 
       // Clean synopsis (remove HTML tags)
       let synopsis = (m.description || '').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
@@ -1786,7 +2025,14 @@ function renderManga() {
     if (currentDemographic && m.demographic !== currentDemographic) return false;
     if (currentGenre && !(m.genres || []).includes(currentGenre)) return false;
     if (currentTag && !(m.tags || []).includes(currentTag)) return false;
+    if (currentThemeFilter && !(m.themes || []).includes(currentThemeFilter)) return false;
     if (currentPubStatus && m.pubStatus !== currentPubStatus) return false;
+    if (currentAlphaFilter) {
+      const firstChar = (m.title || '')[0]?.toUpperCase();
+      if (currentAlphaFilter === '#') {
+        if (firstChar && firstChar >= 'A' && firstChar <= 'Z') return false;
+      } else if (firstChar !== currentAlphaFilter) return false;
+    }
     if (currentRepFilter) {
       if (currentRepFilter === 'lgbtq' && (!m.lgbtq || !m.lgbtq.length)) return false;
       if (currentRepFilter === 'disability' && (!m.disability || !m.disability.length)) return false;
@@ -1794,7 +2040,7 @@ function renderManga() {
       if (currentRepFilter.startsWith('disability:') && (!m.disability || !m.disability.includes(currentRepFilter.split(':')[1]))) return false;
     }
     if (query) {
-      const searchable = [m.title, m.author, ...(m.genres || []), ...(m.tags || []), m.demographic || '', ...(m.lgbtq || []), ...(m.disability || [])].join(' ').toLowerCase();
+      const searchable = [m.title, m.author, ...(m.genres || []), ...(m.tags || []), ...(m.themes || []), m.demographic || '', ...(m.lgbtq || []), ...(m.disability || [])].join(' ').toLowerCase();
       return searchable.includes(query);
     }
     return true;
@@ -1820,6 +2066,7 @@ function renderManga() {
 
   document.getElementById('mangaCount').textContent = manga.length === 0 ? '' : `${manga.length} titles`;
   renderSidebar();
+  renderAlphaBar();
 
   if (filtered.length === 0) {
     grid.innerHTML = manga.length === 0
@@ -1851,6 +2098,9 @@ function renderManga() {
     if (m.disability && m.disability.length) repParts.push(...m.disability.map(v => escHtml(v)));
     const repLine = repParts.length ? `<div class="manga-info-line"><span class="info-label">Representation:</span> ${repParts.join(', ')}</div>` : '';
 
+    // Theme line
+    const themeLine = (m.themes || []).length ? `<div class="manga-info-line"><span class="info-label">Theme:</span> ${(m.themes || []).map(t => escHtml(t)).join(', ')}</div>` : '';
+
     // Synopsis preview (2 lines truncated)
     const synopsisPreview = m.synopsis ? `<div class="manga-synopsis-preview">${escHtml(m.synopsis)}</div>` : '';
 
@@ -1867,7 +2117,12 @@ function renderManga() {
     ];
     const dropdownHtml = `<select class="status-dropdown ${stClass}" onclick="event.stopPropagation()" onchange="event.stopPropagation();quickStatus('${m.id}',this.value)">${statusOptions.map(o => `<option value="${o.val}"${m.readingStatus === o.val ? ' selected' : ''}>${o.label}</option>`).join('')}</select>`;
 
-    return `<div class="manga-card" onclick="openDetail('${m.id}')">
+    const bulkClass = bulkMode ? ' bulk-mode' + (bulkSelected.has(m.id) ? ' bulk-selected' : '') : '';
+    const cardClick = bulkMode ? `toggleBulkSelect('${m.id}')` : `openDetail('${m.id}')`;
+    const bulkCheckHtml = bulkMode ? '<div class="bulk-check">✓</div>' : '';
+
+    return `<div class="manga-card${bulkClass}" onclick="${cardClick}">
+      ${bulkCheckHtml}
       <div class="manga-card-left">
         <div class="manga-cover-wrap">
           ${coverHtml}
@@ -1881,6 +2136,7 @@ function renderManga() {
         ${demoLine}
         ${countLine}
         ${genreText}
+        ${themeLine}
         ${repLine}
         <div class="manga-card-footer">
           ${dropdownHtml}
@@ -1902,7 +2158,7 @@ function renderSidebar() {
 
   html += '<div class="sidebar-section"><div class="sidebar-heading">Shelves</div>';
   for (const [key, label] of Object.entries(readLabels)) {
-    const active = currentReadingFilter === key && !currentDemographic && !currentGenre && !currentTag && !currentPubStatus && !currentRepFilter ? ' active' : '';
+    const active = currentReadingFilter === key && !currentDemographic && !currentGenre && !currentTag && !currentPubStatus && !currentRepFilter && !currentThemeFilter && !currentAlphaFilter ? ' active' : '';
     html += `<div class="sidebar-item${active}" onclick="clearFilters();setReadingFilter('${key}')"><span class="sidebar-item-name">${label}</span><span class="sidebar-item-count">${readCounts[key]}</span></div>`;
   }
   html += '</div>';
@@ -1925,17 +2181,19 @@ function renderSidebar() {
   // Demographic counts
   const demCounts = {};
   manga.forEach(m => { if (m.demographic) demCounts[m.demographic] = (demCounts[m.demographic] || 0) + 1; });
-  const demOrder = ['shonen', 'shojo', 'seinen', 'josei'];
-  const demLabels = { shonen: 'Shonen', shojo: 'Shojo', seinen: 'Seinen', josei: 'Josei' };
+  const demOrder = ['shounen', 'shoujo', 'seinen', 'josei'];
+  const demLabels = { shounen: 'Shounen', shoujo: 'Shoujo', seinen: 'Seinen', josei: 'Josei' };
   const demKeys = demOrder.filter(k => demCounts[k]);
 
   if (demKeys.length > 0) {
-    html += '<div class="sidebar-section"><div class="sidebar-heading">Demographic</div>';
+    const demCollapsed = sidebarCollapsed.demographic;
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (demCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'demographic\')"><span>Demographic</span><span class="collapse-arrow">▼</span></div>';
+    html += '<div class="sidebar-section-items' + (demCollapsed ? ' collapsed' : '') + '">';
     demKeys.forEach(key => {
       const active = currentDemographic === key ? ' active' : '';
       html += `<div class="sidebar-item${active}" onclick="toggleDemographic('${key}')"><span class="sidebar-item-name">${demLabels[key]}</span><span class="sidebar-item-count">${demCounts[key]}</span></div>`;
     });
-    html += '</div>';
+    html += '</div></div>';
   }
 
   // Genre counts
@@ -1966,16 +2224,31 @@ function renderSidebar() {
     html += '</div>';
   }
 
-  // Representation section
+  // Theme counts
+  const themeCounts = {};
+  manga.forEach(m => { (m.themes || []).forEach(t => { themeCounts[t] = (themeCounts[t] || 0) + 1; }); });
+  const sortedThemes = Object.keys(themeCounts).sort((a, b) => a.localeCompare(b));
+
+  if (sortedThemes.length > 0) {
+    html += '<div class="sidebar-section"><div class="sidebar-heading"><span>Themes</span><span class="sidebar-edit" onclick="openTagManager(\'themes\')">edit</span></div>';
+    sortedThemes.forEach(t => {
+      const active = currentThemeFilter === t ? ' active' : '';
+      html += `<div class="sidebar-item${active}" onclick="toggleTheme('${t.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(t)}</span><span class="sidebar-item-count">${themeCounts[t]}</span></div>`;
+    });
+    html += '</div>';
+  }
+
+  // Representation section (collapsible)
   const lgbtqCount = manga.filter(m => m.lgbtq && m.lgbtq.length).length;
   const disabilityCount = manga.filter(m => m.disability && m.disability.length).length;
 
   if (lgbtqCount > 0 || disabilityCount > 0) {
-    html += '<div class="sidebar-section"><div class="sidebar-heading">Representation</div>';
+    const repCollapsed = sidebarCollapsed.representation;
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (repCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'representation\')"><span>Representation</span><span class="collapse-arrow">▼</span></div>';
+    html += '<div class="sidebar-section-items' + (repCollapsed ? ' collapsed' : '') + '">';
     if (lgbtqCount > 0) {
       const active = currentRepFilter === 'lgbtq' ? ' active' : '';
       html += `<div class="sidebar-item${active}" onclick="toggleRep('lgbtq')"><span class="sidebar-item-name">LGBTQ+</span><span class="sidebar-item-count">${lgbtqCount}</span></div>`;
-      // Sub-categories
       const lgbtqSubs = {};
       manga.forEach(m => { (m.lgbtq || []).forEach(v => { lgbtqSubs[v] = (lgbtqSubs[v] || 0) + 1; }); });
       Object.keys(lgbtqSubs).sort().forEach(sub => {
@@ -1986,7 +2259,6 @@ function renderSidebar() {
     if (disabilityCount > 0) {
       const active = currentRepFilter === 'disability' ? ' active' : '';
       html += `<div class="sidebar-item${active}" onclick="toggleRep('disability')"><span class="sidebar-item-name">Disability</span><span class="sidebar-item-count">${disabilityCount}</span></div>`;
-      // Sub-categories
       const disSubs = {};
       manga.forEach(m => { (m.disability || []).forEach(v => { disSubs[v] = (disSubs[v] || 0) + 1; }); });
       Object.keys(disSubs).sort().forEach(sub => {
@@ -1994,14 +2266,14 @@ function renderSidebar() {
         html += `<div class="sidebar-item sidebar-sub${subActive}" onclick="toggleRep('disability:${sub}')" style="padding-left:2rem;font-size:0.8rem;"><span class="sidebar-item-name">${escHtml(sub)}</span><span class="sidebar-item-count">${disSubs[sub]}</span></div>`;
       });
     }
-    html += '</div>';
+    html += '</div></div>';
   }
 
   sb.innerHTML = html;
 }
 
 // ── Filters ──
-function clearFilters() { currentDemographic = null; currentGenre = null; currentTag = null; currentPubStatus = null; currentRepFilter = null; }
+function clearFilters() { currentDemographic = null; currentGenre = null; currentTag = null; currentPubStatus = null; currentRepFilter = null; currentThemeFilter = null; currentAlphaFilter = null; }
 
 function setReadingFilter(v) {
   currentReadingFilter = v;
@@ -2014,6 +2286,9 @@ function toggleGenre(g) { currentGenre = currentGenre === g ? null : g; renderMa
 function toggleTag(t) { currentTag = currentTag === t ? null : t; renderManga(); }
 function toggleRep(r) { currentRepFilter = currentRepFilter === r ? null : r; renderManga(); }
 function togglePubStatus(s) { currentPubStatus = currentPubStatus === s ? null : s; renderManga(); }
+function toggleTheme(t) { currentThemeFilter = currentThemeFilter === t ? null : t; renderManga(); }
+function toggleAlpha(letter) { currentAlphaFilter = currentAlphaFilter === letter ? null : letter; renderManga(); }
+function toggleSidebarCollapse(section) { sidebarCollapsed[section] = !sidebarCollapsed[section]; renderSidebar(); }
 
 // ── Rating ──
 function setRating(n) {
@@ -2072,7 +2347,7 @@ function resetRep() {
 // ── Add/Edit Modal ──
 function openAddModal() {
   editingId = null;
-  currentGenres = []; currentTags = []; currentRating = 0;
+  currentGenres = []; currentTags = []; currentThemes = []; currentRating = 0;
   clearFormError();
   document.getElementById('addModalTitle').textContent = 'Add Manga';
   document.getElementById('mangaTitle').value = '';
@@ -2089,7 +2364,7 @@ function openAddModal() {
   document.getElementById('lookupResults').innerHTML = '';
   resetRep();
   updateRatingDisplay();
-  renderTagChips('genres'); renderTagChips('tags');
+  renderTagChips('genres'); renderTagChips('tags'); renderTagChips('themes');
   document.getElementById('addModal').classList.add('open');
 }
 
@@ -2099,6 +2374,7 @@ function openEditModal(id) {
   editingId = id;
   currentGenres = [...(m.genres || [])];
   currentTags = [...(m.tags || [])];
+  currentThemes = [...(m.themes || [])];
   currentRating = m.rating || 0;
   clearFormError();
   document.getElementById('addModalTitle').textContent = 'Edit Manga';
@@ -2117,7 +2393,7 @@ function openEditModal(id) {
   setRepValues('lgbtq', m.lgbtq || []);
   setRepValues('disability', m.disability || []);
   updateRatingDisplay();
-  renderTagChips('genres'); renderTagChips('tags');
+  renderTagChips('genres'); renderTagChips('tags'); renderTagChips('themes');
   document.getElementById('addModal').classList.add('open');
 }
 
@@ -2143,6 +2419,7 @@ function saveManga() {
     rating: currentRating,
     genres: [...currentGenres],
     tags: [...currentTags],
+    themes: [...currentThemes],
     notes: document.getElementById('mangaNotes').value.trim(),
     lgbtq: getRepValues('lgbtq'),
     disability: getRepValues('disability'),
@@ -2163,6 +2440,7 @@ function saveManga() {
       data.readStart = manga[idx].readStart || '';
       data.readFinish = manga[idx].readFinish || '';
       data.titleRomaji = manga[idx].titleRomaji || '';
+      data.reread = manga[idx].reread || false;
       manga[idx] = data;
     }
   } else {
@@ -2176,8 +2454,8 @@ function saveManga() {
 }
 
 // ── Tags / Genres input ──
-function getList(type) { return type === 'genres' ? currentGenres : currentTags; }
-function setList(type, v) { if (type === 'genres') currentGenres = v; else currentTags = v; }
+function getList(type) { return type === 'genres' ? currentGenres : type === 'themes' ? currentThemes : currentTags; }
+function setList(type, v) { if (type === 'genres') currentGenres = v; else if (type === 'themes') currentThemes = v; else currentTags = v; }
 
 function renderTagChips(type) {
   const wrap = document.getElementById(type + 'Wrap');
@@ -2191,12 +2469,26 @@ function renderTagChips(type) {
   });
 }
 
+function normalizeTagCase(type, val) {
+  // Find existing tag with same text (case-insensitive) and use that casing
+  const field = type === 'genres' ? 'genres' : type === 'themes' ? 'themes' : 'tags';
+  const lower = val.toLowerCase();
+  for (const m of manga) {
+    for (const t of (m[field] || [])) {
+      if (t.toLowerCase() === lower) return t;
+    }
+  }
+  return lower;
+}
+
 function handleTagKey(e, type) {
   if (e.key === 'Enter') {
     e.preventDefault();
-    const val = e.target.value.trim().toLowerCase();
+    const raw = e.target.value.trim();
+    if (!raw) return;
+    const val = normalizeTagCase(type, raw);
     const list = getList(type);
-    if (val && !list.includes(val)) { list.push(val); renderTagChips(type); }
+    if (!list.some(t => t.toLowerCase() === val.toLowerCase())) { list.push(val); renderTagChips(type); }
     e.target.value = '';
     hideSuggestions(type);
   } else if (e.key === 'Backspace' && !e.target.value) {
@@ -2207,7 +2499,7 @@ function handleTagKey(e, type) {
 
 function getAllExisting(type) {
   const s = new Set();
-  const field = type === 'genres' ? 'genres' : 'tags';
+  const field = type === 'genres' ? 'genres' : type === 'themes' ? 'themes' : 'tags';
   manga.forEach(m => (m[field] || []).forEach(t => s.add(t)));
   return [...s].sort();
 }
@@ -2241,7 +2533,8 @@ function removeChip(type, i) { getList(type).splice(i, 1); renderTagChips(type);
 // ── Tag/Genre Manager ──
 function openTagManager(type) {
   tagManagerType = type;
-  document.getElementById('tagManagerTitle').textContent = type === 'genres' ? 'Edit Genres' : 'Edit Tags';
+  const titles = { genres: 'Edit Genres', tags: 'Edit Tags', themes: 'Edit Themes' };
+  document.getElementById('tagManagerTitle').textContent = titles[type] || 'Edit Tags';
   renderTagManagerList();
   document.getElementById('tagManagerModal').classList.add('open');
 }
@@ -2249,7 +2542,7 @@ function openTagManager(type) {
 function closeTagManager() { document.getElementById('tagManagerModal').classList.remove('open'); }
 
 function renderTagManagerList() {
-  const field = tagManagerType === 'genres' ? 'genres' : 'tags';
+  const field = tagManagerType === 'genres' ? 'genres' : tagManagerType === 'themes' ? 'themes' : 'tags';
   const counts = {};
   manga.forEach(m => { (m[field] || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }); });
   const sorted = Object.keys(counts).sort((a, b) => a.localeCompare(b));
@@ -2287,7 +2580,7 @@ function confirmRename(oldTag) {
   const input = document.getElementById('renameInput');
   const newTag = input.value.trim().toLowerCase();
   if (!newTag || newTag === oldTag) { renderTagManagerList(); return; }
-  const field = tagManagerType === 'genres' ? 'genres' : 'tags';
+  const field = tagManagerType === 'genres' ? 'genres' : tagManagerType === 'themes' ? 'themes' : 'tags';
   const existing = new Set();
   manga.forEach(m => (m[field] || []).forEach(t => existing.add(t)));
 
@@ -2303,11 +2596,12 @@ function confirmRename(oldTag) {
 
 function deleteTagItem(tag) {
   if (!confirm(`Remove "${tag}" from all manga?`)) return;
-  const field = tagManagerType === 'genres' ? 'genres' : 'tags';
+  const field = tagManagerType === 'genres' ? 'genres' : tagManagerType === 'themes' ? 'themes' : 'tags';
   manga.forEach(m => { if (m[field]) m[field] = m[field].filter(t => t !== tag); });
   save();
   if (tagManagerType === 'genres' && currentGenre === tag) currentGenre = null;
   if (tagManagerType === 'tags' && currentTag === tag) currentTag = null;
+  if (tagManagerType === 'themes' && currentThemeFilter === tag) currentThemeFilter = null;
   renderTagManagerList(); renderManga();
 }
 
@@ -2343,6 +2637,8 @@ function openDetail(id) {
 
   const tagLine = (m.tags || []).length ? `<div class="detail-info-line"><span class="info-label">Tags:</span> ${(m.tags || []).map(t => escHtml(t)).join(', ')}</div>` : '';
 
+  const themeLine = (m.themes || []).length ? `<div class="detail-info-line"><span class="info-label">Theme:</span> ${(m.themes || []).map(t => escHtml(t)).join(', ')}</div>` : '';
+
   // Representation as text line
   const repParts = [];
   if (m.lgbtq && m.lgbtq.length) repParts.push(...m.lgbtq.map(v => escHtml(v)));
@@ -2365,10 +2661,38 @@ function openDetail(id) {
   // Romaji title — show if it exists, even if same as title (AniList romaji is the Japanese reading)
   const romajiLine = m.titleRomaji ? `<div class="detail-romaji">${escHtml(m.titleRomaji)}</div>` : '';
 
-  // Reading dates
+  // Reading dates (month + year)
+  const monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const startParsed = parseDateField(m.readStart);
+  const finishParsed = parseDateField(m.readFinish);
+  const curYear = new Date().getFullYear();
+  const yearOptions = Array.from({length: 30}, (_, i) => curYear - i);
+
+  function monthOpts(selected) {
+    return '<option value="">—</option>' + monthNames.slice(1).map((name, i) =>
+      `<option value="${i+1}"${selected === (i+1) ? ' selected' : ''}>${name}</option>`
+    ).join('');
+  }
+  function yearOpts(selected) {
+    return '<option value="">—</option>' + yearOptions.map(y =>
+      `<option value="${y}"${selected === y ? ' selected' : ''}>${y}</option>`
+    ).join('');
+  }
+
   const datesHtml = `<div class="detail-dates">
-    <div class="date-field"><span class="date-label">Started</span><input type="date" value="${m.readStart || ''}" onchange="saveDetailDate('${m.id}','readStart',this.value)"></div>
-    <div class="date-field"><span class="date-label">Finished</span><input type="date" value="${m.readFinish || ''}" onchange="saveDetailDate('${m.id}','readFinish',this.value)"></div>
+    <div class="date-field">
+      <span class="date-label">Started</span>
+      <select onchange="saveDetailMonthYear('${m.id}','readStart','month',this.value)">${monthOpts(startParsed.month)}</select>
+      <select onchange="saveDetailMonthYear('${m.id}','readStart','year',this.value)">${yearOpts(startParsed.year)}</select>
+    </div>
+    <div class="date-field">
+      <span class="date-label">Finished</span>
+      <select onchange="saveDetailMonthYear('${m.id}','readFinish','month',this.value)">${monthOpts(finishParsed.month)}</select>
+      <select onchange="saveDetailMonthYear('${m.id}','readFinish','year',this.value)">${yearOpts(finishParsed.year)}</select>
+    </div>
+  </div>
+  <div class="reread-row">
+    <label><input type="checkbox" ${m.reread ? 'checked' : ''} onchange="saveDetailReread('${m.id}',this.checked)"> Re-read</label>
   </div>`;
 
   body.innerHTML = `
@@ -2383,11 +2707,20 @@ function openDetail(id) {
         ${demoLine}
         ${countLine}
         ${genreLine}
+        ${themeLine}
         ${tagLine}
         ${repLine}
       </div>
     </div>
     ${m.synopsis ? `<div class="detail-section"><div class="detail-section-label">Synopsis</div><div class="detail-synopsis">${escHtml(m.synopsis)}</div></div>` : ''}
+    <div class="detail-section"><div class="detail-section-label">Themes</div>
+      <div class="det-rep-tags">${(m.themes || []).map(t => `<span class="det-rep-tag" onclick="removeDetailTheme('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}</div>
+      <div class="autocomplete-wrap"><input type="text" class="det-rep-input" id="detThemeInput" placeholder="Add theme (e.g. school life, office workers...)" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTheme('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'themes','${m.id}')" autocomplete="off"><div class="autocomplete-list" id="detThemeAutocomplete"></div></div>
+    </div>
+    <div class="detail-section"><div class="detail-section-label">Tags</div>
+      <div class="det-rep-tags">${(m.tags || []).map(t => `<span class="det-rep-tag" onclick="removeDetailTag('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}</div>
+      <div class="autocomplete-wrap"><input type="text" class="det-rep-input" id="detTagInput" placeholder="Add tag..." onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTag('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'tags','${m.id}')" autocomplete="off"><div class="autocomplete-list" id="detTagAutocomplete"></div></div>
+    </div>
     <div class="detail-section"><div class="detail-section-label">Representation</div>${repEditor}</div>
     <div class="detail-section"><div class="detail-section-label">Reading Dates</div>${datesHtml}</div>
     ${m.notes ? `<div class="detail-section"><div class="detail-section-label">Notes</div><div class="detail-synopsis" style="white-space:pre-wrap;">${escHtml(m.notes)}</div></div>` : ''}
@@ -2438,13 +2771,180 @@ function removeDetailRepTag(id, field, value) {
   openDetail(id);
 }
 
-// Save reading date from detail modal
-function saveDetailDate(id, field, value) {
+// Parse date field (supports "YYYY-MM", "Mon YYYY", or old "YYYY-MM-DD")
+function parseDateField(val) {
+  if (!val) return { month: null, year: null };
+  // Try "YYYY-MM-DD" or "YYYY-MM"
+  const isoMatch = val.match(/^(\d{4})-(\d{1,2})/);
+  if (isoMatch) return { year: parseInt(isoMatch[1]), month: parseInt(isoMatch[2]) };
+  // Try "Mon YYYY"
+  const monthNames = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+  const textMatch = val.match(/^([A-Za-z]+)\s+(\d{4})$/);
+  if (textMatch) {
+    const mi = monthNames.indexOf(textMatch[1].toLowerCase().slice(0,3));
+    if (mi >= 0) return { year: parseInt(textMatch[2]), month: mi + 1 };
+  }
+  return { month: null, year: null };
+}
+
+function formatDateField(month, year) {
+  if (!month && !year) return '';
+  const monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  if (month && year) return `${monthNames[month]} ${year}`;
+  if (year) return `${year}`;
+  return '';
+}
+
+// Save reading date month/year from detail modal
+function saveDetailMonthYear(id, field, part, value) {
   const m = manga.find(x => x.id === id);
   if (!m) return;
-  m[field] = value || '';
+  const parsed = parseDateField(m[field]);
+  if (part === 'month') parsed.month = value ? parseInt(value) : null;
+  if (part === 'year') parsed.year = value ? parseInt(value) : null;
+  m[field] = formatDateField(parsed.month, parsed.year);
   save();
 }
+
+function saveDetailReread(id, checked) {
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  m.reread = checked;
+  save();
+}
+
+// Alphabet bar
+function renderAlphaBar() {
+  const bar = document.getElementById('alphaBar');
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  // Count which letters have manga
+  const available = new Set();
+  let hasNonAlpha = false;
+  manga.forEach(m => {
+    const first = (m.title || '')[0]?.toUpperCase();
+    if (first && first >= 'A' && first <= 'Z') available.add(first);
+    else hasNonAlpha = true;
+  });
+
+  let html = `<button class="${!currentAlphaFilter ? '' : 'active'}" onclick="clearFilters();renderManga();" style="${!currentAlphaFilter ? 'color:var(--text);font-weight:600;' : ''}">All</button>`;
+  letters.forEach(l => {
+    const has = available.has(l);
+    const active = currentAlphaFilter === l ? ' active' : '';
+    const disabled = !has ? ' disabled' : '';
+    html += `<button class="${active}${disabled}" onclick="${has ? `toggleAlpha('${l}')` : ''}">${l}</button>`;
+  });
+  if (hasNonAlpha) {
+    const active = currentAlphaFilter === '#' ? ' active' : '';
+    html += `<button class="${active}" onclick="toggleAlpha('#')">#</button>`;
+  }
+  bar.innerHTML = html;
+}
+
+// Bulk tag functions
+function toggleBulkMode() {
+  bulkMode = !bulkMode;
+  bulkSelected.clear();
+  document.getElementById('bulkBar').style.display = bulkMode ? 'flex' : 'none';
+  document.getElementById('bulkTagBtn').style.background = bulkMode ? 'var(--accent)' : '';
+  document.getElementById('bulkTagBtn').style.color = bulkMode ? '#fff' : '';
+  document.getElementById('bulkTagBtn').style.borderColor = bulkMode ? 'var(--accent)' : '';
+  document.getElementById('bulkCount').textContent = '0';
+  document.getElementById('bulkTagInput').value = '';
+  renderManga();
+}
+
+function toggleBulkSelect(id) {
+  if (bulkSelected.has(id)) bulkSelected.delete(id);
+  else bulkSelected.add(id);
+  document.getElementById('bulkCount').textContent = bulkSelected.size;
+  renderManga();
+}
+
+function applyBulkTag() {
+  const raw = document.getElementById('bulkTagInput').value.trim();
+  if (!raw || bulkSelected.size === 0) return;
+  const tag = normalizeTagCase('tags', raw);
+  bulkSelected.forEach(id => {
+    const m = manga.find(x => x.id === id);
+    if (!m) return;
+    if (!m.tags) m.tags = [];
+    if (!m.tags.some(t => t.toLowerCase() === tag.toLowerCase())) m.tags.push(tag);
+  });
+  save();
+  document.getElementById('bulkTagInput').value = '';
+  renderManga();
+}
+
+function removeBulkTag() {
+  const raw = document.getElementById('bulkTagInput').value.trim().toLowerCase();
+  if (!raw || bulkSelected.size === 0) return;
+  bulkSelected.forEach(id => {
+    const m = manga.find(x => x.id === id);
+    if (!m || !m.tags) return;
+    m.tags = m.tags.filter(t => t.toLowerCase() !== raw);
+  });
+  save();
+  document.getElementById('bulkTagInput').value = '';
+  renderManga();
+}
+
+// Detail modal tag/theme functions
+function addDetailTag(id, value) {
+  const raw = value.trim();
+  if (!raw) return;
+  const tag = normalizeTagCase('tags', raw);
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  if (!m.tags) m.tags = [];
+  if (!m.tags.some(t => t.toLowerCase() === tag.toLowerCase())) m.tags.push(tag);
+  save(); renderManga(); openDetail(id);
+}
+
+function removeDetailTag(id, value) {
+  const m = manga.find(x => x.id === id);
+  if (!m || !m.tags) return;
+  m.tags = m.tags.filter(t => t !== value);
+  save(); renderManga(); openDetail(id);
+}
+
+function addDetailTheme(id, value) {
+  const raw = value.trim();
+  if (!raw) return;
+  const theme = normalizeTagCase('themes', raw);
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  if (!m.themes) m.themes = [];
+  if (!m.themes.some(t => t.toLowerCase() === theme.toLowerCase())) m.themes.push(theme);
+  save(); renderManga(); openDetail(id);
+}
+
+function removeDetailTheme(id, value) {
+  const m = manga.find(x => x.id === id);
+  if (!m || !m.themes) return;
+  m.themes = m.themes.filter(t => t !== value);
+  save(); renderManga(); openDetail(id);
+}
+
+function showDetailAutocomplete(input, type, id) {
+  const val = input.value.trim().toLowerCase();
+  const acId = type === 'themes' ? 'detThemeAutocomplete' : 'detTagAutocomplete';
+  const container = document.getElementById(acId);
+  if (!val) { container.classList.remove('open'); return; }
+  const all = getAllExisting(type);
+  const m = manga.find(x => x.id === id);
+  const existing = type === 'themes' ? (m?.themes || []) : (m?.tags || []);
+  const matches = all.filter(t => t.toLowerCase().includes(val) && !existing.some(e => e.toLowerCase() === t.toLowerCase()));
+  if (!matches.length) { container.classList.remove('open'); return; }
+  container.innerHTML = matches.map(t =>
+    `<div class="autocomplete-item" onmousedown="${type === 'themes' ? `addDetailTheme('${id}','${t.replace(/'/g, "\\'")}')` : `addDetailTag('${id}','${t.replace(/'/g, "\\'")}')` };document.getElementById('${type === 'themes' ? 'detThemeInput' : 'detTagInput'}').value='';">${escHtml(t)}</div>`
+  ).join('');
+  container.classList.add('open');
+}
+
+function hideDetailAutocomplete() {
+  document.querySelectorAll('.autocomplete-list').forEach(el => el.classList.remove('open'));
+}
+
 function editCurrentManga() { if (!viewingId) return; const id = viewingId; closeDetailModal(); openEditModal(id); }
 
 // ── Quick Status Change (inline on card) ──
@@ -2585,7 +3085,11 @@ function getStaffAuthors(edges) {
 
 function extractDemographic(tags) {
   const demoTag = (tags || []).find(t => (t.category || '').toLowerCase() === 'demographic' && !t.isMediaSpoiler);
-  return demoTag ? demoTag.name.toLowerCase() : '';
+  if (!demoTag) return '';
+  let d = demoTag.name.toLowerCase();
+  if (d === 'shonen') d = 'shounen';
+  if (d === 'shojo') d = 'shoujo';
+  return d;
 }
 
 async function startAutoPopulate() {
