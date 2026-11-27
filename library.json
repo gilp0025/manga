@@ -4588,27 +4588,31 @@
     "titleRomaji": ""
   },
   {
-    "id": "86797f0f14",
     "title": "My Hero Academia - Vigilantes",
     "author": "Hideyuki Furuhashi, Court Betten, Kouhei Horikoshi",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx97842-UifHIxJ0E2jZ.jpg",
     "synopsis": "In the world of My Hero Academia, not everyone needs a license to fight for justice!\n\n\n\nIn a superpowered society, there is nothing ordinary about evil anymore. Heroes, trained and licensed to protect and defend the public against supervillains, stand above all the rest. Not everyone can be a hero, however, and there are those who would use their powers to serve the people without legal sanctio…",
     "volumes": "15",
-    "demographic": "shounen",
+    "chapters": "133",
+    "demographic": "shonen",
+    "pubStatus": "finished",
+    "readingStatus": "not-read",
+    "rating": 0,
     "genres": [
       "action",
       "adventure",
       "drama",
       "fantasy"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "86797f0f14",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "133"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "ea5b91c16e",
