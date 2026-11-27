@@ -60,23 +60,22 @@
     "dateAdded": "2026-11-27"
   },
   {
-    "id": "43c517c711",
     "title": "5 Centimeters Per Second",
     "author": "Makoto Shinkai, Yukiko Seike",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/23419.jpg",
     "synopsis": "Remember a time before cell phones could be found in every pocket? Or when even accessing the world wide web was something only readily available in a library? Back then letters still filled up postboxes and moments just felt so much more precious when captured on Polaroid film. Now life seems to move at the speed of light. Our memories are captured and shared with the world on social media pla…",
     "volumes": "2",
     "demographic": "",
+    "pubStatus": "unknown",
+    "readingStatus": "read",
+    "rating": 0,
     "genres": [
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
-    "readingStatus": "not-read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "id": "43c517c711",
     "dateAdded": "2026-11-27"
   },
   {
