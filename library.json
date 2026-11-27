@@ -3927,7 +3927,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx99435-2C3AHOj8beZq.jpg",
     "synopsis": "She’s a professional hitman. And he…is also a professional hitman. And she’s his target. Caught in a deadly game of cat-and-mouse, will she fall first…or will he?\n\n\n\n(Source: Yen Press)\n\n\n\nNote: Includes 16 extra chapters.",
     "volumes": "14",
-    "demographic": "",
+    "demographic": "shoujo",
     "genres": [
       "action",
       "psychological",
@@ -3939,7 +3939,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "pubStatus": "finished",
+    "chapters": "102"
   },
   {
     "id": "15c8b8930b",
