@@ -912,21 +912,28 @@
     "chapters": "84"
   },
   {
-    "id": "9a3b5777ff",
-    "title": "Black Butler - Kuroshitsuji",
-    "author": "",
-    "cover": "",
-    "synopsis": "",
+    "title": "Black Butler",
+    "author": "Yana Toboso",
+    "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx33866-3BaQrUrA7c2w.jpg",
+    "synopsis": "In Victorian era Europe, a young boy loses everything he once held near and dear to a vicious plot. In his moment of death, he strikes a deal with a demon: his soul, in exchange for revenge. Ciel Phantomhive is now the head of the Phantomhive corporation, handling all business affairs as well as the underground work for the Queen of England. His new partner is a demon butler, Sebastian Michaeli…",
     "volumes": "",
+    "chapters": "",
     "demographic": "",
-    "genres": [],
+    "pubStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
+    "genres": [
+      "action",
+      "fantasy",
+      "mystery",
+      "supernatural"
+    ],
     "tags": [],
     "notes": "",
-    "noteDate": null,
-    "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "lgbtq": [],
+    "disability": [],
+    "id": "9a3b5777ff",
+    "dateAdded": "2026-11-27"
   },
   {
     "id": "14237b9abf",
