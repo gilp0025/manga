@@ -256,32 +256,37 @@ body {
 /* Manga Grid */
 .manga-grid {
   padding: 0 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1rem;
 }
 
 .manga-card {
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
   background: var(--surface);
-  border: 1px solid var(--border-light);
   border-radius: var(--radius);
-  padding: 0.75rem;
+  padding: 1rem;
   cursor: pointer;
-  transition: box-shadow 0.15s, border-color 0.15s;
+  transition: box-shadow 0.2s;
   position: relative;
+  border-left: 4px solid var(--border-light);
 }
+
+/* Publication status as left border color */
+.manga-card[data-pub="ongoing"] { border-left-color: var(--amber); }
+.manga-card[data-pub="finished"] { border-left-color: var(--green); }
+.manga-card[data-pub="hiatus"] { border-left-color: var(--purple); }
+.manga-card[data-pub="cancelled"] { border-left-color: var(--gray); }
 
 .manga-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: var(--border);
 }
 
 .manga-cover-wrap {
   flex-shrink: 0;
-  width: 90px;
-  height: 135px;
+  width: 85px;
+  height: 128px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--border-light);
@@ -307,40 +312,20 @@ body {
   background: var(--border-light);
 }
 
-/* Reading status badge on cover */
-.reading-badge {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.55rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: center;
-  backdrop-filter: blur(4px);
-}
-
-.reading-badge.reading { background: rgba(232,93,74,0.85); color: #fff; }
-.reading-badge.read { background: rgba(74,158,109,0.85); color: #fff; }
-.reading-badge.dropped { background: rgba(138,133,128,0.85); color: #fff; }
-.reading-badge.not-read { display: none; }
-
 /* Info panel (right side of card) */
 .manga-info {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
 
 .manga-title {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text);
-  line-height: 1.3;
+  line-height: 1.35;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -355,110 +340,100 @@ body {
   text-overflow: ellipsis;
 }
 
-.manga-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  align-items: center;
+/* Demographic + volume line — distinct from tags */
+.manga-subline {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  font-style: italic;
   margin-top: 0.1rem;
 }
 
-.meta-chip {
-  font-size: 0.6rem;
+.manga-subline .vol-count {
+  font-style: normal;
   font-weight: 600;
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
+  color: var(--text-secondary);
 }
 
-.meta-chip.pub-ongoing { background: var(--amber-light); color: var(--amber); }
-.meta-chip.pub-finished { background: var(--green-light); color: var(--green); }
-.meta-chip.pub-hiatus { background: var(--purple-light); color: var(--purple); }
-.meta-chip.pub-cancelled { background: var(--gray-light); color: var(--gray); }
-.meta-chip.pub-unknown { background: var(--tag-bg); color: var(--text-tertiary); }
-.meta-chip.demographic { background: var(--blue-light); color: var(--blue); }
-
-.meta-text {
-  font-size: 0.7rem;
-  color: var(--text-tertiary);
-}
-
+/* Genres as small rounded pills */
 .manga-genres {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin-top: 0.1rem;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
 }
 
-.manga-genres .genre-chip {
+.manga-genres .genre-pill {
   font-size: 0.6rem;
-  padding: 0.1rem 0.35rem;
-  border-radius: 3px;
+  padding: 0.15rem 0.45rem;
+  border-radius: 10px;
   background: var(--tag-bg);
   color: var(--tag-text);
 }
 
-/* Representation chips on card */
-.rep-chip {
-  font-size: 0.6rem;
-  padding: 0.1rem 0.35rem;
-  border-radius: 3px;
-  font-weight: 500;
+/* Representation labels on card */
+.manga-rep {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.1rem;
 }
 
-.rep-chip.lgbtq { background: rgba(124,92,191,0.1); color: var(--purple); }
-.rep-chip.disability { background: rgba(74,127,181,0.1); color: var(--blue); }
+.rep-label {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 10px;
+  font-weight: 500;
+  border: 1px solid;
+}
 
-/* Rating stars on card */
+.rep-label.lgbtq { border-color: rgba(124,92,191,0.3); color: var(--purple); background: rgba(124,92,191,0.05); }
+.rep-label.disability { border-color: rgba(74,127,181,0.3); color: var(--blue); background: rgba(74,127,181,0.05); }
+
+/* Card bottom row: rating + status dropdown */
+.manga-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+/* Clickable rating stars on card */
 .card-rating {
   display: flex;
-  gap: 1px;
-  margin-top: auto;
+  gap: 2px;
 }
 
-.card-rating .star {
-  font-size: 0.7rem;
+.card-rating .star-click {
+  font-size: 0.85rem;
   color: var(--border);
-}
-
-.card-rating .star.filled { color: var(--amber); }
-
-/* Inline reading status switcher */
-.status-switcher {
-  display: flex;
-  gap: 0.25rem;
-  margin-top: auto;
-  padding-top: 0.25rem;
-}
-
-.status-switcher button {
-  font-size: 0.6rem;
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
-  border: 1px solid var(--border-light);
-  background: transparent;
-  color: var(--text-tertiary);
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.1s;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.1s;
 }
 
-.status-switcher button:hover {
-  border-color: var(--border);
+.card-rating .star-click:hover { color: var(--amber); }
+.card-rating .star-click.filled { color: var(--amber); }
+
+/* Status dropdown on card */
+.status-dropdown {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
   color: var(--text-secondary);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  margin-left: auto;
 }
 
-.status-switcher button.active {
-  border-color: transparent;
-  font-weight: 600;
-}
-
-.status-switcher button.active[data-status="reading"] { background: var(--accent-light); color: var(--accent); }
-.status-switcher button.active[data-status="read"] { background: var(--green-light); color: var(--green); }
-.status-switcher button.active[data-status="dropped"] { background: var(--gray-light); color: var(--gray); }
-.status-switcher button.active[data-status="not-read"] { background: var(--tag-bg); color: var(--text-tertiary); }
+.status-dropdown:hover,
+.status-dropdown:focus { border-color: var(--border); }
 
 /* Representation nested checkboxes */
 .rep-section {
@@ -896,17 +871,17 @@ body {
 .badge.reading-status.not-read { background: var(--tag-bg); color: var(--text-tertiary); }
 
 .detail-rating {
-  display: flex;
-  gap: 2px;
   margin-bottom: 0.5rem;
 }
 
-.detail-rating .star {
-  font-size: 0.9rem;
-  color: var(--border);
+.detail-rating .card-rating {
+  display: flex;
+  gap: 2px;
 }
 
-.detail-rating .star.filled { color: var(--amber); }
+.detail-rating .star-click {
+  font-size: 1rem;
+}
 
 .detail-tags {
   display: flex;
@@ -1051,6 +1026,7 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header, .toolbar, .manga-grid { padding-left: 1rem; padding-right: 1rem; }
+  .manga-grid { grid-template-columns: 1fr; }
   .manga-cover-wrap { width: 70px; height: 105px; }
   .manga-genres { display: none; }
   .form-row { flex-direction: column; gap: 0; }
@@ -1314,7 +1290,7 @@ body {
         <label class="form-label">Representation</label>
         <div class="rep-section">
           <div class="rep-header">
-            <label><input type="checkbox" id="repLgbtqToggle" onchange="toggleRepSection('lgbtq')"> 🏳️‍🌈 LGBTQ+</label>
+            <label><input type="checkbox" id="repLgbtqToggle" onchange="toggleRepSection('lgbtq')"> LGBTQ+</label>
           </div>
           <div class="rep-options hidden" id="repLgbtqOptions">
             <label><input type="checkbox" value="gay" class="rep-lgbtq-opt"> Gay</label>
@@ -1329,7 +1305,7 @@ body {
         </div>
         <div class="rep-section">
           <div class="rep-header">
-            <label><input type="checkbox" id="repDisabilityToggle" onchange="toggleRepSection('disability')"> ♿ Disability</label>
+            <label><input type="checkbox" id="repDisabilityToggle" onchange="toggleRepSection('disability')"> Disability</label>
           </div>
           <div class="rep-options hidden" id="repDisabilityOptions">
             <label><input type="checkbox" value="physical" class="rep-disability-opt"> Physical</label>
@@ -1694,6 +1670,24 @@ function starsHtml(rating, size) {
   return h;
 }
 
+function clickableStarsHtml(id, rating) {
+  let h = '<div class="card-rating">';
+  for (let i = 1; i <= 5; i++) {
+    h += `<button class="star-click${i <= rating ? ' filled' : ''}" onclick="event.stopPropagation();quickRate('${id}',${i})" title="${i} star${i > 1 ? 's' : ''}">★</button>`;
+  }
+  h += '</div>';
+  return h;
+}
+
+function quickRate(id, rating) {
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  m.rating = m.rating === rating ? 0 : rating;
+  save();
+  renderManga();
+  if (viewingId === id) openDetail(id);
+}
+
 function renderManga() {
   const query = document.getElementById('searchBox').value.toLowerCase().trim();
   const grid = document.getElementById('mangaGrid');
@@ -1750,53 +1744,52 @@ function renderManga() {
       ? `<img src="${escHtml(m.cover)}" alt="" loading="lazy">`
       : `<div class="manga-cover-placeholder">${(m.title || '?')[0]}</div>`;
 
-    const readBadge = m.readingStatus && m.readingStatus !== 'not-read'
-      ? `<div class="reading-badge ${m.readingStatus}">${m.readingStatus}</div>` : '';
-
-    // Meta chips: pub status + demographic
+    // Pub status drives the card's left border via data attribute
     const pubClass = m.pubStatus || 'unknown';
-    const pubLabels = { ongoing: 'Ongoing', finished: 'Finished', hiatus: 'Hiatus', cancelled: 'Cancelled', unknown: 'Unknown' };
-    const pubChip = `<span class="meta-chip pub-${pubClass}">${pubLabels[pubClass] || pubClass}</span>`;
-    const demoChip = m.demographic ? `<span class="meta-chip demographic">${escHtml(m.demographic)}</span>` : '';
 
-    // Volume/chapter text
+    // Subline: demographic (italic) + volume/chapter count (bold)
+    const subParts = [];
+    if (m.demographic) subParts.push(escHtml(m.demographic));
     const countParts = [];
-    if (m.volumes) countParts.push(escHtml(m.volumes) + ' vol');
-    if (m.chapters) countParts.push(escHtml(m.chapters) + ' ch');
-    const countText = countParts.length ? `<span class="meta-text">${countParts.join(' · ')}</span>` : '';
+    if (m.volumes) countParts.push(`<span class="vol-count">${escHtml(m.volumes)} vol</span>`);
+    if (m.chapters) countParts.push(`<span class="vol-count">${escHtml(m.chapters)} ch</span>`);
+    if (countParts.length) subParts.push(countParts.join(' · '));
+    const subline = subParts.length ? `<div class="manga-subline">${subParts.join(' · ')}</div>` : '';
 
-    // Genres
-    const genreChips = (m.genres || []).slice(0, 4).map(g => `<span class="genre-chip">${escHtml(g)}</span>`).join('');
+    // Genres as rounded pills
+    const genrePills = (m.genres || []).slice(0, 4).map(g => `<span class="genre-pill">${escHtml(g)}</span>`).join('');
 
-    // Representation chips
-    let repChips = '';
-    if (m.lgbtq && m.lgbtq.length) repChips += `<span class="rep-chip lgbtq">🏳️‍🌈 ${escHtml(m.lgbtq.join(', '))}</span>`;
-    if (m.disability && m.disability.length) repChips += `<span class="rep-chip disability">♿ ${escHtml(m.disability.join(', '))}</span>`;
+    // Representation labels (outlined, no emojis)
+    let repHtml = '';
+    if (m.lgbtq && m.lgbtq.length) repHtml += `<span class="rep-label lgbtq">${escHtml(m.lgbtq.join(', '))}</span>`;
+    if (m.disability && m.disability.length) repHtml += `<span class="rep-label disability">${escHtml(m.disability.join(', '))}</span>`;
 
-    // Rating (only for 'read' status)
-    const ratingHtml = m.rating && m.readingStatus === 'read' ? `<div class="card-rating">${starsHtml(m.rating, '0.7rem')}</div>` : '';
+    // Clickable rating stars (shown for all, editable)
+    const cardRating = m.rating ? clickableStarsHtml(m.id, m.rating) : clickableStarsHtml(m.id, 0);
 
-    // Inline status switcher
-    const statuses = ['not-read', 'reading', 'read', 'dropped'];
-    const statusLabels = { 'not-read': '—', reading: '📖', read: '✓', dropped: '✕' };
-    const statusTitles = { 'not-read': 'Not read', reading: 'Reading', read: 'Read', dropped: 'Dropped' };
-    const switcherHtml = statuses.map(s =>
-      `<button data-status="${s}" title="${statusTitles[s]}" class="${m.readingStatus === s ? 'active' : ''}" onclick="event.stopPropagation();quickStatus('${m.id}','${s}')">${statusLabels[s]}</button>`
-    ).join('');
+    // Status dropdown (no emojis)
+    const statusOptions = [
+      { val: 'not-read', label: 'Not Read' },
+      { val: 'reading', label: 'Reading' },
+      { val: 'read', label: 'Read' },
+      { val: 'dropped', label: 'Dropped' }
+    ];
+    const dropdownHtml = `<select class="status-dropdown" onclick="event.stopPropagation()" onchange="event.stopPropagation();quickStatus('${m.id}',this.value)">${statusOptions.map(o => `<option value="${o.val}"${m.readingStatus === o.val ? ' selected' : ''}>${o.label}</option>`).join('')}</select>`;
 
-    return `<div class="manga-card" onclick="openDetail('${m.id}')">
+    return `<div class="manga-card" data-pub="${pubClass}" onclick="openDetail('${m.id}')">
       <div class="manga-cover-wrap">
         ${coverHtml}
-        ${readBadge}
       </div>
       <div class="manga-info">
         <div class="manga-title">${escHtml(m.title || 'Untitled')}</div>
         <div class="manga-author">${escHtml(m.author || '')}</div>
-        <div class="manga-meta-row">${pubChip}${demoChip}${countText}</div>
-        ${genreChips ? `<div class="manga-genres">${genreChips}</div>` : ''}
-        ${repChips ? `<div class="manga-meta-row">${repChips}</div>` : ''}
-        ${ratingHtml}
-        <div class="status-switcher">${switcherHtml}</div>
+        ${subline}
+        ${genrePills ? `<div class="manga-genres">${genrePills}</div>` : ''}
+        ${repHtml ? `<div class="manga-rep">${repHtml}</div>` : ''}
+        <div class="manga-card-footer">
+          ${cardRating}
+          ${dropdownHtml}
+        </div>
       </div>
     </div>`;
   }).join('');
@@ -1886,7 +1879,7 @@ function renderSidebar() {
     html += '<div class="sidebar-section"><div class="sidebar-heading">Representation</div>';
     if (lgbtqCount > 0) {
       const active = currentRepFilter === 'lgbtq' ? ' active' : '';
-      html += `<div class="sidebar-item${active}" onclick="toggleRep('lgbtq')"><span class="sidebar-item-name">🏳️‍🌈 LGBTQ+</span><span class="sidebar-item-count">${lgbtqCount}</span></div>`;
+      html += `<div class="sidebar-item${active}" onclick="toggleRep('lgbtq')"><span class="sidebar-item-name">LGBTQ+</span><span class="sidebar-item-count">${lgbtqCount}</span></div>`;
       // Sub-categories
       const lgbtqSubs = {};
       manga.forEach(m => { (m.lgbtq || []).forEach(v => { lgbtqSubs[v] = (lgbtqSubs[v] || 0) + 1; }); });
@@ -1897,7 +1890,7 @@ function renderSidebar() {
     }
     if (disabilityCount > 0) {
       const active = currentRepFilter === 'disability' ? ' active' : '';
-      html += `<div class="sidebar-item${active}" onclick="toggleRep('disability')"><span class="sidebar-item-name">♿ Disability</span><span class="sidebar-item-count">${disabilityCount}</span></div>`;
+      html += `<div class="sidebar-item${active}" onclick="toggleRep('disability')"><span class="sidebar-item-name">Disability</span><span class="sidebar-item-count">${disabilityCount}</span></div>`;
       // Sub-categories
       const disSubs = {};
       manga.forEach(m => { (m.disability || []).forEach(v => { disSubs[v] = (disSubs[v] || 0) + 1; }); });
@@ -2240,17 +2233,18 @@ function openDetail(id) {
   if (m.pubStatus && m.pubStatus !== 'unknown') badges += `<span class="badge ${pubClass[m.pubStatus] || ''}">${pubLabel[m.pubStatus] || m.pubStatus}</span>`;
   badges += `<span class="badge reading-status ${m.readingStatus || 'not-read'}">${readLabel[m.readingStatus] || 'Not Read'}</span>`;
 
-  const ratingHtml = m.rating ? `<div class="detail-rating">${starsHtml(m.rating, '1rem')}</div>` : '';
+  // Clickable rating in detail modal
+  const ratingHtml = `<div class="detail-rating">${clickableStarsHtml(m.id, m.rating || 0)}</div>`;
 
   const genreHtml = (m.genres || []).map(g => `<span class="detail-tag">${escHtml(g)}</span>`).join('');
   const tagHtml = (m.tags || []).map(t => `<span class="detail-tag" style="background:var(--accent-light);color:var(--accent);">${escHtml(t)}</span>`).join('');
 
-  // Representation display
+  // Representation display (no emojis)
   let repHtml = '';
   if ((m.lgbtq && m.lgbtq.length) || (m.disability && m.disability.length)) {
     repHtml = '<div class="detail-section"><div class="detail-section-label">Representation</div><div class="detail-tags">';
-    if (m.lgbtq && m.lgbtq.length) repHtml += `<span class="detail-tag" style="background:rgba(124,92,191,0.1);color:var(--purple);">🏳️‍🌈 ${escHtml(m.lgbtq.join(', '))}</span>`;
-    if (m.disability && m.disability.length) repHtml += `<span class="detail-tag" style="background:rgba(74,127,181,0.1);color:var(--blue);">♿ ${escHtml(m.disability.join(', '))}</span>`;
+    if (m.lgbtq && m.lgbtq.length) repHtml += `<span class="detail-tag" style="background:rgba(124,92,191,0.1);color:var(--purple);border:1px solid rgba(124,92,191,0.3);">LGBTQ+ · ${escHtml(m.lgbtq.join(', '))}</span>`;
+    if (m.disability && m.disability.length) repHtml += `<span class="detail-tag" style="background:rgba(74,127,181,0.1);color:var(--blue);border:1px solid rgba(74,127,181,0.3);">Disability · ${escHtml(m.disability.join(', '))}</span>`;
     repHtml += '</div></div>';
   }
 
