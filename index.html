@@ -111,9 +111,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 200px;
+  width: 215px;
   flex-shrink: 0;
-  padding: 0 0 2rem 2rem;
+  padding: 0 0.75rem 2rem 2rem;
   overflow-y: auto;
   max-height: calc(100vh - 100px);
   position: sticky;
@@ -257,7 +257,7 @@ body {
 .manga-grid {
   padding: 0 2rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
   gap: 1rem;
 }
 
@@ -287,8 +287,8 @@ body {
 
 .manga-cover-wrap {
   flex-shrink: 0;
-  width: 120px;
-  height: 180px;
+  width: 200px;
+  height: 300px;
   border-radius: 4px;
   overflow: hidden;
   background: var(--border-light);
@@ -382,7 +382,7 @@ body {
 }
 
 .card-rating .star-click {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--border);
   cursor: pointer;
   background: none;
@@ -962,6 +962,34 @@ body {
   white-space: nowrap;
 }
 
+.detail-dates .date-text {
+  font-size: 0.8rem;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.detail-dates .date-text:hover {
+  border-color: var(--border);
+}
+
+.detail-dates .date-text.placeholder {
+  color: var(--text-tertiary);
+}
+
+.detail-dates .date-edit {
+  display: none;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.detail-dates .date-edit.active {
+  display: flex;
+}
+
 .detail-dates select {
   font-size: 0.8rem;
   padding: 0.25rem 0.4rem;
@@ -976,6 +1004,54 @@ body {
 
 .detail-dates select:focus {
   border-color: var(--accent);
+}
+
+/* Representation 2-column layout in detail modal */
+.detail-rep-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-rep-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Tags inside input field (detail modal) */
+.det-inline-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  background: var(--surface);
+  min-height: 2rem;
+  align-items: center;
+  cursor: text;
+  transition: border-color 0.15s;
+}
+
+.det-inline-tags-wrap:focus-within {
+  border-color: var(--accent);
+}
+
+.det-inline-tags-wrap .det-rep-tag {
+  margin: 0;
+}
+
+.det-inline-tags-wrap .det-rep-input {
+  border: none;
+  background: none;
+  outline: none;
+  flex: 1;
+  min-width: 80px;
+  padding: 0.15rem 0.3rem;
+  font-size: 0.8rem;
+  max-width: none;
+  width: auto;
 }
 
 .reread-row {
@@ -1043,14 +1119,15 @@ body {
   user-select: none;
 }
 
-.sidebar-heading .collapse-arrow {
-  font-size: 0.65rem;
-  transition: transform 0.15s;
+.sidebar-heading .collapse-chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
   color: var(--text-tertiary);
+  display: inline-block;
 }
 
-.sidebar-heading.collapsed .collapse-arrow {
-  transform: rotate(-90deg);
+.sidebar-heading:not(.collapsed) .collapse-chevron {
+  transform: rotate(90deg);
 }
 
 .sidebar-section-items.collapsed {
@@ -1321,7 +1398,7 @@ body {
 @media (max-width: 768px) {
   .header, .toolbar, .manga-grid { padding-left: 1rem; padding-right: 1rem; }
   .manga-grid { grid-template-columns: 1fr; }
-  .manga-cover-wrap { width: 90px; height: 135px; }
+  .manga-cover-wrap { width: 120px; height: 180px; }
   .manga-synopsis-preview { display: none; }
   .form-row { flex-direction: column; gap: 0; }
   .detail-top { flex-direction: column; align-items: center; text-align: center; }
@@ -1764,7 +1841,8 @@ let currentAlphaFilter = null;
 let currentThemeFilter = null;
 let bulkMode = false;
 let bulkSelected = new Set();
-let sidebarCollapsed = { demographic: false, representation: false };
+let currentRatingFilter = null;
+let sidebarCollapsed = { demographic: false, representation: false, genre: false, themes: false, tags: false, rating: false };
 
 // ── GitHub Storage ──
 function loadConfig() {
@@ -2027,6 +2105,7 @@ function renderManga() {
     if (currentTag && !(m.tags || []).includes(currentTag)) return false;
     if (currentThemeFilter && !(m.themes || []).includes(currentThemeFilter)) return false;
     if (currentPubStatus && m.pubStatus !== currentPubStatus) return false;
+    if (currentRatingFilter && (m.rating || 0) !== currentRatingFilter) return false;
     if (currentAlphaFilter) {
       const firstChar = (m.title || '')[0]?.toUpperCase();
       if (currentAlphaFilter === '#') {
@@ -2158,7 +2237,7 @@ function renderSidebar() {
 
   html += '<div class="sidebar-section"><div class="sidebar-heading">Shelves</div>';
   for (const [key, label] of Object.entries(readLabels)) {
-    const active = currentReadingFilter === key && !currentDemographic && !currentGenre && !currentTag && !currentPubStatus && !currentRepFilter && !currentThemeFilter && !currentAlphaFilter ? ' active' : '';
+    const active = currentReadingFilter === key && !currentDemographic && !currentGenre && !currentTag && !currentPubStatus && !currentRepFilter && !currentThemeFilter && !currentAlphaFilter && !currentRatingFilter ? ' active' : '';
     html += `<div class="sidebar-item${active}" onclick="clearFilters();setReadingFilter('${key}')"><span class="sidebar-item-name">${label}</span><span class="sidebar-item-count">${readCounts[key]}</span></div>`;
   }
   html += '</div>';
@@ -2187,7 +2266,7 @@ function renderSidebar() {
 
   if (demKeys.length > 0) {
     const demCollapsed = sidebarCollapsed.demographic;
-    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (demCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'demographic\')"><span>Demographic</span><span class="collapse-arrow">▼</span></div>';
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (demCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'demographic\')"><span>Demographic</span><div style="display:flex;align-items:center;"><span class="collapse-chevron">›</span></div></div>';
     html += '<div class="sidebar-section-items' + (demCollapsed ? ' collapsed' : '') + '">';
     demKeys.forEach(key => {
       const active = currentDemographic === key ? ' active' : '';
@@ -2196,46 +2275,71 @@ function renderSidebar() {
     html += '</div></div>';
   }
 
-  // Genre counts
+  // Rating filter
+  const ratingCounts = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+  manga.forEach(m => { const r = m.rating || 0; if (r >= 1 && r <= 5) ratingCounts[r]++; });
+  const hasRatings = Object.values(ratingCounts).some(c => c > 0);
+
+  if (hasRatings) {
+    const ratCollapsed = sidebarCollapsed.rating;
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (ratCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'rating\')"><span>Rating</span><span class="collapse-chevron">›</span></div>';
+    html += '<div class="sidebar-section-items' + (ratCollapsed ? ' collapsed' : '') + '">';
+    for (let r = 5; r >= 1; r--) {
+      if (ratingCounts[r] > 0) {
+        const active = currentRatingFilter === r ? ' active' : '';
+        const stars = '★'.repeat(r) + '☆'.repeat(5 - r);
+        html += `<div class="sidebar-item${active}" onclick="toggleRatingFilter(${r})"><span class="sidebar-item-name" style="letter-spacing:1px;color:var(--amber);">${stars}</span><span class="sidebar-item-count">${ratingCounts[r]}</span></div>`;
+      }
+    }
+    html += '</div></div>';
+  }
+
+  // Genre counts (collapsible)
   const genreCounts = {};
   manga.forEach(m => { (m.genres || []).forEach(g => { genreCounts[g] = (genreCounts[g] || 0) + 1; }); });
   const sortedGenres = Object.keys(genreCounts).sort((a, b) => a.localeCompare(b));
 
   if (sortedGenres.length > 0) {
-    html += '<div class="sidebar-section"><div class="sidebar-heading"><span>Genres</span><span class="sidebar-edit" onclick="openTagManager(\'genres\')">edit</span></div>';
+    const genCollapsed = sidebarCollapsed.genre;
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (genCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'genre\')"><span>Genres</span><div style="display:flex;align-items:center;gap:0.5rem;"><span class="sidebar-edit" onclick="event.stopPropagation();openTagManager(\'genres\')">edit</span><span class="collapse-chevron">›</span></div></div>';
+    html += '<div class="sidebar-section-items' + (genCollapsed ? ' collapsed' : '') + '">';
     sortedGenres.forEach(g => {
       const active = currentGenre === g ? ' active' : '';
       html += `<div class="sidebar-item${active}" onclick="toggleGenre('${g.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(g)}</span><span class="sidebar-item-count">${genreCounts[g]}</span></div>`;
     });
-    html += '</div>';
+    html += '</div></div>';
   }
 
-  // Tag counts (representation tags)
-  const tagCounts = {};
-  manga.forEach(m => { (m.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }); });
-  const sortedTags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
-
-  if (sortedTags.length > 0) {
-    html += '<div class="sidebar-section"><div class="sidebar-heading"><span>Tags</span><span class="sidebar-edit" onclick="openTagManager(\'tags\')">edit</span></div>';
-    sortedTags.forEach(t => {
-      const active = currentTag === t ? ' active' : '';
-      html += `<div class="sidebar-item${active}" onclick="toggleTag('${t.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(t)}</span><span class="sidebar-item-count">${tagCounts[t]}</span></div>`;
-    });
-    html += '</div>';
-  }
-
-  // Theme counts
+  // Theme counts (collapsible)
   const themeCounts = {};
   manga.forEach(m => { (m.themes || []).forEach(t => { themeCounts[t] = (themeCounts[t] || 0) + 1; }); });
   const sortedThemes = Object.keys(themeCounts).sort((a, b) => a.localeCompare(b));
 
   if (sortedThemes.length > 0) {
-    html += '<div class="sidebar-section"><div class="sidebar-heading"><span>Themes</span><span class="sidebar-edit" onclick="openTagManager(\'themes\')">edit</span></div>';
+    const thCollapsed = sidebarCollapsed.themes;
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (thCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'themes\')"><span>Themes</span><div style="display:flex;align-items:center;gap:0.5rem;"><span class="sidebar-edit" onclick="event.stopPropagation();openTagManager(\'themes\')">edit</span><span class="collapse-chevron">›</span></div></div>';
+    html += '<div class="sidebar-section-items' + (thCollapsed ? ' collapsed' : '') + '">';
     sortedThemes.forEach(t => {
       const active = currentThemeFilter === t ? ' active' : '';
       html += `<div class="sidebar-item${active}" onclick="toggleTheme('${t.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(t)}</span><span class="sidebar-item-count">${themeCounts[t]}</span></div>`;
     });
-    html += '</div>';
+    html += '</div></div>';
+  }
+
+  // Tag counts (collapsible)
+  const tagCounts = {};
+  manga.forEach(m => { (m.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }); });
+  const sortedTags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
+
+  if (sortedTags.length > 0) {
+    const tagCollapsed = sidebarCollapsed.tags;
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (tagCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'tags\')"><span>Tags</span><div style="display:flex;align-items:center;gap:0.5rem;"><span class="sidebar-edit" onclick="event.stopPropagation();openTagManager(\'tags\')">edit</span><span class="collapse-chevron">›</span></div></div>';
+    html += '<div class="sidebar-section-items' + (tagCollapsed ? ' collapsed' : '') + '">';
+    sortedTags.forEach(t => {
+      const active = currentTag === t ? ' active' : '';
+      html += `<div class="sidebar-item${active}" onclick="toggleTag('${t.replace(/'/g, "\\'")}')"><span class="sidebar-item-name">${escHtml(t)}</span><span class="sidebar-item-count">${tagCounts[t]}</span></div>`;
+    });
+    html += '</div></div>';
   }
 
   // Representation section (collapsible)
@@ -2244,7 +2348,7 @@ function renderSidebar() {
 
   if (lgbtqCount > 0 || disabilityCount > 0) {
     const repCollapsed = sidebarCollapsed.representation;
-    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (repCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'representation\')"><span>Representation</span><span class="collapse-arrow">▼</span></div>';
+    html += '<div class="sidebar-section"><div class="sidebar-heading collapsible' + (repCollapsed ? ' collapsed' : '') + '" onclick="toggleSidebarCollapse(\'representation\')"><span>Representation</span><span class="collapse-chevron">›</span></div>';
     html += '<div class="sidebar-section-items' + (repCollapsed ? ' collapsed' : '') + '">';
     if (lgbtqCount > 0) {
       const active = currentRepFilter === 'lgbtq' ? ' active' : '';
@@ -2273,7 +2377,7 @@ function renderSidebar() {
 }
 
 // ── Filters ──
-function clearFilters() { currentDemographic = null; currentGenre = null; currentTag = null; currentPubStatus = null; currentRepFilter = null; currentThemeFilter = null; currentAlphaFilter = null; }
+function clearFilters() { currentDemographic = null; currentGenre = null; currentTag = null; currentPubStatus = null; currentRepFilter = null; currentThemeFilter = null; currentAlphaFilter = null; currentRatingFilter = null; }
 
 function setReadingFilter(v) {
   currentReadingFilter = v;
@@ -2288,6 +2392,7 @@ function toggleRep(r) { currentRepFilter = currentRepFilter === r ? null : r; re
 function togglePubStatus(s) { currentPubStatus = currentPubStatus === s ? null : s; renderManga(); }
 function toggleTheme(t) { currentThemeFilter = currentThemeFilter === t ? null : t; renderManga(); }
 function toggleAlpha(letter) { currentAlphaFilter = currentAlphaFilter === letter ? null : letter; renderManga(); }
+function toggleRatingFilter(n) { currentRatingFilter = currentRatingFilter === n ? null : n; renderManga(); }
 function toggleSidebarCollapse(section) { sidebarCollapsed[section] = !sidebarCollapsed[section]; renderSidebar(); }
 
 // ── Rating ──
@@ -2645,17 +2750,20 @@ function openDetail(id) {
   if (m.disability && m.disability.length) repParts.push(...m.disability.map(v => escHtml(v)));
   const repLine = repParts.length ? `<div class="detail-info-line"><span class="info-label">Representation:</span> ${repParts.join(', ')}</div>` : '';
 
-  // Representation editor — checkbox toggle for categories, input fields for items inside
-  let repEditor = '<div class="detail-rep-editor">';
+  // Representation editor — 2-column grid layout
+  let repEditor = '<div class="detail-rep-editor"><div class="detail-rep-grid">';
+  // Column 1: LGBTQ+
+  repEditor += '<div class="detail-rep-col">';
   repEditor += '<div class="rep-toggle-row"><label><input type="checkbox" id="detRepLgbtq" onchange="toggleDetailRep()" ' + ((m.lgbtq && m.lgbtq.length) ? 'checked' : '') + '> LGBTQ+</label></div>';
   repEditor += '<div class="rep-sub-options" id="detRepLgbtqOpts" style="' + ((m.lgbtq && m.lgbtq.length) ? '' : 'display:none') + '">';
-  repEditor += `<div class="det-rep-tags" id="detRepLgbtqTags">${(m.lgbtq || []).map(v => `<span class="det-rep-tag" onclick="removeDetailRepTag('${m.id}','lgbtq','${v.replace(/'/g, "\\'")}')">${escHtml(v)} &times;</span>`).join('')}</div>`;
-  repEditor += `<input type="text" class="det-rep-input" id="detRepLgbtqInput" placeholder="Add (e.g. gay, bi, trans...)" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailRepTag('${m.id}','lgbtq',this.value);this.value='';}" />`;
-  repEditor += '</div>';
+  repEditor += `<div class="det-inline-tags-wrap">${(m.lgbtq || []).map(v => `<span class="det-rep-tag" onclick="removeDetailRepTag('${m.id}','lgbtq','${v.replace(/'/g, "\\'")}')">${escHtml(v)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detRepLgbtqInput" placeholder="Add..." onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailRepTag('${m.id}','lgbtq',this.value);this.value='';}" /></div>`;
+  repEditor += '</div></div>';
+  // Column 2: Disability
+  repEditor += '<div class="detail-rep-col">';
   repEditor += '<div class="rep-toggle-row"><label><input type="checkbox" id="detRepDis" onchange="toggleDetailRep()" ' + ((m.disability && m.disability.length) ? 'checked' : '') + '> Disability</label></div>';
   repEditor += '<div class="rep-sub-options" id="detRepDisOpts" style="' + ((m.disability && m.disability.length) ? '' : 'display:none') + '">';
-  repEditor += `<div class="det-rep-tags" id="detRepDisTags">${(m.disability || []).map(v => `<span class="det-rep-tag" onclick="removeDetailRepTag('${m.id}','disability','${v.replace(/'/g, "\\'")}')">${escHtml(v)} &times;</span>`).join('')}</div>`;
-  repEditor += `<input type="text" class="det-rep-input" id="detRepDisInput" placeholder="Add (e.g. neurodivergent, physical...)" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailRepTag('${m.id}','disability',this.value);this.value='';}" />`;
+  repEditor += `<div class="det-inline-tags-wrap">${(m.disability || []).map(v => `<span class="det-rep-tag" onclick="removeDetailRepTag('${m.id}','disability','${v.replace(/'/g, "\\'")}')">${escHtml(v)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detRepDisInput" placeholder="Add..." onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailRepTag('${m.id}','disability',this.value);this.value='';}" /></div>`;
+  repEditor += '</div></div>';
   repEditor += '</div></div>';
 
   // Romaji title — show if it exists, even if same as title (AniList romaji is the Japanese reading)
@@ -2679,16 +2787,29 @@ function openDetail(id) {
     ).join('');
   }
 
+  const startText = m.readStart || '';
+  const finishText = m.readFinish || '';
+  const startDisplay = startText || 'Mon YYYY';
+  const finishDisplay = finishText || 'Mon YYYY';
+  const startPlaceholder = !startText ? ' placeholder' : '';
+  const finishPlaceholder = !finishText ? ' placeholder' : '';
+
   const datesHtml = `<div class="detail-dates">
     <div class="date-field">
       <span class="date-label">Started</span>
-      <select onchange="saveDetailMonthYear('${m.id}','readStart','month',this.value)">${monthOpts(startParsed.month)}</select>
-      <select onchange="saveDetailMonthYear('${m.id}','readStart','year',this.value)">${yearOpts(startParsed.year)}</select>
+      <span class="date-text${startPlaceholder}" id="dateTextStart" onclick="toggleDateEdit('start')">${escHtml(startDisplay)}</span>
+      <div class="date-edit" id="dateEditStart">
+        <select id="dateMonthStart" onchange="saveDetailMonthYear('${m.id}','readStart','month',this.value);updateDateText('start','${m.id}')"><option value="">Mon</option>${monthNames.slice(1).map((name, i) => `<option value="${i+1}"${startParsed.month === (i+1) ? ' selected' : ''}>${name}</option>`).join('')}</select>
+        <select id="dateYearStart" onchange="saveDetailMonthYear('${m.id}','readStart','year',this.value);updateDateText('start','${m.id}')"><option value="">YYYY</option>${yearOptions.map(y => `<option value="${y}"${startParsed.year === y ? ' selected' : ''}>${y}</option>`).join('')}</select>
+      </div>
     </div>
     <div class="date-field">
       <span class="date-label">Finished</span>
-      <select onchange="saveDetailMonthYear('${m.id}','readFinish','month',this.value)">${monthOpts(finishParsed.month)}</select>
-      <select onchange="saveDetailMonthYear('${m.id}','readFinish','year',this.value)">${yearOpts(finishParsed.year)}</select>
+      <span class="date-text${finishPlaceholder}" id="dateTextFinish" onclick="toggleDateEdit('finish')">${escHtml(finishDisplay)}</span>
+      <div class="date-edit" id="dateEditFinish">
+        <select id="dateMonthFinish" onchange="saveDetailMonthYear('${m.id}','readFinish','month',this.value);updateDateText('finish','${m.id}')"><option value="">Mon</option>${monthNames.slice(1).map((name, i) => `<option value="${i+1}"${finishParsed.month === (i+1) ? ' selected' : ''}>${name}</option>`).join('')}</select>
+        <select id="dateYearFinish" onchange="saveDetailMonthYear('${m.id}','readFinish','year',this.value);updateDateText('finish','${m.id}')"><option value="">YYYY</option>${yearOptions.map(y => `<option value="${y}"${finishParsed.year === y ? ' selected' : ''}>${y}</option>`).join('')}</select>
+      </div>
     </div>
   </div>
   <div class="reread-row">
@@ -2697,13 +2818,15 @@ function openDetail(id) {
 
   body.innerHTML = `
     <div class="detail-top">
-      <div class="detail-cover">${coverHtml}</div>
+      <div class="detail-cover">
+        ${coverHtml}
+        <div style="margin-top:0.5rem;">${ratingHtml}</div>
+      </div>
       <div class="detail-meta">
         <h3>${escHtml(m.title || 'Untitled')}</h3>
         ${romajiLine}
         <div class="author">${escHtml(m.author || 'Unknown')}</div>
         <div class="detail-badges">${badges}</div>
-        ${ratingHtml}
         ${demoLine}
         ${countLine}
         ${genreLine}
@@ -2714,12 +2837,10 @@ function openDetail(id) {
     </div>
     ${m.synopsis ? `<div class="detail-section"><div class="detail-section-label">Synopsis</div><div class="detail-synopsis">${escHtml(m.synopsis)}</div></div>` : ''}
     <div class="detail-section"><div class="detail-section-label">Themes</div>
-      <div class="det-rep-tags">${(m.themes || []).map(t => `<span class="det-rep-tag" onclick="removeDetailTheme('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}</div>
-      <div class="autocomplete-wrap"><input type="text" class="det-rep-input" id="detThemeInput" placeholder="Add theme (e.g. school life, office workers...)" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTheme('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'themes','${m.id}')" autocomplete="off"><div class="autocomplete-list" id="detThemeAutocomplete"></div></div>
+      <div class="autocomplete-wrap"><div class="det-inline-tags-wrap" onclick="document.getElementById('detThemeInput').focus()">${(m.themes || []).map(t => `<span class="det-rep-tag" onclick="event.stopPropagation();removeDetailTheme('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detThemeInput" placeholder="${(m.themes || []).length ? '' : 'Add theme (e.g. school life, office workers...)'}" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTheme('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'themes','${m.id}')" autocomplete="off"></div><div class="autocomplete-list" id="detThemeAutocomplete"></div></div>
     </div>
     <div class="detail-section"><div class="detail-section-label">Tags</div>
-      <div class="det-rep-tags">${(m.tags || []).map(t => `<span class="det-rep-tag" onclick="removeDetailTag('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}</div>
-      <div class="autocomplete-wrap"><input type="text" class="det-rep-input" id="detTagInput" placeholder="Add tag..." onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTag('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'tags','${m.id}')" autocomplete="off"><div class="autocomplete-list" id="detTagAutocomplete"></div></div>
+      <div class="autocomplete-wrap"><div class="det-inline-tags-wrap" onclick="document.getElementById('detTagInput').focus()">${(m.tags || []).map(t => `<span class="det-rep-tag" onclick="event.stopPropagation();removeDetailTag('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detTagInput" placeholder="${(m.tags || []).length ? '' : 'Add tag...'}" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTag('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'tags','${m.id}')" autocomplete="off"></div><div class="autocomplete-list" id="detTagAutocomplete"></div></div>
     </div>
     <div class="detail-section"><div class="detail-section-label">Representation</div>${repEditor}</div>
     <div class="detail-section"><div class="detail-section-label">Reading Dates</div>${datesHtml}</div>
@@ -2804,6 +2925,28 @@ function saveDetailMonthYear(id, field, part, value) {
   if (part === 'year') parsed.year = value ? parseInt(value) : null;
   m[field] = formatDateField(parsed.month, parsed.year);
   save();
+}
+
+function toggleDateEdit(which) {
+  const textEl = document.getElementById('dateText' + capitalize(which));
+  const editEl = document.getElementById('dateEdit' + capitalize(which));
+  if (editEl.classList.contains('active')) {
+    editEl.classList.remove('active');
+    textEl.style.display = '';
+  } else {
+    editEl.classList.add('active');
+    textEl.style.display = 'none';
+  }
+}
+
+function updateDateText(which, id) {
+  const m = manga.find(x => x.id === id);
+  if (!m) return;
+  const field = which === 'start' ? 'readStart' : 'readFinish';
+  const textEl = document.getElementById('dateText' + capitalize(which));
+  const val = m[field] || '';
+  textEl.textContent = val || 'Mon YYYY';
+  textEl.classList.toggle('placeholder', !val);
 }
 
 function saveDetailReread(id, checked) {
