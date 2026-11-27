@@ -7905,7 +7905,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx97337-aotf0vw3Ta1F.jpg",
     "synopsis": "A story of two people determined to hold on to one another. Mitsuha, a high school girl from a town deep in the mountains, dreams of an unfamiliar life in Tokyo. Taki, a high school boy from Tokyo, dreams that he is a girl living in the mountains. As the two begin swapping lives, a miraculous story is set in motion.\n\n\n\n(Source: Yen Press)",
     "volumes": "3",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "drama",
       "romance",
@@ -7917,7 +7917,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "9"
   },
   {
     "id": "fcef2876c5",
@@ -7926,7 +7927,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30053-wCR6xyGzeUYo.png",
     "synopsis": "Yusuke Urameshi was a tough teen delinquent until one selfless act changed his life...by ending it. When he died saving a little kid from a speeding car, the afterlife didn't know what to do with him, so it gave him a second chance at life. Now, Yusuke is a ghost with a mission, performing good deeds at the behest of Botan, the ferrywoman of the River Styx, and Koenma, the pacifier-sucking judg…",
     "volumes": "19",
-    "demographic": "",
+    "demographic": "shounen",
     "genres": [
       "action",
       "comedy",
@@ -7940,7 +7941,8 @@
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "pubStatus": "finished",
+    "chapters": "176"
   },
   {
     "id": "50a103f4cd",
@@ -7949,7 +7951,7 @@
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx104660-NZZdpLJlgHle.jpg",
     "synopsis": "Surviving a zombie apocalypse beats being a wage slave any day! After spending years slaving away for a soul-crushing company, Akira's life has lost its luster. He lives in a trash-filled apartment, his pay is abysmal, and he can't even muster up the nerve to confess his love to his beautiful co-worker. But when a zombie apocalypse ravages his town, it gives him the push he needs to live for hi…",
     "volumes": "",
-    "demographic": "",
+    "demographic": "seinen",
     "genres": [
       "action",
       "comedy",
