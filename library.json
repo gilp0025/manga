@@ -6403,21 +6403,30 @@
     "pubStatus": "finished"
   },
   {
-    "id": "cbd59b20d6",
-    "title": "Spiritual Princess - Machi de Uwasa no Tengu no Ko",
-    "author": "",
-    "cover": "",
-    "synopsis": "",
-    "volumes": "",
-    "demographic": "",
-    "genres": [],
+    "title": "Machi de Uwasa no Tengu no Ko",
+    "author": "Nao Iwamoto, Isabelle Bovey",
+    "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx44818-E7F5vTMOB52T.png",
+    "synopsis": "Akihime is a seemingly normal girl attending junior high school, but she is actually the daughter of Ryokuhouzan's tengu. She lives with her mother in the human world, living a normal human life. However, her childhood friend Shun is constantly trying to convince her to go to the mountains with him, so that they can become tengus together. Despite his continuous urgings, Akihime refuses because…",
+    "volumes": "12",
+    "chapters": "68",
+    "demographic": "josei",
+    "pubStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
+    "genres": [
+      "comedy",
+      "romance",
+      "supernatural"
+    ],
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "cbd59b20d6",
     "dateAdded": "2026-11-27",
-    "pubStatus": "unknown"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "60fbccba7d",
