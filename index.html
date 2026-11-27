@@ -1082,9 +1082,13 @@ body {
           <label class="form-label">Author</label>
           <input type="text" class="form-input" id="mangaAuthor">
         </div>
-        <div class="form-group">
+        <div class="form-group" style="flex:0 0 30%;">
           <label class="form-label">Volumes</label>
-          <input type="text" class="form-input" id="mangaVolumes" placeholder="e.g. 24 or ongoing">
+          <input type="text" class="form-input" id="mangaVolumes" placeholder="e.g. 24">
+        </div>
+        <div class="form-group" style="flex:0 0 30%;">
+          <label class="form-label">Chapters</label>
+          <input type="text" class="form-input" id="mangaChapters" placeholder="e.g. 148">
         </div>
       </div>
 
@@ -1347,6 +1351,14 @@ async function loadFromGitHub() {
   fileSha = data.sha;
   const content = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
   manga = JSON.parse(content);
+  // Normalize legacy field names
+  manga.forEach(m => {
+    if (m.publicationStatus) {
+      if (!m.pubStatus || m.pubStatus === 'unknown') m.pubStatus = m.publicationStatus;
+      delete m.publicationStatus;
+    }
+    if (!m.pubStatus) m.pubStatus = 'unknown';
+  });
 }
 
 async function saveToGitHub() {
@@ -1400,9 +1412,11 @@ async function lookupManga() {
         staff(sort: RELEVANCE, perPage: 3) { edges { role node { name { full } } } }
         genres
         volumes
+        chapters
         status
         format
         countryOfOrigin
+        tags { name category rank isMediaSpoiler }
       }
     }
   }`;
@@ -1435,9 +1449,10 @@ async function lookupManga() {
       else if (m.status === 'CANCELLED') pubStatus = 'cancelled';
       else if (m.status === 'NOT_YET_RELEASED') pubStatus = 'ongoing';
 
-      // Guess demographic from format/country (AniList doesn't always have this)
+      // Extract demographic from AniList tags (category: "Demographic")
       let demographic = '';
-      // We won't auto-fill demographic since AniList doesn't reliably provide it
+      const demoTag = (m.tags || []).find(t => (t.category || '').toLowerCase() === 'demographic' && !t.isMediaSpoiler);
+      if (demoTag) demographic = demoTag.name.toLowerCase();
 
       // Clean synopsis (remove HTML tags)
       let synopsis = (m.description || '').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
@@ -1451,6 +1466,7 @@ async function lookupManga() {
         synopsis,
         genres: (m.genres || []).map(g => g.toLowerCase()),
         volumes: m.volumes || null,
+        chapters: m.chapters || null,
         pubStatus,
         demographic,
         format: m.format
@@ -1458,7 +1474,7 @@ async function lookupManga() {
     });
 
     resultsDiv.innerHTML = window._lookupResults.map((r, i) => {
-      const subtitle = r.authors.join(', ') + (r.volumes ? ` · ${r.volumes} vol` : '') + (r.pubStatus !== 'unknown' ? ` · ${r.pubStatus}` : '');
+      const subtitle = r.authors.join(', ') + (r.volumes ? ` · ${r.volumes} vol` : '') + (r.chapters ? ` · ${r.chapters} ch` : '') + (r.pubStatus !== 'unknown' ? ` · ${r.pubStatus}` : '');
       return `<div class="lookup-result" onclick="selectLookup(${i})">
         ${r.cover ? `<img src="${escHtml(r.cover)}" alt="">` : ''}
         <div class="lookup-result-info">
@@ -1483,6 +1499,7 @@ function selectLookup(i) {
   document.getElementById('mangaCover').value = item.cover;
   document.getElementById('mangaSynopsis').value = item.synopsis;
   document.getElementById('mangaVolumes').value = item.volumes || '';
+  document.getElementById('mangaChapters').value = item.chapters || '';
   document.getElementById('mangaPubStatus').value = item.pubStatus;
   if (item.demographic) document.getElementById('mangaDemographic').value = item.demographic;
 
@@ -1687,6 +1704,7 @@ function openAddModal() {
   document.getElementById('mangaCover').value = '';
   document.getElementById('mangaSynopsis').value = '';
   document.getElementById('mangaVolumes').value = '';
+  document.getElementById('mangaChapters').value = '';
   document.getElementById('mangaDemographic').value = '';
   document.getElementById('mangaPubStatus').value = 'unknown';
   document.getElementById('mangaReadingStatus').value = 'not-read';
@@ -1712,6 +1730,7 @@ function openEditModal(id) {
   document.getElementById('mangaCover').value = m.cover || '';
   document.getElementById('mangaSynopsis').value = m.synopsis || '';
   document.getElementById('mangaVolumes').value = m.volumes || '';
+  document.getElementById('mangaChapters').value = m.chapters || '';
   document.getElementById('mangaDemographic').value = m.demographic || '';
   document.getElementById('mangaPubStatus').value = m.pubStatus || 'unknown';
   document.getElementById('mangaReadingStatus').value = m.readingStatus || 'not-read';
@@ -1738,6 +1757,7 @@ function saveManga() {
     cover: document.getElementById('mangaCover').value.trim(),
     synopsis: document.getElementById('mangaSynopsis').value.trim(),
     volumes: document.getElementById('mangaVolumes').value.trim(),
+    chapters: document.getElementById('mangaChapters').value.trim(),
     demographic: document.getElementById('mangaDemographic').value,
     pubStatus: document.getElementById('mangaPubStatus').value,
     readingStatus: document.getElementById('mangaReadingStatus').value,
@@ -1940,7 +1960,7 @@ function openDetail(id) {
         <div class="author">${escHtml(m.author || 'Unknown')}</div>
         <div class="detail-badges">${badges}</div>
         ${ratingHtml}
-        ${m.volumes ? `<div class="detail-volumes">${escHtml(m.volumes)} volumes</div>` : ''}
+        ${m.volumes || m.chapters ? `<div class="detail-volumes">${m.volumes ? escHtml(m.volumes) + ' vol' : ''}${m.volumes && m.chapters ? ' · ' : ''}${m.chapters ? escHtml(m.chapters) + ' ch' : ''}</div>` : ''}
         <div class="detail-tags">${genreHtml}${tagHtml}</div>
       </div>
     </div>
@@ -2035,7 +2055,9 @@ async function anilistSearch(searchTitle) {
         staff(sort: RELEVANCE, perPage: 5) { edges { role node { name { full } } } }
         genres
         volumes
+        chapters
         status
+        tags { name category rank isMediaSpoiler }
       }
     }
   }`;
@@ -2079,57 +2101,90 @@ function getStaffAuthors(edges) {
   return authors;
 }
 
+function extractDemographic(tags) {
+  const demoTag = (tags || []).find(t => (t.category || '').toLowerCase() === 'demographic' && !t.isMediaSpoiler);
+  return demoTag ? demoTag.name.toLowerCase() : '';
+}
+
 async function startAutoPopulate() {
-  // Find entries missing cover
-  const needsData = manga.filter(m => !m.cover);
-  if (needsData.length === 0) {
-    alert('All manga already have covers!');
+  // Normalize any legacy publicationStatus → pubStatus before starting
+  manga.forEach(m => {
+    if (m.publicationStatus && !m.pubStatus) {
+      m.pubStatus = m.publicationStatus;
+    }
+    if (m.publicationStatus) delete m.publicationStatus;
+    if (!m.pubStatus) m.pubStatus = 'unknown';
+  });
+
+  // Process ALL manga entries
+  const entries = [...manga];
+  if (entries.length === 0) {
+    alert('Your library is empty!');
     return;
   }
 
   autopopRunning = true;
   document.getElementById('autopopOverlay').classList.add('open');
-  document.getElementById('autopopTitle').textContent = 'Fetching manga data…';
+  document.getElementById('autopopTitle').textContent = 'Syncing with AniList…';
   document.getElementById('autopopStopBtn').style.display = '';
   document.getElementById('autopopDoneBtn').style.display = 'none';
   document.getElementById('autopopBar').style.width = '0%';
 
   let done = 0;
-  let found = 0;
-  const total = needsData.length;
+  let updated = 0;
+  const total = entries.length;
   let saveCounter = 0;
 
-  for (const entry of needsData) {
+  for (const entry of entries) {
     if (!autopopRunning) break;
 
     const searchTitle = cleanSearchTitle(entry.title);
     document.getElementById('autopopStatus').textContent = searchTitle;
     document.getElementById('autopopProgress').textContent = `${done} / ${total}`;
-    document.getElementById('autopopFound').textContent = `${found} found`;
+    document.getElementById('autopopFound').textContent = `${updated} updated`;
 
     try {
       const result = await anilistSearch(searchTitle);
       if (result) {
+        let changed = false;
+
+        // Cover — only fill if missing
         const cover = result.coverImage?.large || '';
-        if (cover) {
-          entry.cover = cover;
-          found++;
-        }
+        if (cover && !entry.cover) { entry.cover = cover; changed = true; }
+
+        // Synopsis — only fill if missing
         const synopsis = cleanSynopsis(result.description);
-        if (synopsis && !entry.synopsis) entry.synopsis = synopsis;
+        if (synopsis && !entry.synopsis) { entry.synopsis = synopsis; changed = true; }
 
+        // Author — only fill if missing
         const authors = getStaffAuthors(result.staff?.edges);
-        if (authors.length && !entry.author) entry.author = authors.join(', ');
+        if (authors.length && !entry.author) { entry.author = authors.join(', '); changed = true; }
 
+        // Genres — only fill if missing
         const genres = (result.genres || []).map(g => g.toLowerCase());
-        if (genres.length && (!entry.genres || !entry.genres.length)) entry.genres = genres;
+        if (genres.length && (!entry.genres || !entry.genres.length)) { entry.genres = genres; changed = true; }
 
-        if (result.volumes && !entry.volumes) entry.volumes = String(result.volumes);
+        // Volumes — only fill if missing
+        if (result.volumes && !entry.volumes) { entry.volumes = String(result.volumes); changed = true; }
 
+        // Chapters — only fill if missing
+        if (result.chapters && !entry.chapters) { entry.chapters = String(result.chapters); changed = true; }
+
+        // Publication status — ALWAYS update from AniList
         const apiStatus = mapAnilistStatus(result.status);
-        if (entry.publicationStatus === 'unknown' && apiStatus !== 'unknown') {
-          entry.publicationStatus = apiStatus;
+        if (apiStatus !== 'unknown' && entry.pubStatus !== apiStatus) {
+          entry.pubStatus = apiStatus;
+          changed = true;
         }
+
+        // Demographic — ALWAYS update from AniList (overwrite if API has it)
+        const apiDemo = extractDemographic(result.tags);
+        if (apiDemo && entry.demographic !== apiDemo) {
+          entry.demographic = apiDemo;
+          changed = true;
+        }
+
+        if (changed) updated++;
       }
     } catch (err) {
       // Skip on error, continue with next
@@ -2155,9 +2210,9 @@ async function startAutoPopulate() {
   try { await saveToGitHub(); } catch(e) {}
 
   document.getElementById('autopopTitle').textContent = autopopRunning ? 'Done!' : 'Stopped';
-  document.getElementById('autopopStatus').textContent = `${found} manga updated with covers and info.`;
+  document.getElementById('autopopStatus').textContent = `${updated} manga updated.`;
   document.getElementById('autopopProgress').textContent = `${done} / ${total}`;
-  document.getElementById('autopopFound').textContent = `${found} found`;
+  document.getElementById('autopopFound').textContent = `${updated} updated`;
   document.getElementById('autopopBar').style.width = `${Math.round((done / total) * 100)}%`;
   document.getElementById('autopopStopBtn').style.display = 'none';
   document.getElementById('autopopDoneBtn').style.display = '';
