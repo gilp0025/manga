@@ -417,13 +417,16 @@
     "chapters": "80"
   },
   {
-    "id": "7b3abf121b",
-    "title": "Akatsuki no Yona_Yona of the Dawn",
+    "title": "Yona of the Dawn",
     "author": "Mizuho Kusanagi, Lys Blakeslee",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx51525-wZ1AjkbXrKns.png",
     "synopsis": "A red-haired princess loses her family and her kingdom—now she must rise and fight for her throne!\n\n\n\nPrincess Yona lives an ideal life as the only princess of her kingdom. Doted on by her father, the king, and protected by her faithful guard Hak, she cherishes the time spent with the man she loves, Su-won. But everything changes on her 16th birthday when tragedy strikes her family!\n\n\n\nYona ree…",
     "volumes": "48",
-    "demographic": "shoujo",
+    "chapters": "295",
+    "demographic": "",
+    "pubStatus": "finished",
+    "readingStatus": "not-read",
+    "rating": 0,
     "genres": [
       "action",
       "adventure",
@@ -431,14 +434,12 @@
       "fantasy",
       "romance"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
-    "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "295"
+    "lgbtq": [],
+    "disability": [],
+    "id": "7b3abf121b",
+    "dateAdded": "2026-11-27"
   },
   {
     "id": "a7b0486f0b",
