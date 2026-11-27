@@ -1080,24 +1080,29 @@
     "chapters": "53"
   },
   {
-    "id": "6857e61a80",
     "title": "Blue Exorcist",
     "author": "Kazue Katou",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx43492-2mvXJnP6Feqq.png",
     "synopsis": "Raised by Father Fujimoto, a famous exorcist, Rin Okumura never knew his real father. One day a fateful argument with Father Fujimoto forces Rin to face a terrible truth—the blood of the demon lord Satan runs in Rin's veins! Rin swears to defeat Satan, but doing that means entering the mysterious True Cross Academy and becoming an exorcist himself. Can Rin fight demons and keep his infernal blo…",
     "volumes": "",
-    "demographic": "shounen",
+    "chapters": "",
+    "demographic": "shonen",
+    "pubStatus": "ongoing",
+    "readingStatus": "reading",
+    "rating": 3,
     "genres": [
       "action",
       "supernatural"
     ],
-    "readingStatus": "reading",
-    "rating": 3,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "6857e61a80",
     "dateAdded": "2026-11-27",
-    "pubStatus": "ongoing"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "title": "Blue Flag",
