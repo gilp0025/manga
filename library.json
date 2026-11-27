@@ -3024,28 +3024,35 @@
     "chapters": "6"
   },
   {
-    "id": "ce041cf4af",
     "title": "I Love You So Much, I Hate You",
     "author": "Yuni",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx110205-1LEphywyVcnf.jpg",
     "synopsis": "Saori Fujimura and her boss, Ayako Asano, are an unbeatable duo at work, but after hours their relationship is more than just professional. As tensions mount between Ayako and her husband and Saori’s feelings grow stronger, they’ll have to decide—is it love they seek, or merely pleasure?\n\n\n(Source: Yen Press)",
     "volumes": "1",
+    "chapters": "9",
     "demographic": "josei",
-    "genres": [
-      "drama",
-      "romance"
-    ],
+    "pubStatus": "finished",
     "readingStatus": "read",
     "rating": 2,
+    "genres": [
+      "drama",
+      "romance",
+      "yuri",
+      "gl"
+    ],
     "tags": [],
-    "notes": "",
-    "noteDate": null,
-    "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "9",
     "themes": [
       "office workers"
-    ]
+    ],
+    "notes": "",
+    "lgbtq": [],
+    "disability": [],
+    "id": "ce041cf4af",
+    "dateAdded": "2026-11-27",
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": "",
+    "reread": false
   },
   {
     "id": "18291af7c9",
