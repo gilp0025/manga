@@ -455,21 +455,28 @@
     "pubStatus": "finished"
   },
   {
-    "id": "f2321e27b8",
-    "title": "Alice in Borderlands",
-    "author": "",
-    "cover": "",
-    "synopsis": "",
-    "volumes": "",
-    "demographic": "",
-    "genres": [],
-    "readingStatus": "not-read",
+    "title": "Alice in Borderland",
+    "author": "Haro Aso",
+    "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx63031-lE9pKD3cpmVK.jpg",
+    "synopsis": "Eighteen-year-old Ryohei Arisu is sick of his life. School sucks, his love life is a joke, and his future feels like impending doom. As he struggles to exist in a world that can’t be bothered with him, Ryohei feels like everything would be better if he were anywhere else. When a strange fireworks show transports him and his friends to a parallel world, Ryohei thinks all his wishes have come tru…",
+    "volumes": "18",
+    "chapters": "87",
+    "demographic": "shonen",
+    "pubStatus": "finished",
+    "readingStatus": "read",
     "rating": 0,
+    "genres": [
+      "action",
+      "drama",
+      "horror",
+      "psychological",
+      "supernatural",
+      "thriller"
+    ],
     "tags": [],
     "notes": "",
-    "noteDate": null,
-    "dateAdded": "2026-11-27",
-    "pubStatus": "finished"
+    "id": "f2321e27b8",
+    "dateAdded": "2026-11-27"
   },
   {
     "id": "66c2f61f98",
