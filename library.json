@@ -1645,26 +1645,27 @@
     "pubStatus": "ongoing"
   },
   {
-    "id": "133a40d75f",
     "title": "Dame na Watashi ni Koishite Kudasai",
     "author": "Aya Nakahara",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx86317-zlMHxrOQwNq5.jpg",
     "synopsis": "Michiko is an unemployed 30-year-old. She has just broken up with a younger boyfriend whom she supported financially until she drained all of her savings. Michiko then has a chance meeting with a former boss she used to dislike.\n\n(Source: Anime News Network)\n\n\n\nNote: Includes four bonus chapters.",
     "volumes": "10",
+    "chapters": "44",
     "demographic": "josei",
+    "pubStatus": "finished",
+    "readingStatus": "read",
+    "rating": 0,
     "genres": [
       "comedy",
       "drama",
       "romance"
     ],
-    "readingStatus": "read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
-    "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "44"
+    "lgbtq": [],
+    "disability": [],
+    "id": "133a40d75f",
+    "dateAdded": "2026-11-27"
   },
   {
     "id": "20232be273",
