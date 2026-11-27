@@ -998,26 +998,31 @@
     "chapters": "34"
   },
   {
-    "id": "2ad3b7b140",
     "title": "Blood on the Tracks",
     "author": "Shuuzou Oshimi",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx98397-5b3kSYyw7ykd.jpg",
     "synopsis": "Ordinary middle school student Seiichi Osabe receives love and care from his mother Seiko. Until one summer an incident changes the family dynamic forever. This is a story of a mother’s love that has gone too far….\n\n\n\n(Source: Kodansha USA)",
     "volumes": "17",
+    "chapters": "153",
     "demographic": "seinen",
+    "pubStatus": "finished",
+    "readingStatus": "read",
+    "rating": 0,
     "genres": [
       "drama",
       "horror",
       "psychological"
     ],
-    "readingStatus": "read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
-    "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "153"
+    "lgbtq": [
+      "trans"
+    ],
+    "disability": [
+      "mental health"
+    ],
+    "id": "2ad3b7b140",
+    "dateAdded": "2026-11-27"
   },
   {
     "id": "096324e7ed",
