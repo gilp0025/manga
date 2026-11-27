@@ -32,13 +32,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "hiatus",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "hiatus"
   },
   {
     "title": "365 Days to the Wedding",
@@ -95,13 +95,13 @@
       "romance",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "title": "86 - EIGHTY-SIX",
@@ -136,13 +136,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "175f9e793a",
@@ -156,13 +156,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "title": "A Kiss with a Cat",
@@ -196,13 +196,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "title": "A Silent Voice",
@@ -235,13 +235,13 @@
     "genres": [
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b0b5d604c5",
@@ -257,13 +257,13 @@
       "drama",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7947d9eecb",
@@ -274,13 +274,13 @@
     "volumes": "2",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "title": "After the Rain",
@@ -316,13 +316,13 @@
       "fantasy",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "41ab7b132b",
@@ -337,34 +337,34 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
-    "id": "2582dd863c",
     "title": "AIR",
     "author": "Yukimaru Katsura, Key",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b31604-dHOps27OpPIk.jpg",
     "synopsis": "Yukito Kunisaki is a man traveling Japan in search of the \"girl in the sky\". Eventually he makes his way to a sleepy seaside town where he meets a strange girl named Misuzu Kamio who has dreams of flying in the sky. During his stay in the town, Yukito meets other unique people and begins to learn more about Misuzu and the town she lives in. \n\n(Source: AnimeCouncil&sup2;)",
     "volumes": "2",
+    "chapters": "",
     "demographic": "",
+    "pubStatus": "finished",
+    "readingStatus": "read",
+    "rating": 0,
     "genres": [
       "comedy",
       "drama",
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
-    "readingStatus": "not-read",
-    "rating": 0,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "id": "2582dd863c",
     "dateAdded": "2026-11-27"
   },
   {
@@ -382,13 +382,13 @@
       "fantasy",
       "horror"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7b3abf121b",
@@ -405,13 +405,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a7b0486f0b",
@@ -424,13 +424,13 @@
     "genres": [
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "43e203a6fe",
@@ -446,13 +446,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f2321e27b8",
@@ -463,13 +463,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "66c2f61f98",
@@ -487,13 +487,13 @@
       "romance",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "faf315e764",
@@ -509,13 +509,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1b1d2b1384",
@@ -528,13 +528,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "2413a72629",
@@ -545,13 +545,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "442c0184eb",
@@ -567,13 +567,13 @@
       "supernatural",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "bc95960385",
@@ -586,13 +586,13 @@
     "genres": [
       "sports"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a7f23335ec",
@@ -608,13 +608,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "bbbe91545c",
@@ -628,13 +628,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "642e8dd2bc",
@@ -648,13 +648,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a1a013e22a",
@@ -672,13 +672,13 @@
       "sci-fi",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fd6c6738ee",
@@ -692,13 +692,13 @@
       "fantasy",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e68de2f184",
@@ -711,13 +711,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a9c63312e8",
@@ -732,13 +732,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4df5dc8e8b",
@@ -755,13 +755,13 @@
       "psychological",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ecfd5b0f0e",
@@ -775,13 +775,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4638b1bb77",
@@ -798,13 +798,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "41c71f8fbc",
@@ -822,13 +822,13 @@
       "horror",
       "psychological"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "7b97a223c4",
@@ -845,13 +845,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "9a3b5777ff",
@@ -862,13 +862,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "14237b9abf",
@@ -882,13 +882,13 @@
       "action",
       "comedy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "8663a51cf9",
@@ -901,13 +901,13 @@
     "genres": [
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "77f04c00d2",
@@ -921,13 +921,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2ad3b7b140",
@@ -942,13 +942,13 @@
       "horror",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "096324e7ed",
@@ -963,13 +963,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6857e61a80",
@@ -983,13 +983,13 @@
       "action",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "def3428e57",
@@ -1003,13 +1003,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "441f0bad53",
@@ -1024,13 +1024,13 @@
       "music",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "57ddce9ddf",
@@ -1045,13 +1045,13 @@
       "drama",
       "sports"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "bed27e6082",
@@ -1064,13 +1064,13 @@
     "genres": [
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4d916f0831",
@@ -1085,13 +1085,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "590a605ca0",
@@ -1107,13 +1107,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f8a8497bb1",
@@ -1127,13 +1127,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ea2d89c88d",
@@ -1148,13 +1148,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "cd5133945b",
@@ -1168,13 +1168,13 @@
       "fantasy",
       "mystery"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "f68762ec59",
@@ -1189,13 +1189,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fc63ac7f9c",
@@ -1210,13 +1210,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3dcfa94d0c",
@@ -1232,13 +1232,13 @@
       "mystery",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "8e992ed832",
@@ -1254,13 +1254,13 @@
       "mystery",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d629aaf4e3",
@@ -1277,13 +1277,13 @@
       "slice of life",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7b1fc01a41",
@@ -1294,13 +1294,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "dedc79d0c1",
@@ -1313,13 +1313,13 @@
     "genres": [
       "comedy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "68082676c2",
@@ -1336,13 +1336,13 @@
       "horror",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "da656296ee",
@@ -1353,13 +1353,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "54cc2cf720",
@@ -1374,13 +1374,13 @@
       "romance",
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3938fcc968",
@@ -1394,13 +1394,13 @@
       "comedy",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2a77c78fb3",
@@ -1417,13 +1417,13 @@
       "romance",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "0fd9cb147d",
@@ -1438,13 +1438,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "dd201283fd",
@@ -1458,13 +1458,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "809949c300",
@@ -1478,13 +1478,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2c0d42b895",
@@ -1500,13 +1500,13 @@
       "romance",
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "0912096518",
@@ -1521,13 +1521,13 @@
       "adventure",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "133a40d75f",
@@ -1542,13 +1542,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "20232be273",
@@ -1563,13 +1563,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "5eeec20c3f",
@@ -1587,13 +1587,13 @@
       "sci-fi",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "eedca0768c",
@@ -1610,13 +1610,13 @@
       "sci-fi",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d3a968a3e5",
@@ -1632,13 +1632,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "2e50eee67c",
@@ -1654,13 +1654,13 @@
       "sci-fi",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ef47413d61",
@@ -1677,13 +1677,13 @@
       "sci-fi",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c675e9924d",
@@ -1699,13 +1699,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "015cefa506",
@@ -1719,13 +1719,13 @@
       "comedy",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "adeb7ebcc4",
@@ -1738,13 +1738,13 @@
     "genres": [
       "drama"
     ],
-    "publicationStatus": "hiatus",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "hiatus"
   },
   {
     "id": "80d4b8b4ca",
@@ -1760,13 +1760,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "77523db09d",
@@ -1780,13 +1780,13 @@
       "drama",
       "mystery"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "989b71c573",
@@ -1802,13 +1802,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "c2c1b728a4",
@@ -1826,13 +1826,13 @@
       "horror",
       "mystery"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6396781e82",
@@ -1848,13 +1848,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1335d074c5",
@@ -1868,13 +1868,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "db29df47b4",
@@ -1888,13 +1888,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "562e604a3c",
@@ -1910,13 +1910,13 @@
       "comedy",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "cf3204181a",
@@ -1934,13 +1934,13 @@
       "romance",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "bbcf719fc8",
@@ -1956,13 +1956,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4212ac8a00",
@@ -1980,13 +1980,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "740b89dabb",
@@ -2000,13 +2000,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3d69030d35",
@@ -2021,13 +2021,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "3ae5167fbe",
@@ -2042,13 +2042,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d0907c3c92",
@@ -2064,13 +2064,13 @@
       "sci-fi",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7e5c095ab6",
@@ -2085,13 +2085,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "5ffe67a8cd",
@@ -2106,13 +2106,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a2743909a9",
@@ -2127,13 +2127,13 @@
       "drama",
       "ecchi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6c4e77f601",
@@ -2148,13 +2148,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "87c7777e75",
@@ -2171,13 +2171,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c09065c207",
@@ -2192,13 +2192,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "52388731d0",
@@ -2215,13 +2215,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2112da519b",
@@ -2235,13 +2235,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "40dab3a50b",
@@ -2254,13 +2254,13 @@
     "genres": [
       "hentai"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a68cff1ced",
@@ -2276,13 +2276,13 @@
       "ecchi",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "0dfcf23e66",
@@ -2298,13 +2298,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4efd121675",
@@ -2319,13 +2319,13 @@
       "drama",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "12b2ff4f6e",
@@ -2341,13 +2341,13 @@
       "comedy",
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b126df5ab6",
@@ -2362,13 +2362,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b4da544e49",
@@ -2383,13 +2383,13 @@
       "mystery",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "516b55cd31",
@@ -2405,13 +2405,13 @@
       "slice of life",
       "sports"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "f7faba66a9",
@@ -2427,13 +2427,13 @@
       "slice of life",
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e924ee0735",
@@ -2448,13 +2448,13 @@
       "drama",
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7e5add9bb4",
@@ -2467,13 +2467,13 @@
     "genres": [
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "19a84c8e0b",
@@ -2488,13 +2488,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a02b0e9293",
@@ -2509,13 +2509,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7dee80ac76",
@@ -2530,13 +2530,13 @@
       "drama",
       "mystery"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "f0d9f66471",
@@ -2551,13 +2551,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ddb5f69628",
@@ -2572,13 +2572,13 @@
       "hentai",
       "horror"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "67ea025e44",
@@ -2593,13 +2593,13 @@
       "horror",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "28cbba8510",
@@ -2613,13 +2613,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d367460570",
@@ -2633,13 +2633,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "72d3c3be69",
@@ -2653,13 +2653,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e2b44f06c3",
@@ -2676,13 +2676,13 @@
       "sports",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "70902db936",
@@ -2697,13 +2697,13 @@
       "fantasy",
       "mecha"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f89ee36f14",
@@ -2717,13 +2717,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d0bde17f7a",
@@ -2738,13 +2738,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f0be927799",
@@ -2759,13 +2759,13 @@
       "horror",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "56b455473f",
@@ -2779,13 +2779,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ce041cf4af",
@@ -2799,13 +2799,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "18291af7c9",
@@ -2820,13 +2820,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ff0971911a",
@@ -2841,13 +2841,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ff56c63417",
@@ -2863,13 +2863,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "be4c71180d",
@@ -2882,13 +2882,13 @@
     "genres": [
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a560639831",
@@ -2903,13 +2903,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1f60d7e598",
@@ -2924,13 +2924,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a4fcc4fe25",
@@ -2946,13 +2946,13 @@
       "psychological",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fe8c352078",
@@ -2966,13 +2966,13 @@
       "drama",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2efcec8a2c",
@@ -2986,13 +2986,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "49f63b086d",
@@ -3009,13 +3009,13 @@
       "psychological",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2e454dfa08",
@@ -3029,13 +3029,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "61ec450060",
@@ -3049,13 +3049,13 @@
       "drama",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3ec5792441",
@@ -3070,13 +3070,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a49f41c11c",
@@ -3093,13 +3093,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "5d15be54a5",
@@ -3114,13 +3114,13 @@
       "horror",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e9d6e9ad8c",
@@ -3136,13 +3136,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "2791dc2625",
@@ -3157,13 +3157,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "97aaa138b7",
@@ -3178,13 +3178,13 @@
       "drama",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "8fb572b29b",
@@ -3197,13 +3197,13 @@
     "genres": [
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f2220fa68e",
@@ -3219,13 +3219,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d3c677842e",
@@ -3240,13 +3240,13 @@
       "sci-fi",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "010dd082c6",
@@ -3261,13 +3261,13 @@
       "mystery",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "43bdaa3fb5",
@@ -3283,13 +3283,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6b925db86b",
@@ -3303,13 +3303,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "36814ee8d2",
@@ -3324,13 +3324,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7146edde56",
@@ -3344,13 +3344,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b65c731c49",
@@ -3365,13 +3365,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fdef7a5f3c",
@@ -3386,13 +3386,13 @@
       "comedy",
       "sports"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "90c910ba99",
@@ -3407,13 +3407,13 @@
       "mystery",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "cfd8325fb2",
@@ -3427,13 +3427,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7f26b5c346",
@@ -3448,13 +3448,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "254efbe1e4",
@@ -3469,13 +3469,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "849f504cca",
@@ -3491,13 +3491,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "265d059ad9",
@@ -3512,13 +3512,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2b93f84ad1",
@@ -3533,13 +3533,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fd8ca192ea",
@@ -3553,13 +3553,13 @@
       "action",
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "96cb5a7884",
@@ -3575,13 +3575,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3604a081f8",
@@ -3592,13 +3592,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "hiatus",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "hiatus"
   },
   {
     "id": "749e560598",
@@ -3613,13 +3613,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "95cfc43b34",
@@ -3635,13 +3635,13 @@
       "psychological",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "19c0366595",
@@ -3656,13 +3656,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "5ecda69de5",
@@ -3675,13 +3675,13 @@
     "genres": [
       "hentai"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a4915b9ae1",
@@ -3695,13 +3695,13 @@
       "comedy",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d69d28de42",
@@ -3715,13 +3715,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c06de9c747",
@@ -3736,13 +3736,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "bcda7fea06",
@@ -3756,13 +3756,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "541469f7b5",
@@ -3777,13 +3777,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "15c8b8930b",
@@ -3796,13 +3796,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c178236d25",
@@ -3819,13 +3819,13 @@
       "horror",
       "sci-fi"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "c7cc4d3397",
@@ -3841,13 +3841,13 @@
       "mahou shoujo",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d7d9ae288c",
@@ -3862,13 +3862,13 @@
       "fantasy",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6e197bed07",
@@ -3881,13 +3881,13 @@
     "genres": [
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f395a5a714",
@@ -3902,13 +3902,13 @@
       "comedy",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6fa93a9ec3",
@@ -3924,13 +3924,13 @@
       "ecchi",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b462046f9f",
@@ -3947,13 +3947,13 @@
       "supernatural",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e702b1eb3f",
@@ -3968,13 +3968,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "75dd2d8166",
@@ -3992,13 +3992,13 @@
       "slice of life",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "243a3afa44",
@@ -4014,13 +4014,13 @@
       "psychological",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e4835ee4d5",
@@ -4034,13 +4034,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a4ef14e48c",
@@ -4054,13 +4054,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c1d92a5137",
@@ -4074,13 +4074,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "32a7171eae",
@@ -4094,13 +4094,13 @@
       "comedy",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "9c5dd80f27",
@@ -4116,13 +4116,13 @@
       "ecchi",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a218763cf4",
@@ -4137,13 +4137,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "00653ad3fb",
@@ -4157,13 +4157,13 @@
       "drama",
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2be651c688",
@@ -4178,13 +4178,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c0b6b9029d",
@@ -4197,13 +4197,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "6be77b579f",
@@ -4219,13 +4219,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4af58fa2b9",
@@ -4241,13 +4241,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "db4a82b587",
@@ -4261,13 +4261,13 @@
       "action",
       "comedy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "0f012abb2e",
@@ -4282,13 +4282,13 @@
       "comedy",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4d10c5f70a",
@@ -4302,13 +4302,13 @@
       "action",
       "adventure"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "86797f0f14",
@@ -4324,13 +4324,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ea5b91c16e",
@@ -4346,13 +4346,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7f3cd5d4b7",
@@ -4367,13 +4367,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1d42812297",
@@ -4387,13 +4387,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4b6df800cd",
@@ -4407,13 +4407,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "9ebaae8bbd",
@@ -4427,13 +4427,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d6023ba58d",
@@ -4449,13 +4449,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "163d8d4bda",
@@ -4470,13 +4470,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "564e101e3f",
@@ -4492,13 +4492,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "72fb5f8156",
@@ -4514,13 +4514,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "hiatus",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "hiatus"
   },
   {
     "id": "2af787436a",
@@ -4535,13 +4535,13 @@
       "adventure",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2f0b2c7525",
@@ -4555,13 +4555,13 @@
       "drama",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "012bc2c9fb",
@@ -4576,13 +4576,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7da535ba2d",
@@ -4597,13 +4597,13 @@
       "fantasy",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "246eaf3b14",
@@ -4618,13 +4618,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "0690e1e91f",
@@ -4639,13 +4639,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "10059a5c7d",
@@ -4661,13 +4661,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7080036f93",
@@ -4683,13 +4683,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1e5efde650",
@@ -4706,13 +4706,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "308442ced7",
@@ -4728,13 +4728,13 @@
       "comedy",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d5540335ad",
@@ -4750,13 +4750,13 @@
       "sci-fi",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "0343789d82",
@@ -4771,13 +4771,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "30add27e8e",
@@ -4791,13 +4791,13 @@
       "comedy",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "814c290d3e",
@@ -4812,13 +4812,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "909cea0c97",
@@ -4831,13 +4831,13 @@
     "genres": [
       "hentai"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "740198fc66",
@@ -4853,13 +4853,13 @@
       "psychological",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d28eeb60a3",
@@ -4873,13 +4873,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b7d17ac2db",
@@ -4894,13 +4894,13 @@
       "psychological",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "65a661470a",
@@ -4916,13 +4916,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "68b0398235",
@@ -4936,13 +4936,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f92c23997f",
@@ -4959,13 +4959,13 @@
       "psychological",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3444b38c48",
@@ -4979,13 +4979,13 @@
       "action",
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "14e114b6ac",
@@ -4999,13 +4999,13 @@
       "action",
       "drama"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "8cd3d764c9",
@@ -5019,13 +5019,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "8a0e14002e",
@@ -5039,13 +5039,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2930de385a",
@@ -5058,13 +5058,13 @@
     "genres": [
       "hentai"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "8dc5344bc0",
@@ -5077,13 +5077,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b6507b7d62",
@@ -5099,13 +5099,13 @@
       "sci-fi",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "674248bf66",
@@ -5122,13 +5122,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ea8dbc7900",
@@ -5145,13 +5145,13 @@
       "psychological",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3ea1d55aff",
@@ -5166,13 +5166,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a6c6b2ccca",
@@ -5187,13 +5187,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "8eef0d702a",
@@ -5211,13 +5211,13 @@
       "psychological",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "040f2522bb",
@@ -5232,13 +5232,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "63a3745a39",
@@ -5249,13 +5249,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "82143c7d47",
@@ -5271,13 +5271,13 @@
       "comedy",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "ab8c5bb623",
@@ -5297,13 +5297,13 @@
       "romance",
       "thriller"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a120319d44",
@@ -5320,13 +5320,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1c6aa3d257",
@@ -5341,13 +5341,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e2c7a691ce",
@@ -5362,13 +5362,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "8d2651a34e",
@@ -5384,13 +5384,13 @@
       "ecchi",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "85e8d2311f",
@@ -5406,13 +5406,13 @@
       "ecchi",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "260ff171b5",
@@ -5427,13 +5427,13 @@
       "drama",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "84e53ccdcf",
@@ -5447,13 +5447,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "hiatus",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "hiatus"
   },
   {
     "id": "256e67afc0",
@@ -5468,13 +5468,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b2f3a6353d",
@@ -5487,13 +5487,13 @@
     "genres": [
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c019d2b026",
@@ -5506,13 +5506,13 @@
     "genres": [
       "action"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "56961188a5",
@@ -5526,13 +5526,13 @@
       "drama",
       "psychological"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "0ded3b1813",
@@ -5546,13 +5546,13 @@
       "action",
       "comedy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "3abd8630e3",
@@ -5567,13 +5567,13 @@
       "mystery",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "db7fa61241",
@@ -5584,13 +5584,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "07669ef0bf",
@@ -5607,13 +5607,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4900c46b62",
@@ -5626,13 +5626,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "99aed52400",
@@ -5648,13 +5648,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "30af14a41c",
@@ -5665,13 +5665,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3fb1d7c077",
@@ -5682,13 +5682,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "adda25a71b",
@@ -5704,13 +5704,13 @@
       "comedy",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "5a45105efe",
@@ -5725,13 +5725,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b995997c90",
@@ -5746,13 +5746,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "cf0d1e5390",
@@ -5766,13 +5766,13 @@
       "action",
       "drama"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "58527ae581",
@@ -5787,13 +5787,13 @@
       "drama",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "06f5199ffa",
@@ -5807,13 +5807,13 @@
       "comedy",
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e0d3b48abe",
@@ -5828,13 +5828,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "6cef30e366",
@@ -5849,13 +5849,13 @@
       "drama",
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fbb4f52e04",
@@ -5869,13 +5869,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "80665b7964",
@@ -5890,13 +5890,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "6e420ac8be",
@@ -5911,13 +5911,13 @@
       "fantasy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "1470937c89",
@@ -5932,13 +5932,13 @@
       "music",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "630fc9f60e",
@@ -5953,13 +5953,13 @@
       "adventure",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ffff13142c",
@@ -5975,13 +5975,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "hiatus",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "hiatus"
   },
   {
     "id": "d105b6d2d4",
@@ -5998,13 +5998,13 @@
       "fantasy",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "82419bcd92",
@@ -6020,13 +6020,13 @@
       "fantasy",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b4f4de173d",
@@ -6041,13 +6041,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "91590bdf3e",
@@ -6064,13 +6064,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e1390b6def",
@@ -6081,13 +6081,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "cbd59b20d6",
@@ -6098,13 +6098,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "unknown",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "unknown"
   },
   {
     "id": "60fbccba7d",
@@ -6120,13 +6120,13 @@
       "slice of life",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "2fcb287129",
@@ -6140,13 +6140,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "ce5700d6c2",
@@ -6160,13 +6160,13 @@
       "drama",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fd5a125060",
@@ -6179,13 +6179,13 @@
     "genres": [
       "hentai"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "404bf2394d",
@@ -6200,13 +6200,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "82a6022d59",
@@ -6221,13 +6221,13 @@
       "romance",
       "sports"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b8f9343f19",
@@ -6241,13 +6241,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "63b9c31419",
@@ -6265,13 +6265,13 @@
       "supernatural",
       "thriller"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d3db70dd7d",
@@ -6286,13 +6286,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "a276dc767e",
@@ -6309,13 +6309,13 @@
       "slice of life",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "9ffefe6684",
@@ -6330,13 +6330,13 @@
       "fantasy",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "491a9fc8b8",
@@ -6351,13 +6351,13 @@
       "fantasy",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "0b91dd0e48",
@@ -6371,13 +6371,13 @@
       "drama",
       "mystery"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "5d80b9691c",
@@ -6391,13 +6391,13 @@
       "drama",
       "mystery"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "f1e0cb5eb0",
@@ -6412,13 +6412,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "191fc264d5",
@@ -6432,13 +6432,13 @@
       "action",
       "adventure"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "b250c88ac4",
@@ -6453,13 +6453,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "748b5898e9",
@@ -6474,13 +6474,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3b04fd18af",
@@ -6494,13 +6494,13 @@
       "drama",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "52c2058963",
@@ -6515,13 +6515,13 @@
       "fantasy",
       "mystery"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4930f5914b",
@@ -6537,13 +6537,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "5f818f4806",
@@ -6561,13 +6561,13 @@
       "romance",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "39f9eb145e",
@@ -6583,13 +6583,13 @@
       "slice of life",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "05679e63dc",
@@ -6606,13 +6606,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "0023fea6c8",
@@ -6625,13 +6625,13 @@
     "genres": [
       "psychological"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4a6eb04b78",
@@ -6646,13 +6646,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f4d707c8fb",
@@ -6666,13 +6666,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "0acb7a5803",
@@ -6689,13 +6689,13 @@
       "supernatural",
       "thriller"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "a1c91d52ea",
@@ -6710,13 +6710,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c12cd70aa3",
@@ -6731,13 +6731,13 @@
       "fantasy",
       "mecha"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "8ef40a1d0e",
@@ -6753,13 +6753,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4879e1dcb9",
@@ -6770,13 +6770,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "unknown",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "unknown"
   },
   {
     "id": "83686a2a8f",
@@ -6789,13 +6789,13 @@
     "genres": [
       "hentai"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c3e0f120c9",
@@ -6810,13 +6810,13 @@
       "mystery",
       "sci-fi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "6f5d7520f2",
@@ -6830,13 +6830,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "8ab3cb172b",
@@ -6854,13 +6854,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "37555ae254",
@@ -6877,13 +6877,13 @@
       "psychological",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "b228bff1b3",
@@ -6899,13 +6899,13 @@
       "horror",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e087a61c15",
@@ -6923,13 +6923,13 @@
       "psychological",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "d07f449fde",
@@ -6945,13 +6945,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4d0cc9d967",
@@ -6967,13 +6967,13 @@
       "psychological",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "f272b0404f",
@@ -6988,13 +6988,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "95769d5e5d",
@@ -7010,13 +7010,13 @@
       "sci-fi",
       "supernatural"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "763b210c1f",
@@ -7030,13 +7030,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "c61245e6f2",
@@ -7054,13 +7054,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "37b9820ea2",
@@ -7075,13 +7075,13 @@
       "adventure",
       "drama"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e3b63b8f5e",
@@ -7096,13 +7096,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "87af8bde21",
@@ -7119,13 +7119,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "36dd81e45d",
@@ -7140,13 +7140,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "e81ed5a1f7",
@@ -7161,13 +7161,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "9c207b2794",
@@ -7183,13 +7183,13 @@
       "psychological",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "2f57088276",
@@ -7204,13 +7204,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "96cfb74d89",
@@ -7225,13 +7225,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "744c62b29a",
@@ -7246,13 +7246,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "17afa1846a",
@@ -7263,13 +7263,13 @@
     "volumes": "",
     "demographic": "",
     "genres": [],
-    "publicationStatus": "unknown",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "unknown"
   },
   {
     "id": "9fe66a6507",
@@ -7283,13 +7283,13 @@
       "action",
       "sci-fi"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "d25da43845",
@@ -7304,13 +7304,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "50c17da8cd",
@@ -7325,13 +7325,13 @@
       "drama",
       "fantasy"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "cba2e7abb6",
@@ -7345,13 +7345,13 @@
       "action",
       "ecchi"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "1c6e1578b8",
@@ -7366,13 +7366,13 @@
       "romance",
       "thriller"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "7f8928c326",
@@ -7386,13 +7386,13 @@
       "comedy",
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "ba4b800317",
@@ -7405,13 +7405,13 @@
     "genres": [
       "horror"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "371a370907",
@@ -7427,13 +7427,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "7c1f14ec74",
@@ -7449,13 +7449,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "fa78217519",
@@ -7471,13 +7471,13 @@
       "drama",
       "romance"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   },
   {
     "id": "67c41f108a",
@@ -7490,13 +7490,13 @@
     "genres": [
       "romance"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "4a2c9c20b4",
@@ -7512,13 +7512,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "3130c1a269",
@@ -7534,13 +7534,13 @@
       "romance",
       "slice of life"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "614cffa523",
@@ -7555,13 +7555,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "fcef2876c5",
@@ -7578,13 +7578,13 @@
       "romance",
       "supernatural"
     ],
-    "publicationStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "finished"
   },
   {
     "id": "50a103f4cd",
@@ -7599,12 +7599,12 @@
       "comedy",
       "horror"
     ],
-    "publicationStatus": "ongoing",
     "readingStatus": "not-read",
     "rating": 0,
     "tags": [],
     "notes": "",
     "noteDate": null,
-    "dateAdded": "2026-11-27"
+    "dateAdded": "2026-11-27",
+    "pubStatus": "ongoing"
   }
 ]
