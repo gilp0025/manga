@@ -2069,25 +2069,37 @@
     "chapters": "28"
   },
   {
-    "id": "db29df47b4",
     "title": "Doughnuts under a Crescent Moon",
     "author": "Shio Usui, Rina Mapa",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx108919-NSKHxpPmsC9k.png",
     "synopsis": "Uno Hinako throws herself into makeup, fashion, and falling in love, hoping that will make her seem “normal” to the other people at her job. But no matter how hard she tries, she’s a self-doubting mess inside, and her attempts at “normal” romance with men just keep failing. When she starts to think she might be alone forever, a new normal presents itself–in the form of her relationship with Sat…",
     "volumes": "4",
-    "demographic": "",
+    "chapters": "20",
+    "demographic": "josei",
+    "pubStatus": "finished",
+    "readingStatus": "not-read",
+    "rating": 2,
     "genres": [
       "drama",
-      "romance"
+      "romance",
+      "yuri",
+      "gl"
     ],
-    "readingStatus": "not-read",
-    "rating": 0,
-    "tags": [],
+    "tags": [
+      "hd"
+    ],
+    "themes": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [
+      "lesbian"
+    ],
+    "disability": [],
+    "id": "db29df47b4",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "20"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": "",
+    "reread": false
   },
   {
     "id": "562e604a3c",
