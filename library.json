@@ -7601,21 +7601,30 @@
     "pubStatus": "ongoing"
   },
   {
-    "id": "17afa1846a",
-    "title": "Wolf Girl and Black Prince - Ookami Shoujo to Kuro Ouji",
-    "author": "",
-    "cover": "",
-    "synopsis": "",
-    "volumes": "",
+    "title": "Wolf Girl and Black Prince",
+    "author": "Ayuko Hatta",
+    "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx58825-jAL4i3vf2lNN.jpg",
+    "synopsis": "Fed up with her friends’ constant bragging about their boyfriends, high school student Erika Shinohara decides to make up one of her own. When her lie starts unraveling at the seams, her charming schoolmate Kyoya Sata agrees to be her pretend boyfriend, seemingly saving her reputation. She won’t get off that easy, however, as she soon discovers her white knight is actually a blackhearted prince…",
+    "volumes": "16",
+    "chapters": "69",
     "demographic": "",
-    "genres": [],
+    "pubStatus": "finished",
     "readingStatus": "not-read",
     "rating": 0,
+    "genres": [
+      "comedy",
+      "drama",
+      "romance"
+    ],
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "17afa1846a",
     "dateAdded": "2026-11-27",
-    "pubStatus": "unknown"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "9fe66a6507",
