@@ -6620,13 +6620,16 @@
     "chapters": "124"
   },
   {
-    "id": "63b9c31419",
     "title": "Talentless Nana",
     "author": "Loose Boy, Iori Furuya, Studio Charon",
     "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx99536-Ad0c9WNX50L6.jpg",
     "synopsis": "An academy on an island in unnavigable waters. There, students trained tirelessly, to fight back against the enemies of humanity. The protagonist, a student newly transferred there, also sets out with the intention of eradicating all enemies of humankind. An unpredictable, intellectual suspense story of justice and evil.\n\n(Source: Crunchyroll)",
     "volumes": "15",
-    "demographic": "shounen",
+    "chapters": "122",
+    "demographic": "shonen",
+    "pubStatus": "finished",
+    "readingStatus": "reading",
+    "rating": 2,
     "genres": [
       "drama",
       "horror",
@@ -6635,14 +6638,15 @@
       "supernatural",
       "thriller"
     ],
-    "readingStatus": "reading",
-    "rating": 2,
     "tags": [],
     "notes": "",
-    "noteDate": null,
+    "lgbtq": [],
+    "disability": [],
+    "id": "63b9c31419",
     "dateAdded": "2026-11-27",
-    "pubStatus": "finished",
-    "chapters": "122"
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": ""
   },
   {
     "id": "d3db70dd7d",
