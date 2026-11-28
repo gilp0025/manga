@@ -1864,6 +1864,7 @@ let currentPubStatus = null;
 let currentRepFilter = null; // 'lgbtq', 'disability', or a specific sub like 'lgbtq:gay'
 let editingId = null;
 let viewingId = null;
+let detailThemeEditOpen = false;
 let currentGenres = [];
 let currentTags = [];
 let currentThemes = [];
@@ -2872,7 +2873,10 @@ function openDetail(id) {
     </div>
     ${m.synopsis ? `<div class="detail-section"><div class="detail-section-label">Synopsis</div><div class="detail-synopsis">${escHtml(m.synopsis)}</div></div>` : ''}
     <div class="detail-section"><div class="detail-section-label">Themes</div>
-      <div class="autocomplete-wrap"><div class="det-inline-tags-wrap" onclick="document.getElementById('detThemeInput').focus()">${(m.themes || []).map(t => `<span class="det-rep-tag" onclick="event.stopPropagation();removeDetailTheme('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detThemeInput" placeholder="${(m.themes || []).length ? '' : 'Add theme (e.g. school life, office workers...)'}" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTheme('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'themes','${m.id}')" autocomplete="off"></div><div class="autocomplete-list" id="detThemeAutocomplete"></div></div>
+      <span class="date-text${(m.themes || []).length ? '' : ' placeholder'}" id="themeTextDisplay" onclick="toggleThemeEdit()" style="display:${detailThemeEditOpen ? 'none' : 'inline-block'};margin-bottom:0.3rem;">${(m.themes || []).length ? (m.themes || []).map(t => escHtml(t)).join(', ') : 'Click to add themes...'}</span>
+      <div id="themeEditWrap" style="display:${detailThemeEditOpen ? '' : 'none'};">
+        <div class="autocomplete-wrap"><div class="det-inline-tags-wrap" onclick="document.getElementById('detThemeInput').focus()">${(m.themes || []).map(t => `<span class="det-rep-tag" onclick="event.stopPropagation();removeDetailTheme('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detThemeInput" placeholder="${(m.themes || []).length ? '' : 'Add theme (e.g. school life, office workers...)'}" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTheme('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'themes','${m.id}')" autocomplete="off"></div><div class="autocomplete-list" id="detThemeAutocomplete"></div></div>
+      </div>
     </div>
     <div class="detail-section"><div class="detail-section-label">Tags</div>
       <div class="autocomplete-wrap"><div class="det-inline-tags-wrap" onclick="document.getElementById('detTagInput').focus()">${(m.tags || []).map(t => `<span class="det-rep-tag" onclick="event.stopPropagation();removeDetailTag('${m.id}','${t.replace(/'/g, "\\'")}')">${escHtml(t)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detTagInput" placeholder="${(m.tags || []).length ? '' : 'Add tag...'}" onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailTag('${m.id}',this.value);this.value='';hideDetailAutocomplete();}" oninput="showDetailAutocomplete(this,'tags','${m.id}')" autocomplete="off"></div><div class="autocomplete-list" id="detTagAutocomplete"></div></div>
@@ -2884,7 +2888,7 @@ function openDetail(id) {
   document.getElementById('detailModal').classList.add('open');
 }
 
-function closeDetailModal() { document.getElementById('detailModal').classList.remove('open'); viewingId = null; }
+function closeDetailModal() { document.getElementById('detailModal').classList.remove('open'); viewingId = null; detailThemeEditOpen = false; }
 
 // Toggle detail modal rep sub-options visibility (click-to-expand)
 function toggleRepExpand(type) {
@@ -2941,6 +2945,15 @@ function parseDateField(val) {
     const mi = monthNames.indexOf(textMatch[1].toLowerCase().slice(0,3));
     if (mi >= 0) return { year: parseInt(textMatch[2]), month: mi + 1 };
   }
+  // Try month only "Mon"
+  const monthOnly = val.match(/^([A-Za-z]+)$/);
+  if (monthOnly) {
+    const mi = monthNames.indexOf(monthOnly[1].toLowerCase().slice(0,3));
+    if (mi >= 0) return { month: mi + 1, year: null };
+  }
+  // Try year only "YYYY"
+  const yearOnly = val.match(/^(\d{4})$/);
+  if (yearOnly) return { month: null, year: parseInt(yearOnly[1]) };
   return { month: null, year: null };
 }
 
@@ -2948,6 +2961,7 @@ function formatDateField(month, year) {
   if (!month && !year) return '';
   const monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   if (month && year) return `${monthNames[month]} ${year}`;
+  if (month) return `${monthNames[month]}`;
   if (year) return `${year}`;
   return '';
 }
@@ -2961,6 +2975,29 @@ function saveDetailMonthYear(id, field, part, value) {
   if (part === 'year') parsed.year = value ? parseInt(value) : null;
   m[field] = formatDateField(parsed.month, parsed.year);
   save();
+}
+
+function toggleThemeEdit() {
+  const textEl = document.getElementById('themeTextDisplay');
+  const editEl = document.getElementById('themeEditWrap');
+  if (editEl.style.display === 'none') {
+    editEl.style.display = '';
+    textEl.style.display = 'none';
+    detailThemeEditOpen = true;
+    setTimeout(() => { const inp = document.getElementById('detThemeInput'); if (inp) inp.focus(); }, 50);
+  } else {
+    editEl.style.display = 'none';
+    textEl.style.display = 'inline-block';
+    detailThemeEditOpen = false;
+    if (viewingId) {
+      const m = manga.find(x => x.id === viewingId);
+      if (m) {
+        const themes = m.themes || [];
+        textEl.textContent = themes.length ? themes.join(', ') : 'Click to add themes...';
+        textEl.classList.toggle('placeholder', !themes.length);
+      }
+    }
+  }
 }
 
 function toggleDateEdit(which) {
