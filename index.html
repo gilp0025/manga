@@ -189,11 +189,16 @@ body {
 
 /* Toolbar */
 .toolbar {
-  padding: 0 2rem 1.25rem;
+  padding: 0.75rem 2rem;
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .search-box {
@@ -257,7 +262,7 @@ body {
 .manga-grid {
   padding: 0 2rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 1rem;
 }
 
@@ -514,8 +519,15 @@ body {
   width: 100%;
   max-width: 800px;
   max-height: 90vh;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
+}
+
+.modal .modal-body {
+  flex: 1;
+  overflow-y: auto;
 }
 
 .modal-header {
@@ -894,13 +906,33 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.4rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: border-color 0.15s;
 }
 
-.detail-rep-editor .rep-toggle-row label {
+.detail-rep-editor .rep-toggle-row:hover {
+  border-color: var(--border);
+}
+
+.detail-rep-editor .rep-toggle-row .rep-label {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--text);
   cursor: pointer;
+}
+
+.detail-rep-editor .rep-toggle-row .rep-indicator {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.detail-rep-editor .rep-toggle-row.expanded .rep-indicator {
+  transform: rotate(90deg);
 }
 
 .detail-rep-editor .rep-sub-options {
@@ -1299,6 +1331,8 @@ body {
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
+  flex-shrink: 0;
+  background: var(--surface);
 }
 
 .btn {
@@ -1398,7 +1432,7 @@ body {
 @media (max-width: 768px) {
   .header, .toolbar, .manga-grid { padding-left: 1rem; padding-right: 1rem; }
   .manga-grid { grid-template-columns: 1fr; }
-  .manga-cover-wrap { width: 120px; height: 180px; }
+  .manga-cover-wrap { width: 100px; height: 140px; }
   .manga-synopsis-preview { display: none; }
   .form-row { flex-direction: column; gap: 0; }
   .detail-top { flex-direction: column; align-items: center; text-align: center; }
@@ -1726,8 +1760,7 @@ body {
 <!-- Detail Modal -->
 <div class="modal-overlay" id="detailModal">
   <div class="modal">
-    <div class="modal-header">
-      <h2>Details</h2>
+    <div class="modal-header" style="justify-content:flex-end;border-bottom:none;padding:0.75rem 1rem;">
       <button class="modal-close" onclick="closeDetailModal()">&times;</button>
     </div>
     <div class="modal-body" id="detailBody"></div>
@@ -2750,18 +2783,20 @@ function openDetail(id) {
   if (m.disability && m.disability.length) repParts.push(...m.disability.map(v => escHtml(v)));
   const repLine = repParts.length ? `<div class="detail-info-line"><span class="info-label">Representation:</span> ${repParts.join(', ')}</div>` : '';
 
-  // Representation editor — 2-column grid layout
+  // Representation editor — 2-column grid layout, click-to-expand
+  const lgbtqHasTags = m.lgbtq && m.lgbtq.length;
+  const disHasTags = m.disability && m.disability.length;
   let repEditor = '<div class="detail-rep-editor"><div class="detail-rep-grid">';
   // Column 1: LGBTQ+
   repEditor += '<div class="detail-rep-col">';
-  repEditor += '<div class="rep-toggle-row"><label><input type="checkbox" id="detRepLgbtq" onchange="toggleDetailRep()" ' + ((m.lgbtq && m.lgbtq.length) ? 'checked' : '') + '> LGBTQ+</label></div>';
-  repEditor += '<div class="rep-sub-options" id="detRepLgbtqOpts" style="' + ((m.lgbtq && m.lgbtq.length) ? '' : 'display:none') + '">';
+  repEditor += `<div class="rep-toggle-row${lgbtqHasTags ? ' expanded' : ''}" onclick="toggleRepExpand('lgbtq')"><span class="rep-indicator">›</span><span class="rep-label">LGBTQ+</span></div>`;
+  repEditor += '<div class="rep-sub-options" id="detRepLgbtqOpts" style="' + (lgbtqHasTags ? '' : 'display:none') + '">';
   repEditor += `<div class="det-inline-tags-wrap">${(m.lgbtq || []).map(v => `<span class="det-rep-tag" onclick="removeDetailRepTag('${m.id}','lgbtq','${v.replace(/'/g, "\\'")}')">${escHtml(v)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detRepLgbtqInput" placeholder="Add..." onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailRepTag('${m.id}','lgbtq',this.value);this.value='';}" /></div>`;
   repEditor += '</div></div>';
   // Column 2: Disability
   repEditor += '<div class="detail-rep-col">';
-  repEditor += '<div class="rep-toggle-row"><label><input type="checkbox" id="detRepDis" onchange="toggleDetailRep()" ' + ((m.disability && m.disability.length) ? 'checked' : '') + '> Disability</label></div>';
-  repEditor += '<div class="rep-sub-options" id="detRepDisOpts" style="' + ((m.disability && m.disability.length) ? '' : 'display:none') + '">';
+  repEditor += `<div class="rep-toggle-row${disHasTags ? ' expanded' : ''}" onclick="toggleRepExpand('disability')"><span class="rep-indicator">›</span><span class="rep-label">Disability</span></div>`;
+  repEditor += '<div class="rep-sub-options" id="detRepDisOpts" style="' + (disHasTags ? '' : 'display:none') + '">';
   repEditor += `<div class="det-inline-tags-wrap">${(m.disability || []).map(v => `<span class="det-rep-tag" onclick="removeDetailRepTag('${m.id}','disability','${v.replace(/'/g, "\\'")}')">${escHtml(v)} &times;</span>`).join('')}<input type="text" class="det-rep-input" id="detRepDisInput" placeholder="Add..." onkeydown="if(event.key==='Enter'){event.preventDefault();addDetailRepTag('${m.id}','disability',this.value);this.value='';}" /></div>`;
   repEditor += '</div></div>';
   repEditor += '</div></div>';
@@ -2851,19 +2886,20 @@ function openDetail(id) {
 
 function closeDetailModal() { document.getElementById('detailModal').classList.remove('open'); viewingId = null; }
 
-// Toggle detail modal rep sub-options visibility
-function toggleDetailRep() {
-  const lgbtqChecked = document.getElementById('detRepLgbtq').checked;
-  const disChecked = document.getElementById('detRepDis').checked;
-  document.getElementById('detRepLgbtqOpts').style.display = lgbtqChecked ? '' : 'none';
-  document.getElementById('detRepDisOpts').style.display = disChecked ? '' : 'none';
-  if (!lgbtqChecked && viewingId) {
-    const m = manga.find(x => x.id === viewingId);
-    if (m) { m.lgbtq = []; save(); renderManga(); renderSidebar(); }
-  }
-  if (!disChecked && viewingId) {
-    const m = manga.find(x => x.id === viewingId);
-    if (m) { m.disability = []; save(); renderManga(); renderSidebar(); }
+// Toggle detail modal rep sub-options visibility (click-to-expand)
+function toggleRepExpand(type) {
+  const optsId = type === 'lgbtq' ? 'detRepLgbtqOpts' : 'detRepDisOpts';
+  const optsEl = document.getElementById(optsId);
+  const toggleRow = optsEl.previousElementSibling;
+  const isExpanded = toggleRow.classList.contains('expanded');
+  if (isExpanded) {
+    toggleRow.classList.remove('expanded');
+    optsEl.style.display = 'none';
+  } else {
+    toggleRow.classList.add('expanded');
+    optsEl.style.display = '';
+    const inputId = type === 'lgbtq' ? 'detRepLgbtqInput' : 'detRepDisInput';
+    setTimeout(() => { const inp = document.getElementById(inputId); if (inp) inp.focus(); }, 50);
   }
 }
 
