@@ -1198,7 +1198,9 @@
     ],
     "readingStatus": "not-read",
     "rating": 0,
-    "tags": [],
+    "tags": [
+      "laptop"
+    ],
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
