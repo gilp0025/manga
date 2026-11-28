@@ -243,7 +243,10 @@
     "noteDate": null,
     "dateAdded": "2026-11-27",
     "pubStatus": "ongoing",
-    "titleRomaji": "Yubisaki to Renren"
+    "titleRomaji": "Yubisaki to Renren",
+    "themes": [
+      "hd"
+    ]
   },
   {
     "title": "A Silent Voice",
