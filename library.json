@@ -841,7 +841,7 @@
       "drama",
       "romance"
     ],
-    "readingStatus": "not-read",
+    "readingStatus": "read",
     "rating": 0,
     "tags": [],
     "notes": "",
@@ -886,7 +886,7 @@
       "drama",
       "romance"
     ],
-    "readingStatus": "not-read",
+    "readingStatus": "read",
     "rating": 0,
     "tags": [],
     "notes": "",
@@ -1026,7 +1026,7 @@
       "sports"
     ],
     "readingStatus": "read",
-    "rating": 0,
+    "rating": 2,
     "tags": [],
     "notes": "",
     "noteDate": null,
@@ -1047,7 +1047,7 @@
       "slice of life"
     ],
     "readingStatus": "read",
-    "rating": 0,
+    "rating": 3,
     "tags": [],
     "notes": "",
     "noteDate": null,
@@ -1065,7 +1065,7 @@
     "demographic": "seinen",
     "pubStatus": "finished",
     "readingStatus": "read",
-    "rating": 0,
+    "rating": 4,
     "genres": [
       "drama",
       "horror",
@@ -1096,7 +1096,7 @@
       "slice of life"
     ],
     "readingStatus": "dropped",
-    "rating": 0,
+    "rating": 1,
     "tags": [],
     "notes": "",
     "noteDate": null,
@@ -1173,7 +1173,7 @@
       "slice of life"
     ],
     "readingStatus": "read",
-    "rating": 0,
+    "rating": 2,
     "tags": [
       "hd"
     ],
@@ -1357,7 +1357,7 @@
       "romance"
     ],
     "readingStatus": "read",
-    "rating": 0,
+    "rating": 2,
     "tags": [],
     "notes": "",
     "noteDate": null,
@@ -1379,7 +1379,7 @@
       "slice of life"
     ],
     "readingStatus": "read",
-    "rating": 0,
+    "rating": 4,
     "tags": [],
     "notes": "",
     "noteDate": null,
@@ -8943,6 +8943,32 @@
     "lgbtq": [],
     "disability": [],
     "id": "mwzs3zxo7tt5b",
+    "dateAdded": "2026-11-28"
+  },
+  {
+    "title": "By the Grace of the Gods",
+    "author": "Ranran, Roy",
+    "cover": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx101793-19Px7kvls6PB.jpg",
+    "synopsis": "Under the protection of the gods, a relaxed life with slimes in another world begins! One day, the life of middle-aged Japanese businessman Ryoma Takebayashi came to a rather sudden and disappointing end. Ryoma had never had a blessed life, but after his death, three great gods sought his cooperation and reincarnated him as a child in another world with swords and magic! Receiving a most cordia…",
+    "volumes": "",
+    "chapters": "",
+    "demographic": "shounen",
+    "pubStatus": "ongoing",
+    "readingStatus": "not-read",
+    "rating": 0,
+    "genres": [
+      "adventure",
+      "fantasy",
+      "slice of life"
+    ],
+    "tags": [
+      "laptop"
+    ],
+    "themes": [],
+    "notes": "",
+    "lgbtq": [],
+    "disability": [],
+    "id": "mwzs4k43vkd7n",
     "dateAdded": "2026-11-28"
   }
 ]
