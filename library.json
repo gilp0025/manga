@@ -8375,12 +8375,18 @@
     "readingStatus": "not-read",
     "rating": 0,
     "genres": [],
-    "tags": [],
+    "tags": [
+      "laptop"
+    ],
     "themes": [],
     "notes": "",
     "lgbtq": [],
     "disability": [],
     "id": "mwzrdcwf4ybfq",
-    "dateAdded": "2026-11-28"
+    "dateAdded": "2026-11-28",
+    "readStart": "",
+    "readFinish": "",
+    "titleRomaji": "",
+    "reread": false
   }
 ]
