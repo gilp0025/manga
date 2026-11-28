@@ -192,7 +192,9 @@
     ],
     "readingStatus": "dropped",
     "rating": 0,
-    "tags": [],
+    "tags": [
+      "hd"
+    ],
     "notes": "",
     "noteDate": null,
     "dateAdded": "2026-11-27",
